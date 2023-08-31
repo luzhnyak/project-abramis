@@ -2,20 +2,20 @@
   "name": "project-bookshelf",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://luzhnyak.github.io/project-bookshelf",
+  "homepage": "https://luzhnyak.github.io/project-abramis",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /project-bookshelf/"
+    "build": "parcel build src/*.html --public-url /project-abramis/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luzhnyak/project-bookshelf.git"
+    "url": "git+https://github.com/luzhnyak/project-abramis.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luzhnyak/project-bookshelf/issues"
+    "url": "https://github.com/luzhnyak/project-abramis/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
