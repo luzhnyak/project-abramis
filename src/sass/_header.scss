@@ -2,6 +2,23 @@
     border: 1px solid #000;
 }
 
-.menu-link{
-    color: chartreuse;
+.header-container{
+    display: flex;
+    gap: 32px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.menu {
+    display: flex;
+    gap: 32px;    
+}
+
+.menu-item {
+    height: 32px;
+}
+
+
+.menu-link{    
+    color:indigo;    
 }
