@@ -2,7 +2,7 @@ export const fundsData = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: null,
+    img: '../images/funds/save-children.png',
   },
   {
     title: 'Project HOPE',

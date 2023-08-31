@@ -1,3 +1,67 @@
-.sponsors {
-    color: red;
+.funds {
+    max-height: 352px;
+    overflow: hidden;
+
+  border-radius: 16px;
+  background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
+  box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.10);
+
+  @media only screen and (min-width: 768px) {
+    max-height: 474px;
+}
+}
+
+
+
+.funds-title {
+
+  color: #FFF;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.09;
+  letter-spacing: -0.88px;
+  text-align: center;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0;
+  margin-top: 28px;
+  margin-bottom: 44px;
+}
+
+.funds-list {
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+
+  margin: 40px 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.funds-scroll-btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  border: none;
+  border-radius: 16px;
+  background-color: #fff;
+
+  rotate: 180deg;
+
+}
+
+
+.gerb-icon {
+  fill: white;
 }
