@@ -1,12 +1,19 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+:root {
+    --black-color: #000;
+    --black-light-color: #202024;
+    --grey-color: #B4AFAF;    
+    --white-color: #fff;
+    --violet-color: #4F2EE8;
+    --yellow-color: #EAC645;
+}
+
 body{
     font-family: 'DM Sans', sans-serif;
-    letter-spacing: 0.02em;
-    font-size: 14px;
-    line-height: 1.29;
-    background-color: var(--red-color);
-    color: var(--white-color);
+    letter-spacing: 0.02em;    
+    background-color: var(--white-color);
+    color: var(--black-color);
     min-width: 320px;
 }
 
