@@ -1,5 +1,8 @@
+
+
 .main-wrapper {
     display: block;
+    padding-top: 40px;
     @media only screen and (min-width: 375px) {
     
     }
@@ -14,9 +17,7 @@
     }
 }
 
-.sidebar {
-    
-    border: 1px solid #000;
+.sidebar {    
 
     @media only screen and (min-width: 375px) {
         display: block;        
