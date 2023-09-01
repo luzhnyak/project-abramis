@@ -23,8 +23,8 @@ fundsRender.insertAdjacentHTML("beforeend", markup);
 const down = document.querySelector('.down-scroll');
 const up = document.querySelector('.up-scroll');
 
-down.addEventListener('click', downClick);
-up.addEventListener('click', upClick);
+// down.addEventListener('click', downClick);
+// up.addEventListener('click', upClick);
 
 function downClick(){
     fundsContainer.scrollTo({
