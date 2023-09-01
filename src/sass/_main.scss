@@ -18,18 +18,23 @@
 }
 
 .sidebar {    
-
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
     @media only screen and (min-width: 375px) {
-        display: block;        
+
+        // display: block;        
     }
 
-    @media only screen and (min-width: 768px) {
-        display: flex;
-        gap: 32px;        
+    @media only screen and (min-width: 768px) {        
+        flex-direction: row;
+        column-gap: 32px;
     }
 
     @media only screen and (min-width: 1440px) {
-        display: block;
+        // display: block;
+        flex-direction: column;
+        row-gap: 86px;
         width: 356px;        
     }
 }
