@@ -1,5 +1,29 @@
-.shoping-list {
-    color: aqua;
-    width: 100%;
-    border: 1px solid #000;
+.sh-title {
+  margin-bottom: 40px;
+  font-size: 32px;
+  line-height: 1.19;
+  letter-spacing: -1.28px;
+}
+
+.shopping-title {
+  color: var(--black-color);
+}
+
+.title-span {
+  color: var(--violet-color);
+}
+
+.book-column-img {
+  margin: 0 auto;
+  width: 265px;
+}
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sh-list-section {
+  width: 100%;
 }
