@@ -2,3 +2,43 @@
     background-color: var(--black-light-color);
     color: var(--white-color);
 }
+
+
+/**
+  |============================
+  | dark style HEADER
+  |============================
+*/
+
+.header{
+&.dark{
+    background: var(--black-color);
+    color: var(--white-color);
+    border: 1.5px solid var(--white-color);
+}}
+
+.logo {
+&.dark{
+    color: var(--white-color);
+}
+}
+
+
+.menu-link{
+    &.dark{
+    color: var(--white-color);
+
+    &:hover{
+    color: var(--black-color);
+    }
+    }
+
+
+}
+
+.switch{
+    &.dark{
+background-color: var(--black-color);
+    }
+}
+
