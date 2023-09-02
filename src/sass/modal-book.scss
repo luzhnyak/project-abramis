@@ -3,36 +3,46 @@
   border-radius: 18px;
   background-color: white;
   @media only screen and (min-width: 375px) {
+    // display: inline-block;
     width: 335px;
-    height: 762;
+    // height: 762;
     margin: 0 auto;
+    padding-top: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media only screen and (min-width: 768px) {
     width: 579px;
     height: 465px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 40px;
   }
 
   @media only screen and (min-width: 1440px) {
-    
-    padding-left: 24px;
-    padding-right: 24px;
-    
   }
 }
 
 .modal-info {
 }
 .modal-close-btn {
-  width: 24px;
-  height: 24px;
+  border: none;
+  background: transparent;
 }
 .modal-close-svg {
+  padding-bottom: 24px;
+  padding-right: 24px;
+  //   z-index: 10;
+  width: 24px;
+  height: 24px;
   // stroke: var(--black-color);
   // padding-right: 12px;
   // padding-top: 12px;
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }
 .book-image {
   display: block;
@@ -41,16 +51,59 @@
   height: 281px;
   object-fit: cover;
   border-radius: 8px;
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }
 .title {
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }
 .author {
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }
 .description {
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }
 .buy-list {
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }
 .buy-item {
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }
 .add-to-shoping-list {
+
+  @media only screen and (min-width: 375px) {
+  }
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 1440px) {
+  }
 }

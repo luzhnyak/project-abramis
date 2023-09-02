@@ -1,5 +1,6 @@
 import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
+import iconClose from '../images/x-close.png';
 
 const bookEl = document.querySelector('.js-test-modal');
 bookEl.addEventListener('click', onBookClick);
@@ -24,10 +25,11 @@ async function markupBook(id) {
 
   const instanceEl = document.querySelector('.js-modal');
 
-  instanceEl.innerHTML = `<div class="modal modal-info container">
-    <button class="modal-close-btn" type="button">
-      <img class="modal-close-svg" src="./images/x-close.png" alt=""/>
+  instanceEl.innerHTML = `<div class="modal container">
+    <button class="modal-close-btn" type="button" aria-label="close">
+      <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24"/>
     </button>
+    <div class="modal-info">
     <img class="book-image" src="${book_image}" alt=""/>
     <h2 class="title">${title}</h2>
     <h3 class="author">${author}</h3>
@@ -43,6 +45,7 @@ async function markupBook(id) {
         <a href="${buy_links[2].url}">${buy_links[2].name}</a>
       </li>
     </ul>
+    </div>
     <button class="add-to-shoping-list" type="button">ADD TO SHOPING LIST</button>
   </div>
   `;
