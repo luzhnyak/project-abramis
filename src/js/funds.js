@@ -30,8 +30,6 @@ let size = 0;
 
 function onClick() {
 
-    console.log(size);
-
     if (size > fundsRender.clientHeight) {
         downClick();
         size = 0;
@@ -47,7 +45,7 @@ function onClick() {
 
 function downClick() {
     fundsRender.scrollTo({
-        top: fundsRender.scrollHeight = size,
+        top: fundsRender.scrollWidth = size,
         behavior: 'smooth'
     });
 }
