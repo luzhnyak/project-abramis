@@ -7,12 +7,22 @@ bookEl.addEventListener('click', onBookClick);
 const booksApi = new BookshelfApiService();
 const ID_BOOK = '643282b1e85766588626a0dc';
 
+function disableBodyScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+function enableBodyScroll() {
+  document.body.style.overflow = 'visible';
+}
+
 const instance = basicLightbox.create(`<div class="js-modal"></div>`, {
   onShow: () => {
     document.addEventListener('keydown', onEscDown);
+    disableBodyScroll();
   },
   onClose: () => {
     document.removeEventListener('keydown', onEscDown);
+    enableBodyScroll();
   },
 });
 
