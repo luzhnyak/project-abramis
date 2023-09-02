@@ -1,3 +1,5 @@
+const STORAGE_KEY = "saved-theme"
+
 
 const body = document.querySelector('body')
 
@@ -11,22 +13,59 @@ const header = {
 const menuLinks = document.querySelectorAll('.menu-link')
 
 const headerElements = Object.values(header)
- 
+
+currentTheme()
+
+/**
+  |============================
+  | збереження останньої теми
+  |============================
+*/
+
+function currentTheme(){
+  const item = localStorage.getItem(STORAGE_KEY)
+  const parsedItem = JSON.parse(item)
+console.log(parsedItem);
+  if (parsedItem === null) {
+  }
+  else{
+    header.switcher.checked = true
+    onDark() 
+  }
+
+}
+function savedTheme(){
+const data = {}
+if(header.switcher.checked){
+  data.theme = 'dark';
+} 
+localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+}
+
+/**
+  |============================
+  | очистка стилів
+  |============================
+*/
 
 function onLigth() {
     body.classList.remove('body-dark');
-
 for (const el of headerElements){
   el.classList.remove('dark')
 }
 for (const link of menuLinks){
   link.classList.remove ('dark')
 }
-
 }
   
+/**
+  |============================
+  | додавання стилів темної теми
+  |============================
+*/
   function onDark(e){
-    if(e.currentTarget.checked){
+    savedTheme()
+
       body.classList.add('body-dark');
       
 for (const el of headerElements){
@@ -35,14 +74,22 @@ for (const el of headerElements){
 for (const link of menuLinks){
   link.classList.add ('dark')
 }
-
-
     }
 
-    else{
-      onLigth()
-    }
-   
+    /**
+      |============================
+      | слухач
+      |============================
+    */
+
+ function toggle(){
+  if(header.switcher.checked){
+    onDark()
+  } 
+  else{
+    localStorage.clear()
+    onLigth()
   }
-  
-  header.switcher.addEventListener('change', onDark)
+ }
+
+  header.switcher.addEventListener('change', toggle)
