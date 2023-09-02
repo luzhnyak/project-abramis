@@ -107,7 +107,16 @@
   //   height: auto;
   filter: brightness(0) invert(1);
 }
+.up-scroll-anim{
+  rotate: 180deg;
+  transition: rotate;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.active {
-	border:red solid 3px;
+.down-scroll-anim{
+  rotate: 0deg;
+  transition: rotate;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
