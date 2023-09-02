@@ -26,9 +26,7 @@ async function markupBook(id) {
 
   instanceEl.innerHTML = `<div class="modal modal-info container">
     <button class="modal-close-btn" type="button">
-      <svg class="modal-close-svg" width="24" height="24">
-        <use href="./images/icons.svg#icon-close"></use>
-      </svg>
+      <img class="modal-close-svg" src="./images/x-close.png" alt=""/>
     </button>
     <img class="book-image" src="${book_image}" alt=""/>
     <h2 class="title">${title}</h2>
