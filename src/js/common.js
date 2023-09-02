@@ -6,3 +6,4 @@ import './cards';
 import './modal-book.js';
 import './auth';
 import './firebase';
+import './scroll-up';
