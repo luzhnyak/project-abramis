@@ -24,7 +24,7 @@ async function markupBook(id) {
 
   const instanceEl = document.querySelector('.js-modal');
 
-  instanceEl.innerHTML = `<div class="modal modal-info">
+  instanceEl.innerHTML = `<div class="modal modal-info container">
     <button class="modal-close-btn" type="button">
       <svg class="modal-close-svg" width="24" height="24">
         <use href="./images/icons.svg#icon-close"></use>
