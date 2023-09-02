@@ -30,8 +30,6 @@ let size = 0;
 
 function onClick() {
 
-    console.log(size);
-
     if (size > fundsRender.clientHeight) {
         downClick();
         size = 0;
