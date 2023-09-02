@@ -1,5 +1,4 @@
 <div class="funds js-funds">
-  <!-- <button class="down-scroll" id="prev">down</button> -->
 
   <div class="title-container">
     <h2 class="funds-title">Support Ukraine</h2>
@@ -8,8 +7,18 @@
     </svg>
   </div>
 
-  <ol class="funds-list"></ol>
+  <ol class="funds-list" id="slider"></ol>
 
-  <!-- <button class="up-scroll unds-scroll-btn">up</button> -->
+  <button class="down-scroll funds-scroll-btn">
+    <svg class="funds-icon" width="32" height="32">
+      <use href="/src/images/icons.svg#icon-arrow-down-slider-funds"></use>
+    </svg>
+  </button>
+  
+  <button class="up-scroll funds-scroll-btn visually-hidden">
+    <svg class="funds-icon" width="32" height="32">
+      <use href="/src/images/icons.svg#icon-arrow-up-scroll"></use>
+    </svg>
+  </button>
 
 </div>
