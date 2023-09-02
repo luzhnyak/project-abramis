@@ -1,12 +1,12 @@
-import { fundsData } from "./funds-data";
+import { fundsData } from './funds-data';
 
 const fundsContainer = document.querySelector('.js-funds');
 const fundsRender = document.querySelector('.funds-list');
 
-
 const markup = fundsData
-    .map((fund) =>
-        `<li class="funds-item slide">
+  .map(
+    fund =>
+      `<li class="funds-item slide">
         <a class="funds-link" href="${fund.url}" target="_blank" rel="noopener noreferrer">
         <img class="funds-image" 
           src="${fund.img}" 
@@ -14,11 +14,11 @@ const markup = fundsData
           target="_parent">
          </a>
     </li> 
-        `)
-    .join("");
+        `
+  )
+  .join('');
 
-
-fundsRender.insertAdjacentHTML("beforeend", markup);
+fundsRender.insertAdjacentHTML('beforeend', markup);
 
 const down = document.querySelector('.down-scroll');
 const up = document.querySelector('.up-scroll');
@@ -29,6 +29,7 @@ up.addEventListener('click', upClick);
 let size = fundsRender.clientHeight;
 
 function onClick() {
+
     if (size === 0) {
         upClick();
     } else {
@@ -65,3 +66,4 @@ function upClick() {
     });
 
 }
+

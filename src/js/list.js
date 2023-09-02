@@ -1,9 +1,6 @@
 import './mobile-menu';
 import './theme';
-import './categoryes';
 import './funds';
-import './cards';
-import './modal-book.js';
+import './shopping-list';
 import './auth';
 import './firebase';
-import './scroll-up';
