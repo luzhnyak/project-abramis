@@ -26,36 +26,44 @@ const up = document.querySelector('.up-scroll');
 down.addEventListener('click', onClick);
 up.addEventListener('click', upClick);
 
-let size = 0;
+let size = fundsRender.clientHeight;
 
 function onClick() {
-  if (size > fundsRender.clientHeight) {
-    downClick();
-    size = 0;
-    down.classList.add('visually-hidden');
-    up.classList.remove('visually-hidden');
-    return;
-  } else {
-    size += fundsRender.clientHeight;
-    downClick();
-  }
+
+    if (size === 0) {
+        upClick();
+    } else {
+        downClick();
+        size += fundsRender.clientHeight;
+    }
 }
 
 function downClick() {
-  fundsRender.scrollTo({
-    top: fundsRender.scrollWidth,
-    behavior: 'smooth',
-  });
+    fundsRender.scrollTo({
+        top: size,
+        behavior: 'smooth'
+    });
+
+    if (size + fundsRender.clientHeight >= fundsRender.scrollHeight) {
+        down.classList.remove('down-scroll-anim');
+        down.classList.add('up-scroll-anim');
+    }
+
+    if (size >= fundsRender.scrollHeight) {
+        upClick();
+        size = 0;
+    }
 }
 
 function upClick() {
-  down.classList.remove('visually-hidden');
-  up.classList.add('visually-hidden');
-  fundsRender.scrollTo({
-    top: fundsRender.scrollIntoView,
-    behavior: 'smooth',
-  });
+
+    down.classList.remove('up-scroll-anim');
+    down.classList.add('down-scroll-anim');
+
+    fundsRender.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
 }
 
-// // console.log(firstEl);
-// firstEl.classList.add('active');
