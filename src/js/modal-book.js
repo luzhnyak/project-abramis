@@ -7,11 +7,24 @@ bookEl.addEventListener('click', onBookClick);
 const booksApi = new BookshelfApiService();
 const ID_BOOK = '643282b1e85766588626a0dc';
 
+const instance = basicLightbox.create(`<div class="js-modal"></div>`, {
+  onShow: () => {
+    document.addEventListener('keydown', onEscDown);
+  },
+  onClose: () => {
+    document.removeEventListener('keydown', onEscDown);
+  },
+});
+
 async function markupBook(id) {
   const { book_image, title, author, description, buy_links } =
     await booksApi.fetchDetailsByBookId(id);
-  const modalMarkup = basicLightbox.create(
-    `<div class="modal modal-info">
+
+  instance.show();
+
+  const instanceEl = document.querySelector('.js-modal');
+
+  instanceEl.innerHTML = `<div class="modal modal-info">
     <button class="modal-close-btn" type="button">
       <svg class="modal-close-svg" width="24" height="24">
         <use href=""></use>
@@ -34,17 +47,7 @@ async function markupBook(id) {
     </ul>
     <button class="add-to-shoping-list" type="button">ADD TO SHOPING LIST</button>
   </div>
-  `,
-    {
-      onShow: () => {
-        document.addEventListener('keydown', onEscDown);
-      },
-      onClose: () => {
-        document.removeEventListener('keydown', onEscDown);
-      },
-    }
-  );
-  modalMarkup.show();
+  `;
 }
 
 function onBookClick(evt) {
@@ -54,8 +57,9 @@ function onBookClick(evt) {
   }
   markupBook(ID_BOOK);
 }
+
 function onEscDown(event) {
-  if (event.code === "Esc") {
-    markupBook.close();
+  if (event.code === 'Escape') {
+    instance.close();
   }
 }
