@@ -27,7 +27,7 @@ async function markupBook(id) {
   instanceEl.innerHTML = `<div class="modal modal-info">
     <button class="modal-close-btn" type="button">
       <svg class="modal-close-svg" width="24" height="24">
-        <use href=""></use>
+        <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
     <img class="book-image" src="${book_image}" alt=""/>
@@ -52,7 +52,7 @@ async function markupBook(id) {
 
 function onBookClick(evt) {
   evt.preventDefault();
-  if (evt.target.classSlist == '.js-test-modal') {
+  if (evt.target.classList === '.js-test-modal') {
     return;
   }
   markupBook(ID_BOOK);
