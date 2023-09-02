@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Bookshelf</title>
-  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
-  <link rel="stylesheet" href="./sass/index.scss" />
-</head>
-
-<body>
-  <include src="./partials/header.html"></include>
-  <main class="main">
-    <div class="container main-wrapper">
-      <div class="sidebar">
-        <include src="./partials/categoryes.html"></include>
-        <include src="./partials/funds.html"></include>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Bookshelf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+  <body>
+    <include src="./partials/header.html"></include>
+    <main class="main">
+      <div class="container main-wrapper">
+        <div class="sidebar">
+          <include src="./partials/categoryes.html"></include>
+          <include src="./partials/funds.html"></include>
+        </div>
+        <include src="./partials/cards.html"></include>
       </div>
-
-      <include src="./partials/cards.html"></include>
-    </div>
-    <button class="test-modal js-test-modal">Test Modal</button>
-  </main>
-  <script type="module" src="./index.js"></script>
-</body>
-
+      <button class="test-modal js-test-modal">Test Modal</button>
+    </main>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
-
-      
-    
-    
-
-
-
