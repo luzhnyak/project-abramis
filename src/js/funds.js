@@ -47,7 +47,7 @@ function onClick() {
 
 function downClick() {
     fundsRender.scrollTo({
-        top: fundsRender.scrollHeight = size,
+        top: fundsRender.scrollWidth = size,
         behavior: 'smooth'
     });
 }
