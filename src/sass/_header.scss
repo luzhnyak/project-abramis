@@ -8,17 +8,21 @@
 
 .header-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-top: 14px;
   padding-bottom: 14px;
   align-items: center;
 }
 
 .part-two {
+  display: none;
   position: relative;
-  display: flex;
+ 
   // gap: 24px;
   //   top: -15px;
+  @media only screen and (min-width: 768px) {
+    display: flex;
+   }
 }
 
 .logo {
@@ -29,25 +33,61 @@
   flex-shrink: 0;
   color: #000;
   font-weight: bold;
+  margin-right: 144px;
+
+  @media only screen and (min-width: 768px) {
+    margin-right: 40px;
+   }
 }
 
-.menu {
+.part-one {
   display: flex;
   gap: 32px;
   align-items: center;
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.menu {
 
   color: #111;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px; /* 128.571% */
+  line-height: 18px;
+  /* 128.571% */
   letter-spacing: -0.56px;
   text-transform: uppercase;
+
+  display: none;
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+ 
 }
 
 .menu-item {
   padding-top: 14px;
   padding-bottom: 14px;
+
+  transition: background, border-radius, padding;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item:hover,
+.menu-item:focus {
+  border-radius: 36px;
+  padding: 8px 16px;
+  background: #EAC645;
+  color: black;
 }
 
 .menu-link {
@@ -56,25 +96,25 @@
   align-items: center;
 }
 
-.icon-shoping-list {
-  
-}
+// .icon-shoping-list {}
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--violet-color);
-}
+// .menu-link:hover,
+// .menu-link:focus {
+//   color: var(--violet-color);
+// }
 
 // ____________________________swicher
 .switch {
   display: inline-block;
   position: relative;
-  width: 41px;
+  min-width: 41px;
   height: 21px;
   background-color: #ffffff;
   padding-left: 10px;
   padding-top: 5px;
+  margin-right: 36px;
   top: 1px;
+
 }
 
 .switch-slider {
@@ -104,21 +144,21 @@
   background-color: #e8e6e6;
 }
 
-.theme:focus + .switch-slider {
+.theme:focus+.switch-slider {
   box-shadow: 0 0 2px #000;
 }
 
-.theme:checked + .switch-slider {
+.theme:checked+.switch-slider {
   background-image: linear-gradient(to bottom, var(--violet-color), #686868);
-  transition: background-image
-    linear-gradient(to bottom, var(--violet-color), #686868);
+  transition: background-image linear-gradient(to bottom, var(--violet-color), #686868);
 }
 
-.theme:checked + .switch-slider::before {
+.theme:checked+.switch-slider::before {
   transform: translateX(19px);
   -webkit-transform: translateX(19px);
   -ms-transform: translateX(19px);
 }
+
 // __________________________________________________________________________
 
 .registration {
@@ -191,8 +231,7 @@
   background-color: var(--violet-color);
 }
 
-@media only screen and (min-width: 375px) {
-}
+@media only screen and (min-width: 375px) {}
 
 // @media only screen and (min-width: 768px) {
 //   .menu-icon {
