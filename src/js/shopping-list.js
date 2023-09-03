@@ -1,4 +1,5 @@
 const shoppingListEl = document.querySelector('.js-shopping_list');
+import dumpIcon from '../images/dump-icon.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';
 import store3 from '../images/modal/store3.png';
@@ -24,8 +25,9 @@ function cardBook({
   description,
   buy_links,
 }) {
-  return `<li>
-        <img src="${book_image}">        
+  return `<li class="shopping-list-book-item">
+        <img class="shop-l-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
+        <div class="shop-list-description-wrapper">      
         <h3>${title}</h3>
         <p>${list_name}</p>
         <p>${description}</p>
@@ -41,7 +43,7 @@ function cardBook({
             <a href="${buy_links[2].url}"><img class="store-3" src="${store3}" alt="" width="" height=""/></a>
           </li>
         </ul>
-        <br>
+        </div>
       </li>`;
 }
 

@@ -2,7 +2,7 @@
   width: 100%;
 }
 .shopping_list-title {
-  margin-bottom: 140px;
+  margin-bottom: 40px;
 
   font-weight: 700;
   font-size: 32px;
@@ -51,4 +51,24 @@
   @media only screen and (min-width: 1440px) {
     margin-left: 315px;
   }
+}
+
+.shopping_list-empty-text {
+  margin-top: 120px;
+  @media only screen and (min-width: 768px) {
+    margin-top: 140px;
+  }
+}
+
+.shopping-list-book-item {
+  display: flex;
+
+  padding: 30px 24px;
+  border: 2px rgba(79, 46, 232, 0.4) solid;
+  border-radius: 16px;
+}
+
+.shop-l-item-img {
+  width: 100px;
+  height: 142px;
 }
