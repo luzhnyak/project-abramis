@@ -31,7 +31,7 @@ const instance = basicLightbox.create(`<div class="js-modal"></div>`, {
   },
 });
 
-async function markupBook(id) {
+export async function markupBook(id) {
   bookData = await booksApi.fetchDetailsByBookId(id);
   const { book_image, title, author, description, buy_links } = bookData;
 
