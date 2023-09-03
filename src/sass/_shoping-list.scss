@@ -5,10 +5,15 @@
   margin-bottom: 140px;
 
   font-weight: 700;
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1.19;
   letter-spacing: -1.28px;
   color: var(--black-color);
+
+  @media only screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1;
+  }
 }
 
 .violet {
@@ -27,9 +32,23 @@
 }
 
 .shopping_list-content {
-  margin-left: 315px;
-  width: 349px;
+  width: 265px;
+  margin: 0 auto;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
   text-align: center;
-  font-size: 18px;
+
   color: rgba(0, 0, 0, 0.6);
+
+  @media only screen and (min-width: 768px) {
+    width: 349px;
+    letter-spacing: -0.02em;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+  @media only screen and (min-width: 1440px) {
+    margin-left: 315px;
+  }
 }
