@@ -46,6 +46,13 @@
   align-items: center;
 }
 
+.header-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
 .menu {
 
   color: #111;
@@ -69,6 +76,18 @@
 .menu-item {
   padding-top: 14px;
   padding-bottom: 14px;
+
+  transition: background, border-radius, padding;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item:hover,
+.menu-item:focus {
+  border-radius: 36px;
+  padding: 8px 16px;
+  background: #EAC645;
+  color: black;
 }
 
 .menu-link {
@@ -77,12 +96,12 @@
   align-items: center;
 }
 
-.icon-shoping-list {}
+// .icon-shoping-list {}
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--violet-color);
-}
+// .menu-link:hover,
+// .menu-link:focus {
+//   color: var(--violet-color);
+// }
 
 // ____________________________swicher
 .switch {
