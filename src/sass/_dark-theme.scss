@@ -9,23 +9,20 @@
   | dark style HEADER
   |============================
 */
-
+.body-dark{
 .header{
-&.dark{
     background: var(--black-color);
     color: var(--white-color);
     border: 1.5px solid var(--white-color);
-}}
+}
 
 .logo {
-&.dark{
+
     color: var(--white-color);
-}
 }
 
 
 .menu-link{
-    &.dark{
     color: var(--white-color);
 
     &:hover{
@@ -35,17 +32,18 @@
     &:focus{
     color: var(--black-color);
     }
-    }
-
+    
 
 }
 
 .switch{
-    &.dark{
 background-color: var(--black-color);
-    }
-}
 
+}
+.icon-shoping-list{
+fill: var(--white-color);
+}
+}
 /**
   |============================
   | dark theme SIDEBAR
