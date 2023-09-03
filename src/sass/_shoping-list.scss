@@ -62,17 +62,41 @@
 }
 .shopping_list-wrapper {
   display: flex;
+
   flex-direction: column;
   gap: 20px;
 }
 
 .shopping-list-book-item {
   display: flex;
+  position: relative;
   gap: 14px;
   padding: 12px;
 
   border: 2px rgba(79, 46, 232, 0.4) solid;
   border-radius: 16px;
+}
+
+// .shopping-list {
+//   position: relative;
+// }
+
+.icon-dump {
+  position: absolute;
+  top: 12px;
+  left: 289px;
+  width: 28px;
+  height: 28px;
+  @media only screen and (min-width: 768px) {
+    left: 646px;
+    width: 28px;
+    height: 28px;
+  }
+  @media only screen and (min-width: 1440px) {
+    left: 955px;
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .shop-list-item-img {

@@ -26,6 +26,7 @@ function cardBook({
   buy_links,
 }) {
   return `<li class="shopping-list-book-item">
+        <img class="icon-dump" src="${dumpIcon}" alt="" /> </svg>
         <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
       <div class="shop-list-description-wrapper">      
         <h3 class="shop-list-item-title">${title}</h3>
