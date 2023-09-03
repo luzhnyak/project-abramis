@@ -61,16 +61,15 @@
         </svg>
       </button>
     </div>
-    <button class="mobile-close" id="close-menu">
-      <svg class="close-icon" width="28" height="28">
-        <use href="/src/images/icons.svg#icon-close"></use>
-      </svg>
-    </button>
-    <button class="burger-menu" id="toggle-menu">
-      <svg class="menu-icon" width="28" height="28">
-        <use href="/src/images/icons.svg#icon-align-left"></use>
-      </svg>
-    </button>
+    <button
+    class="header__toggle js-open-menu"
+    aria-expanded="false"
+    aria-label="mobile-menu"
+  >
+    <svg class="" width="24" height="24">
+      <use href="/src/images/icons.svg#icon-align-left"></use>
+    </svg>
+  </button>
   </div>
   <include src="./partials/mobile-menu.html"></include>
 </header>
