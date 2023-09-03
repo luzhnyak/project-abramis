@@ -132,9 +132,8 @@
 
 .shop-list-item-description {
   // margin-bottom: 30px;
-  overflow: hidden;
+
   color: var(--black-color);
-  text-overflow: ellipsis;
 
   font-size: 14px;
   font-style: normal;
@@ -154,7 +153,8 @@
 
 .buy-item-wrapper {
   display: flex;
-  // gap: 42px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .buy-list-shop {
