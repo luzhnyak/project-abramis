@@ -100,11 +100,14 @@ img {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  padding: 15px 17px;
+  background-color: var(--violet-color);
   z-index: 99;
   border: none;
+  box-shadow: 0 0 0 5px rgba(79, 46, 232, 0.3);
   border-radius: 50%;
   cursor: pointer;
-  transition: opacity 0.4s;
+  transition: opacity 0.7s;
 }
 
 .scroll-to-top:hover {
