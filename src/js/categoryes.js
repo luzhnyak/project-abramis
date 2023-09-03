@@ -11,7 +11,7 @@ async function listCategories() {
       return `<li class="categorie-item"><button class="categorie-btn" href=“”>${el.list_name}</button></li>`;
     })
     .join('');
-  allCategories.innerHTML = `<ul class="categorie-list list"><li><button class="categorie-btn" href=“”>All categories</button></li>${listHtml}</ul>`;
+  allCategories.innerHTML = `<ul class="categorie-list list"><li><button class="categorie-btn active" href=“”>All categories</button></li>${listHtml}</ul>`;
 }
 
 listCategories();

@@ -60,10 +60,14 @@
   margin-bottom: 32px;
 }
 
-.categorie-btn:hover,
-.categorie-btn:focus {
+.categorie-btn.active {
   color: var(--violet-color);
   text-transform: uppercase;
 }
 
-
+.categorie-btn:hover,
+.categorie-btn:focus {
+  color: var(--violet-color);
+  text-transform: uppercase;
+  font-size: 15px;
+}
