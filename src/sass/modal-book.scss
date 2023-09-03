@@ -1,10 +1,18 @@
+.basicLightbox {
+  height: 100%;
+}
 .js-modal {
   position: relative;
 }
 .modal {
+  width: 320px;
   border: 1px solid var(--black-color);
   border-radius: 18px;
   background-color: white;
+  padding-bottom: 40px;
+  padding-top: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
   @media only screen and (min-width: 375px) {
     display: grid;
     width: 335px;
@@ -33,8 +41,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //   top: 28;
-  //   right: 28;
+  top: 14;
+  right: 14;
   position: absolute;
   border: none;
   background: transparent;
@@ -63,7 +71,9 @@
 .book-image {
   display: block;
   object-fit: contain;
+  width: 250px;
   border: 1px solid;
+  border-color: rgba($color: #171717, $alpha: 0.5);
   border-radius: 8px;
   @media only screen and (min-width: 375px) {
     width: 287px;
@@ -131,23 +141,48 @@
   }
 }
 .add-to-shoping-list {
+  font-weight: bold;
   border: 2px solid transparent;
   border-color: var(--violet-color);
-  margin-bottom: 40px;
   padding: 0;
   @media only screen and (min-width: 375px) {
+    font-size: 14px;
     margin-left: auto;
     margin-right: auto;
     // display: block;
     // justify-content: center;
 
-    width: 211px;
+    min-width: 211px;
     height: 46px;
     border-radius: 24px;
+    padding-right: 23px;
+    padding-left: 23px;
   }
   @media only screen and (min-width: 768px) {
+    font-size: 18px;
     width: 499px;
     height: 64px;
     border-radius: 32px;
   }
+}
+.text-info {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 8px;
+  letter-spacing: -0.04em;
+  color: rgba($color: #171717, $alpha: 0.5);
+  @media only screen and (min-width: 375px) {
+    font-size: 10px;
+    width: 242px;
+    height: 36;
+  }
+  @media only screen and (min-width: 768px) {
+    font-size: 12px;
+    width: 324px;
+    height: 28px;
+  }
+}
+.is-hidden {
+  display: none;
 }

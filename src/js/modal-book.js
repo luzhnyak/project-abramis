@@ -6,6 +6,7 @@ import store2 from '../images/modal/store2.jpg';
 import store3 from '../images/modal/store3.jpg';
 
 const bookEl = document.querySelector('.js-test-modal');
+
 bookEl.addEventListener('click', onBookClick);
 
 const booksApi = new BookshelfApiService();
@@ -63,6 +64,8 @@ export async function markupBook(id) {
     </div>
     </div>
     <button class="add-to-shoping-list" data-id=${id} type="button">ADD TO SHOPING LIST</button>
+    <p class="text-info is-hidden" id="text">Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>
+  </div>
   </div>
   `;
 
@@ -72,9 +75,18 @@ export async function markupBook(id) {
 
   if (shoppingListData.find(book => book._id === id)) {
     btnAddEl.textContent = 'REMOVE FROM THE SHOPPING LIST';
+    console.log('text1');
   } else {
     btnAddEl.textContent = 'ADD TO SHOPING LIST';
+    console.log('text2');
   }
+
+  const closeBtn = document.querySelector('.modal-close-btn');
+  closeBtn.addEventListener('click', onClickbBtn);
+}
+
+function onClickbBtn(event) {
+  instance.close();
 }
 
 function onBookClick(evt) {
@@ -91,6 +103,12 @@ function onEscDown(event) {
   }
 }
 
+function onClose(event) {
+  if (event.target.classList === '.modal-close-btn') {
+    instance.close();
+  }
+}
+
 // ================ Local Storage
 
 let shoppingListData = [];
@@ -99,13 +117,16 @@ loadData();
 
 function onClickBtnAdd(event) {
   const id = event.target.dataset.id;
+  const textInfoEL = document.querySelector('.text-info');
 
   if (shoppingListData.find(book => book._id === id)) {
     shoppingListData = shoppingListData.filter(book => book._id !== id);
     event.target.textContent = 'ADD TO SHOPING LIST';
+    textInfoEL.classList.add('is-hidden');
   } else {
     shoppingListData.push(bookData);
     event.target.textContent = 'REMOVE FROM THE SHOPPING LIST';
+    textInfoEL.classList.remove('is-hidden');
   }
 
   saveData(shoppingListData);
