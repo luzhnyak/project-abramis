@@ -20,24 +20,6 @@ const menuLinks = document.querySelectorAll('.menu-link')
 
 const headerElements = Object.values(header)
 
-/**
-  |============================
-  | dark style SIDEBAR
-  |============================
-*/
-
-// import { listCategories } from "./categoryes"
-
-
-// async function sidebar(){
-// const categoriesList = await listCategories()
-// const categories = document.querySelectorAll('.categorie-btn')
-// return categories
-// }
-
-
-
-
 
 /**
   |============================
@@ -97,12 +79,6 @@ for (const el of headerElements){
 for (const link of menuLinks){
   link.classList.add ('dark')
 }
-// sidebar()
-// .then(categories=>{
-//   for(const categorie of categories){
-//     categorie.classList.add('dark');
-//   };
-// })
 
     }
     
