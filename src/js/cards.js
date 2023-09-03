@@ -5,7 +5,7 @@ const cardsEl = document.querySelector('.js-cards');
 const booksApi = new BookshelfApiService();
 
 // Рендер категорій по 5 книг
-async function bestBooksAllCategoryes() {
+async function bestBooksAllCategories() {
   const topBooksData = await booksApi.fetchTopBooks();
 
   const cardsHtml = topBooksData
@@ -32,9 +32,10 @@ function bestBooks(books) {
 // Рендер однієї книги
 function cardBook(book) {
   return `<div>
-        <h3>${book.title}</h3>
-        <p>${book.author}</p>
+        <h3 class='book-title'>${book.title}</h3>
+        <p class='book-author'>${book.author}</p>
+        <img class='book-img' src="${book.book_image}" width="180px" height="226px" />
       </div>`;
 }
 
-bestBooksAllCategoryes();
+bestBooksAllCategories();

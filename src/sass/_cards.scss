@@ -1,3 +1,21 @@
 .cards{    
     width: 100%;    
 }
+
+.book-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.book-author {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    font-style: italic;
+    color: #B4AFAF;
+}
+
+.book-img {
+    border-radius: 8px;
+}
