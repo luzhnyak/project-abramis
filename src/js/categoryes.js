@@ -8,10 +8,10 @@ async function listCategories() {
 
   const listHtml = catList
     .map(el => {
-      return `<li class="categorie-item"><button class="categorie-btn" href=“силка”>${el.list_name}</button></li>`;
+      return `<li class="categorie-item"><button class="categorie-btn" href=“”>${el.list_name}</button></li>`;
     })
     .join('');
-  allCategories.innerHTML = `<ul class="categorie-list list"><li><button class="categorie-btn" href=“силка”>All categories</button></li>${listHtml}</ul>`;
+  allCategories.innerHTML = `<ul class="categorie-list list"><li><button class="categorie-btn" href=“”>All categories</button></li>${listHtml}</ul>`;
 }
 
 listCategories();

@@ -1,55 +1,89 @@
 .categoryes {
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
-    overflow-y: auto;
-    padding-right: 20px;
-    
-    
-    
-    @media only screen and (min-width: 375px) {
-       max-width: 335px;
-       max-height: 228px;
-       margin: 40px 0;
-       font-size: 16px;
-    }
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  overflow-y: auto;
+  padding-right: 20px;
 
-    @media only screen and (min-width: 768px) {
-        max-width: 309px;
-        max-height: 472px;
-        margin: 40px 32px;
-        font-size: 18px;
-    }
+  @media only screen and (min-width: 375px) {
+    // max-width: 335px;
+    max-height: 228px;
+    // margin: 40px 0;
+    font-size: 16px;
+  }
 
-    @media only screen and (min-width: 1440px) {
-        max-width: 328px;
-       max-height: 472px;
-       margin: 40px 0;
-       font-size: 18px;
-    }
+  @media only screen and (min-width: 768px) {
+    // max-width: 309px;
+    max-height: 472px;
+    // margin: 40px 32px;
+    font-size: 18px;
+  }
 
+  @media only screen and (min-width: 1440px) {
+    // max-width: 328px;
+    max-height: 472px;
+    //    margin: 40px 0;
+    font-size: 18px;
+  }
+}
+/**
+  |============================
+  | scrolbar 
+  |============================
+*/
 
+.categoryes::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+  border-radius: px;
+  height: 114px;
+}
 
-
+.categoryes::-webkit-scrollbar-thumb {
+  background: var(--scroll-color);
+  border-radius: 12px;
 }
 
 .categorie-list {
-    
 }
 
 .categorie-item {
-    
+  // margin-bottom: 32px;
 }
 
 .categorie-btn {
-    color: var(--grey-color);
-    background-color: var(--white-color);
-    border: none;
-    text-align: left;
+  color: var(--grey-color);
+  background-color: transparent;
+  border: none;
+  text-align: left;
+
+  margin-bottom: 32px;
 }
 
 .categorie-btn:hover,
 .categorie-btn:focus {
-    color: var(--violet-color);
-    text-transform: uppercase;
+  color: var(--violet-color);
+  text-transform: uppercase;
+}
+
+
+/**
+  |============================
+  | dark theme
+  |============================
+*/
+.body-dark {
+    .categoryes::-webkit-scrollbar-thumb {
+        background: rgb(17, 17, 17, 0.6);
+    
+      }
+      
+      .categorie-btn {
+        color: rgb(255, 255, 255, 0.6);
+      }
+      
+      .categorie-btn:hover,
+      .categorie-btn:focus {
+        color: var(--yellow-color);
+      }
 }
