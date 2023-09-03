@@ -3,6 +3,12 @@ const STORAGE_KEY = "saved-theme"
 
 const body = document.querySelector('body')
 
+/**
+  |============================
+  | dark style HEADER
+  |============================
+*/
+
 const header = {
  generalHeader: document.querySelector('.header'),
  logo: document.querySelector('.logo'),
@@ -14,18 +20,35 @@ const menuLinks = document.querySelectorAll('.menu-link')
 
 const headerElements = Object.values(header)
 
-currentTheme()
+/**
+  |============================
+  | dark style SIDEBAR
+  |============================
+*/
+
+// import { listCategories } from "./categoryes"
+
+
+// async function sidebar(){
+// const categoriesList = await listCategories()
+// const categories = document.querySelectorAll('.categorie-btn')
+// return categories
+// }
+
+
+
+
 
 /**
   |============================
   | збереження останньої теми
   |============================
 */
+currentTheme()
 
 function currentTheme(){
   const item = localStorage.getItem(STORAGE_KEY)
   const parsedItem = JSON.parse(item)
-console.log(parsedItem);
   if (parsedItem === null) {
   }
   else{
@@ -74,7 +97,15 @@ for (const el of headerElements){
 for (const link of menuLinks){
   link.classList.add ('dark')
 }
+// sidebar()
+// .then(categories=>{
+//   for(const categorie of categories){
+//     categorie.classList.add('dark');
+//   };
+// })
+
     }
+    
 
     /**
       |============================
