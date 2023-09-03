@@ -1,194 +1,335 @@
-.container-mobile {
+.header__toggle {
+    position: relative;
+  stroke: #000000;
+  fill: #000000;
+  border: none;
+  background-color: transparent;
+}
+
+/* Mobile toogle styles */
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  stroke: var(--color-navy-blue);
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobile__container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  gap: 200px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
   background: radial-gradient(
-    189.32% 190.93% at 59.76% -23.42%,
+  189.32% 190.93% at 59.76% -23.42%,
     #4f2ee8 18.03%,
     #fff 100%
   );
-
-  width: 376px;
-  height: 812px;
-  top: 62;
-  padding: 20px;
-
-  text-align: center;
-
-  position: fixed;
-  right: 375px;
-  transition: right 0.3s ease;
+  background-image: url(../images/background-mobile.png),
+  radial-gradient(
+  189.32% 190.93% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #fff 100%
+  );
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
   z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
 }
 
-.log {
-  display: none;
+.mobile__container.is-open {
+  transform: translateX(0);
+}
+
+
+.mobile__header {
+  display: flex;
+  padding: 13px 17px;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+
+  background-color: white;
+}
+
+.mobile__toogle {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+
+  stroke: black;
+  fill: black;
+
+  cursor: pointer;
+}
+
+.mobile__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 9px;
+  gap: 16px;
 
-  color: var(--white-color);
+  
 }
 
-.user {
-  display: inline;
+.mobile__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  color: var(--text-cl);
 }
 
-.mobile-menu {
-  margin-top: 183px;
-  margin-bottom: 395px;
 
-  font-size: 14px;
+.mobile__list .link {
+  display: block;
+
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mobile__item .link {
   font-style: normal;
-  font-weight: 700;
-  line-height: 18px; /* 128.571% */
-  letter-spacing: -0.56px;
-  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+
+  letter-spacing: -0.04em;
 }
 
-.mobile-menu .mobile-menu-item:first-child {
-  margin-bottom: 16px;
+.mobile__bascket {
+  background-color: transparent;
+  border: none;
+  fill: var(--text-cl);
+
 }
 
-// не можу підклюсити фон-------
+// .container-mobile {
+//   background: radial-gradient(
+//     189.32% 190.93% at 59.76% -23.42%,
+//     #4f2ee8 18.03%,
+//     #fff 100%
+//   );
 
-// .background-mobile {
-//   width: 450.001px;
-//   height: 439px;
-//   transform: rotate(-15deg);
+//   width: 376px;
+//   height: 812px;
+//   top: 62;
+//   padding: 20px;
+
+//   text-align: center;
+
+//   position: fixed;
+//   right: 375px;
+//   transition: right 0.3s ease;
+//   z-index: 999;
 // }
 
-.burger-menu {
-  position: relative;
-  stroke: #000000;
-  fill: #000000;
-  border: none;
-  background-color: transparent;
-}
+// .log {
+//   display: none;
+//   align-items: center;
+//   gap: 9px;
 
-.mobile-close {
-  position: relative;
-  stroke: #000000;
-  fill: #000000;
-  border: none;
-  background-color: transparent;
-}
+//   color: var(--white-color);
+// }
 
-.menu-icon:hover,
-.menu-icon:focus {
-  stroke: var(--violet-color);
-  fill: var(--violet-color);
-}
+// .user {
+//   display: inline;
+// }
 
-.close-icon:hover,
-.close-icon:focus {
-  stroke: var(--violet-color);
-  fill: var(--violet-color);
-}
+// .mobile-menu {
+//   margin-top: 183px;
+//   margin-bottom: 395px;
 
-@media only screen and (min-width: 375px) {
-  .log-out {
-    display: none;
-  }
+//   font-size: 14px;
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: 18px; /* 128.571% */
+//   letter-spacing: -0.56px;
+//   text-transform: uppercase;
+// }
 
-  .registration {
-    display: none;
-  }
+// .mobile-menu .mobile-menu-item:first-child {
+//   margin-bottom: 16px;
+// }
 
-  .log-desc-tab {
-    display: none;
-  }
+// // не можу підклюсити фон-------
 
-  .menu {
-    display: none;
-  }
+// // .background-mobile {
+// //   width: 450.001px;
+// //   height: 439px;
+// //   transform: rotate(-15deg);
+// // }
 
-//   //   .menu {
-//   //     margin-left: 128px;
-//   //   }
+// .burger-menu {
+//   position: relative;
+//   stroke: #000000;
+//   fill: #000000;
+//   border: none;
+//   background-color: transparent;
+// }
 
-  .switch {
-    margin-left: 120px;
-    margin-right: 14px;
-  }
+// .mobile-close {
+//   position: relative;
+//   stroke: #000000;
+//   fill: #000000;
+//   border: none;
+//   background-color: transparent;
+// }
 
-  .mobile-close {
-    display: none;
-  }
-}
+// .menu-icon:hover,
+// .menu-icon:focus {
+//   stroke: var(--violet-color);
+//   fill: var(--violet-color);
+// }
 
-.background-container {
-    background-image: url('../images/background-mobile.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+// .close-icon:hover,
+// .close-icon:focus {
+//   stroke: var(--violet-color);
+//   fill: var(--violet-color);
+// }
 
-@media only screen and (min-width: 768px) {
-  .menu-icon {
-    display: none;
-  }
-
-  .close-icon {
-    display: none;
-  }
-
-  .log-out {
-    display: none;
-  }
-
-//   .registration {
-//     display: flex;
+// @media only screen and (min-width: 375px) {
+//   .log-out {
+//     display: none;
 //   }
 
-  .container-mobile {
-    display: none;
-  }
+//   .registration {
+//     display: none;
+//   }
 
-  .log-desc-tab {
-    display: none;
-  }
+//   .log-desc-tab {
+//     display: none;
+//   }
+
+//   .menu {
+//     display: none;
+//   }
+
+// //   //   .menu {
+// //   //     margin-left: 128px;
+// //   //   }
+
+//   .switch {
+//     margin-left: 120px;
+//     margin-right: 14px;
+//   }
+
+//   .mobile-close {
+//     display: none;
+//   }
+// }
+
+// .background-container {
+//     background-image: url('../images/background-mobile.png');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+// @media only screen and (min-width: 768px) {
+//   .menu-icon {
+//     display: none;
+//   }
+
+//   .close-icon {
+//     display: none;
+//   }
+
+//   .log-out {
+//     display: none;
+//   }
+
+// //   .registration {
+// //     display: flex;
+// //   }
+
+//   .container-mobile {
+//     display: none;
+//   }
+
+//   .log-desc-tab {
+//     display: none;
+//   }
 
 
-  .part-one {
-    display: flex;
-    gap: 40px;
-  }
+//   .part-one {
+//     display: flex;
+//     gap: 40px;
+//   }
 
-  .menu {
-    display: flex;
-    margin-right: 101px;
-  }
+//   .menu {
+//     display: flex;
+//     margin-right: 101px;
+//   }
 
-  .switch {
-    margin-right: 24px;
-  }
-}
+//   .switch {
+//     margin-right: 24px;
+//   }
+// }
 
-@media only screen and (min-width: 1440px) {
-  .menu-icon {
-    display: none;
-  }
+// @media only screen and (min-width: 1440px) {
+//   .menu-icon {
+//     display: none;
+//   }
 
-  .part-one {
-    display: flex;
-    gap: 92px;
-     height: 28px;
-  }
+//   .part-one {
+//     display: flex;
+//     gap: 92px;
+//      height: 28px;
+//   }
 
-  .close-icon {
-    display: none;
-  }
+//   .close-icon {
+//     display: none;
+//   }
 
-  .log-out {
-    display: none;
-  }
+//   .log-out {
+//     display: none;
+//   }
 
-  .switch {
-   margin-left: 746px;
-    margin-right: 24px;
-  }
+//   .switch {
+//    margin-left: 746px;
+//     margin-right: 24px;
+//   }
 
-  .container-mobile {
-    display: none;
-  }
+//   .container-mobile {
+//     display: none;
+//   }
 
-  .log-desc-tab {
-    display: none;
-  }
-}
+//   .log-desc-tab {
+//     display: none;
+//   }
+// }
