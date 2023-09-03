@@ -18,28 +18,28 @@ const booksData = [];
 //   });
 // }
 
-function getPageBooks(page, itemsPerPage) {
-  const start = (page - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  return booksData.slice(start, end);
-}
+// function getPageBooks(page, itemsPerPage) {
+//   const start = (page - 1) * itemsPerPage;
+//   const end = start + itemsPerPage;
+//   return booksData.slice(start, end);
+// }
 
 // Створення пагінації
-const paginationContainer = document.getElementById('pagination');
-const itemsPerPage = 3;
-const options = {
-  totalItems: booksData.length,
-  itemsPerPage,
-  visiblePages: 4,
-  centerAlign: false,
-};
+// const paginationContainer = document.getElementById('pagination');
+// const itemsPerPage = 3;
+// const options = {
+//   totalItems: booksData.length,
+//   itemsPerPage,
+//   visiblePages: 4,
+//   centerAlign: false,
+// };
 
-const pagination = new Pagination(paginationContainer, options);
+// const pagination = new Pagination(paginationContainer, options);
 
-pagination.on('beforeMove', event => {
-  const currentPage = event.page;
-  const booksForPage = getPageBooks(currentPage, itemsPerPage);
-  //   renderBooks(booksForPage);
-});
+// pagination.on('beforeMove', event => {
+//   const currentPage = event.page;
+//   const booksForPage = getPageBooks(currentPage, itemsPerPage);
+//   //   renderBooks(booksForPage);
+// });
 
-pagination.movePageTo(1);
+// pagination.movePageTo(1);

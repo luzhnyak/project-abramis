@@ -1,9 +1,11 @@
 .header__toggle {
-  position: relative;
+  // position: relative;
+  margin-right: 20px;
   stroke: #000000;
   fill: #000000;
   border: none;
   background-color: transparent;
+  padding: 0;
 
   @media only screen and (min-width: 768px) {
    display: none;

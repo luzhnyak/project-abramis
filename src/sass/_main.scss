@@ -2,10 +2,11 @@
 
 .main-wrapper {
     display: flex;
+    row-gap: 40px;
+    flex-direction: column;
     padding-top: 40px;
-    @media only screen and (min-width: 375px) {
-        flex-direction: column;
-        row-gap: 400px;
+    @media only screen and (min-width: 375px) {        
+        
     }
 
     @media only screen and (min-width: 768px) {
