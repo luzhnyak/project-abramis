@@ -52,12 +52,12 @@
 
 .menu-link {
   color: #111;
+  display: flex;
+  align-items: center;
 }
 
 .icon-shoping-list {
-  position: relative;
-  top: 4px;
-  left: 4px;
+  
 }
 
 .menu-link:hover,
