@@ -1,5 +1,6 @@
 import { BookshelfApiService } from './api-service';
 import { markupBook } from './modal-book';
+import Notiflix from 'notiflix';
 
 const cardsEl = document.querySelector('.js-cards');
 
@@ -7,6 +8,7 @@ const booksApi = new BookshelfApiService();
 
 // Рендер категорій по 5 книг
 export async function bestBooksAllCategories() {
+  Notiflix.Loading.standard();
   const topBooksData = await booksApi.fetchTopBooks();
 
   const cardsHtml = topBooksData
@@ -19,7 +21,8 @@ export async function bestBooksAllCategories() {
     })
     .join('');
 
-  cardsEl.innerHTML = cardsHtml;
+  cardsEl.innerHTML = `<h1 class="general-title">Best Sellers<span class="violet"> Books</span></h1>
+         ${cardsHtml}`;
 
   const allCardsEl = document.querySelectorAll('.js-card-click');
 
@@ -28,6 +31,46 @@ export async function bestBooksAllCategories() {
       markupBook(event.target.dataset.id);
     });
   });
+
+  Notiflix.Loading.remove();
+}
+
+// Рендер всіх книг однієї категорії
+export async function booksCategory(catName) {
+  Notiflix.Loading.standard();
+  const books = await booksApi.fetchBooksByCategory(catName);
+
+  if (books.length) {
+    const booksHtml = books
+      .map(el => {
+        return cardBook(el, 0);
+      })
+      .join('');
+
+    const catNameWords = catName.trim().split(' ');
+
+    cardsEl.innerHTML = `<div>
+        <h1 class="general-title">${catNameWords
+          .slice(0, catNameWords.length - 1)
+          .join(' ')}<span class="violet"> ${
+      catNameWords[catNameWords.length - 1]
+    }</span>
+        </h1>        
+        <div class='category-books-container'>${booksHtml}</div>
+      </div>`;
+
+    const allCardsEl = document.querySelectorAll('.js-card-click');
+
+    allCardsEl.forEach(el => {
+      el.addEventListener('click', event => {
+        markupBook(event.target.dataset.id);
+      });
+    });
+
+    Notiflix.Loading.remove();
+  } else {
+    bestBooksAllCategories();
+  }
 }
 
 //Рендер 5 книг

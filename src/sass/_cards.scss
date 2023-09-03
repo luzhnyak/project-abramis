@@ -23,6 +23,8 @@
 
 .see-more-btn {
     display: block;
+    margin-top: 8px;
+    margin-bottom: 40px;
 
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -34,9 +36,18 @@
     border-radius: 40px;
     border: solid 2px #4F2EE8;
     background-color: transparent;
+
+    @media only screen and (min-width: 768px) {
+        margin-top: 20px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        margin-top: 32px;
+    }
 }
 
 .category-name {
+    padding-bottom: 18px;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
@@ -55,7 +66,7 @@
         margin-bottom: 20px;
     }
 
-    @media only screen and (min-width: 1428px) {
+    @media only screen and (min-width: 1440px) {
         width: calc((100% - 96px) / 5);
         height: 306px;
         margin-bottom: 32px;
@@ -88,6 +99,8 @@
 .book-img {
     border-radius: 8px;
     width: 100%;
+    cursor: pointer;
+    margin-bottom: 14px;
 };
 
 
@@ -114,7 +127,7 @@
 
 
 .col-1, .col-2{
-    @media only screen and (max-width: 1427px) {
+    @media only screen and (max-width: 1440px) {
         display: none;
     }    
 }

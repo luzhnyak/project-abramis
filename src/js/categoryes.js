@@ -1,5 +1,6 @@
 import { BookshelfApiService } from './api-service';
-import { cardBook, bestBooksAllCategories } from './cards';
+import { cardBook, bestBooksAllCategories, booksCategory } from './cards';
+import { markupBook } from './modal-book';
 
 const cardsEl = document.querySelector('.js-cards');
 const allCategories = document.querySelector('.categoryes');
@@ -10,7 +11,7 @@ async function listCategories() {
 
   const listHtml = catList
     .map(el => {
-      return `<li class="categorie-item"><button data-list_name=${el.list_name} class="categorie-btn">${el.list_name}</button>
+      return `<li class="categorie-item"><button data-list_name="${el.list_name}" class="categorie-btn">${el.list_name}</button>
       </li>`;
     })
     .join('');
@@ -19,26 +20,13 @@ async function listCategories() {
   const catsBtn = document.querySelectorAll('.categorie-btn');
 
   catsBtn.forEach(el => {
-    el.addEventListener('click', async event => {
-      const books = await booksApi.fetchBooksByCategory(el.textContent);
+    el.addEventListener('click', event => {
       document
         .querySelector('.categorie-btn.active')
         .classList.remove('active');
 
+      booksCategory(el.textContent);
       el.classList.add('active');
-      if (books.length) {
-        const booksHtml = books
-          .map(el => {
-            return cardBook(el);
-          })
-          .join('');
-        cardsEl.innerHTML = `<div>
-        <h2 class='category-name'>${el.textContent}</h2>
-        <div class='category-books-container'>${booksHtml}</div>
-      </div>`;
-      } else {
-        bestBooksAllCategories();
-      }
     });
   });
 }
