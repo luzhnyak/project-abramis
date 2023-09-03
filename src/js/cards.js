@@ -42,8 +42,10 @@ function bestBooks(books) {
 function cardBook(book) {
   return `<div class='one-book-container'>
         <img class='book-img js-card-click' data-id="${book._id}" src="${book.book_image}" width="180px" height="226px" />
+        <div>
         <h3 class='book-title'>${book.title}</h3>
         <p class='book-author'>${book.author}</p>
+        </div>
       </div>`;
 }
 
