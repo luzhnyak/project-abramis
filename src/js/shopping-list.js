@@ -47,7 +47,7 @@ function cardBook({
 
 // ================ Local Storage
 
-let shoppingListData = [];
+export let shoppingListData = [];
 let bookData = {};
 loadData();
 markupShoppingList(shoppingListData);
