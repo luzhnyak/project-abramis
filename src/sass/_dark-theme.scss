@@ -64,3 +64,24 @@ fill: var(--white-color);
         color: var(--yellow-color);
       }
 }
+
+
+/**
+  |============================
+  | dark theme MODAL
+  |============================
+*/
+.body-dark{
+    .modal{
+        border: 2px solid var(--white-color);
+        background-color: var(--black-light-color);
+    }
+    .modal-close-btn{
+        stroke: var(--white-color);
+    }
+
+    .add-to-shoping-list{
+        background-color: var(--black-light-color);
+        color: var(--white-color);
+    }
+}
