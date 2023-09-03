@@ -14,6 +14,7 @@ async function bestBooksAllCategories() {
       return `<div>
         <h2 class='category-name'>${el.list_name}</h2>
         <div class='category-books-container'>${bestBooks(el.books)}</div>
+        <div class='see-more-btn-container'><button class='see-more-btn' type="button">See more</button></div>
       </div>`;
     })
     .join('');
