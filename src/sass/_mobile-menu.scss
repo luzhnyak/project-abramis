@@ -1,10 +1,15 @@
 .header__toggle {
-    position: relative;
+  position: relative;
   stroke: #000000;
   fill: #000000;
   border: none;
   background-color: transparent;
+
+  @media only screen and (min-width: 768px) {
+   display: none;
+  }
 }
+
 
 /* Mobile toogle styles */
 
@@ -46,18 +51,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  
-  background: radial-gradient(
-  189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #fff 100%
-  );
+
+  background: radial-gradient(189.32% 190.93% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #fff 100%);
   background-image: url(../images/background-mobile.png),
-  radial-gradient(
-  189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #fff 100%
-  );
+    radial-gradient(189.32% 190.93% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #fff 100%);
   background-repeat: no-repeat;
   background-position: bottom 0px right 0px;
   z-index: 999;
@@ -94,22 +95,34 @@
   cursor: pointer;
 }
 
-.mobile__menu {
+// .mobile__menu {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 16px;
+
+// }
+
+.mobile-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 16px;
 
-  
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  /* 128.571% */
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
 }
 
 .mobile__list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
 
   color: var(--text-cl);
 }
@@ -138,6 +151,60 @@
   fill: var(--text-cl);
 
 }
+
+
+.registration {
+  position: absolute;
+  bottom: 35px;
+  left: 44px;
+
+  max-width: 118px;
+}
+
+.header__registr-icon {
+  margin-left: 18px;
+}
+
+.mobile-menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  transition: background;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.mobile-menu-item:hover,
+.mobile-menu-item:focus{ 
+  border-radius: 36px;
+  padding: 8px 16px;
+  background: #EAC645;
+  color: black;
+}
+
+.mobile-menu-link {
+  color: white;
+
+  transition: color;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  color: black;
+}
+
+// .icon-shoping-list:hover,
+// .icon-shoping-list:focus {
+//   fill: black;
+//   stroke: black;
+// }
+
+
 
 // .container-mobile {
 //   background: radial-gradient(
