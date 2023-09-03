@@ -26,11 +26,11 @@ function cardBook({
   buy_links,
 }) {
   return `<li class="shopping-list-book-item">
-        <img class="shop-l-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
+        <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
         <div class="shop-list-description-wrapper">      
-        <h3>${title}</h3>
-        <p>${list_name}</p>
-        <p>${description}</p>
+        <h3 class="shop-list-item-title">${title}</h3>
+        <p class="shop-list-item-category">${list_name}</p>
+        <p class="shop-list-item-description">${description}</p>
         <p>${author}</p>
         <ul class="buy-list list">
           <li class="buy-item">
