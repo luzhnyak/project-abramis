@@ -55,12 +55,12 @@ localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
 
 function onLigth() {
     body.classList.remove('body-dark');
-for (const el of headerElements){
-  el.classList.remove('dark')
-}
-for (const link of menuLinks){
-  link.classList.remove ('dark')
-}
+// for (const el of headerElements){
+//   el.classList.remove('dark')
+// }
+// for (const link of menuLinks){
+//   link.classList.remove ('dark')
+// }
 }
   
 /**
@@ -73,12 +73,12 @@ for (const link of menuLinks){
 
       body.classList.add('body-dark');
       
-for (const el of headerElements){
-  el.classList.add('dark')
-}
-for (const link of menuLinks){
-  link.classList.add ('dark')
-}
+// for (const el of headerElements){
+//   el.classList.add('dark')
+// }
+// for (const link of menuLinks){
+//   link.classList.add ('dark')
+// }
 
     }
     

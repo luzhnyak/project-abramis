@@ -9,23 +9,20 @@
   | dark style HEADER
   |============================
 */
-
+.body-dark{
 .header{
-&.dark{
     background: var(--black-color);
     color: var(--white-color);
     border: 1.5px solid var(--white-color);
-}}
+}
 
 .logo {
-&.dark{
+
     color: var(--white-color);
-}
 }
 
 
 .menu-link{
-    &.dark{
     color: var(--white-color);
 
     &:hover{
@@ -35,17 +32,18 @@
     &:focus{
     color: var(--black-color);
     }
-    }
-
+    
 
 }
 
 .switch{
-    &.dark{
 background-color: var(--black-color);
-    }
-}
 
+}
+.icon-shoping-list{
+fill: var(--white-color);
+}
+}
 /**
   |============================
   | dark theme SIDEBAR
@@ -65,4 +63,25 @@ background-color: var(--black-color);
       .categorie-btn:focus {
         color: var(--yellow-color);
       }
+}
+
+
+/**
+  |============================
+  | dark theme MODAL
+  |============================
+*/
+.body-dark{
+    .modal{
+        border: 2px solid var(--white-color);
+        background-color: var(--black-light-color);
+    }
+    .modal-close-btn{
+        stroke: var(--white-color);
+    }
+
+    .add-to-shoping-list{
+        background-color: var(--black-light-color);
+        color: var(--white-color);
+    }
 }
