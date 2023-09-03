@@ -1,34 +1,29 @@
 .header {
   border-radius: 0px 0px 8px 8px;
   border: 1.5px solid #111;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-top: 14px;
   padding-bottom: 14px;
   align-items: center;
 }
 
-.part-one {
-  display: flex;
-  gap: 92px;
-  height: 28px;
-}
-
 .part-two {
   position: relative;
   display: flex;
-  gap: 24px;
+  // gap: 24px;
   //   top: -15px;
 }
 
 .logo {
   display: inline-flex;
-  height: 28px;
+  // height: 28px;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
@@ -59,6 +54,12 @@
   color: #111;
 }
 
+.icon-shoping-list {
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
+
 .menu-link:hover,
 .menu-link:focus {
   color: var(--violet-color);
@@ -73,7 +74,7 @@
   background-color: #ffffff;
   padding-left: 10px;
   padding-top: 5px;
-  top: 15px;
+  top: 1px;
 }
 
 .switch-slider {
@@ -123,26 +124,153 @@
 .registration {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
   border: 1.5px solid #000;
   width: 184px;
   height: 48px;
   background-color: var(--violet-color);
   border-radius: 18px;
-}
-
-.sign-up {
-  padding-top: 15px;
-  padding-left: 14px;
-  color: #fff;
-}
-
-.sign-up:hover,
-.sign-up:focus {
-    color: var(--yellow-color);
+  color: var(--white-color);
 }
 
 .header__registr-icon {
   position: relative;
-  top: 14px;
+  top: 1px;
   right: 14px;
 }
+
+.registration:hover,
+.registration:focus {
+  color: var(--black-color);
+  background-color: var(--white-color);
+  transition: 0.4s;
+}
+
+.log-out {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1.5px solid #000;
+  width: 118px;
+  height: 48px;
+  background-color: var(--white-color);
+  border-radius: 18px;
+}
+
+.header__unregistr-icon {
+  position: relative;
+  top: 1px;
+  right: 14px;
+}
+
+.log-out:hover,
+.log-out:focus {
+  background-color: var(--violet-color);
+  color: var(--white-color);
+  transition: 0.4s;
+}
+
+.log-desc-tab {
+  color: #fff;
+
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.44px;
+
+  display: flex;
+  justify-content: space-between;
+  width: 184px;
+  height: 45px;
+  border: none;
+  border-radius: 37px;
+  align-items: center;
+  background-color: var(--violet-color);
+}
+
+@media only screen and (min-width: 375px) {
+}
+
+// @media only screen and (min-width: 768px) {
+//   .menu-icon {
+//     display: none;
+//   }
+
+//   .close-icon {
+//     display: none;
+//   }
+
+//   .log-out {
+//     display: none;
+//   }
+//   .registration {
+//     display: flex;
+//   }
+
+//   .container-mobile {
+//     display: none;
+//   }
+
+//   .log-desc-tab {
+//     display: none;
+//   }
+
+//   .logo {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .part-one {
+//     display: flex;
+//     gap: 40px;
+//   }
+
+//   .menu {
+//     display: flex;
+//     margin-right: 101px;
+//   }
+
+//   .switch {
+//     margin-right: 24px;
+//   }
+// }
+
+// @media only screen and (min-width: 1440px) {
+//   .menu-icon {
+//     display: none;
+//   }
+
+//   .part-one {
+//     display: flex;
+//     gap: 92px;
+//     height: 28px;
+//   }
+
+//   .close-icon {
+//     display: none;
+//   }
+
+//   .log-out {
+//     display: none;
+//   }
+
+//   .menu {
+//     display: flex;
+//     margin-right: 745px;
+//   }
+
+//   .switch {
+//     margin-right: 24px;
+//   }
+
+//   .container-mobile {
+//     display: none;
+//   }
+
+//   .log-desc-tab {
+//     display: none;
+//   }
+// }
