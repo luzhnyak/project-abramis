@@ -171,8 +171,9 @@
   justify-content: center;
   align-items: center;
   gap: 2px;
+  padding: 8px 16px;
 
-  transition: background;
+  transition: background, border-radius;
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -181,7 +182,7 @@
 .mobile-menu-item:hover,
 .mobile-menu-item:focus{ 
   border-radius: 36px;
-  padding: 8px 16px;
+  
   background: #EAC645;
   color: black;
 }
