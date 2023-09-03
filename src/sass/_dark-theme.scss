@@ -82,8 +82,7 @@ fill: var(--white-color);
         background-color: var(--black-light-color);
     }
     .modal-close-btn{
-        stroke: var(--white-color);
-        fill: var(--white-color);
+      filter:brightness(0) invert(1);
     }
 
     .add-to-shoping-list{
@@ -109,7 +108,9 @@ fill: var(--white-color);
       filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
   }
   }
-
+  .text-info{
+    color: rgba(255, 255, 255, 0.50);
+  }
 }
 
 /**
