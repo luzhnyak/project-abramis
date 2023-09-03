@@ -11,8 +11,8 @@ async function bestBooksAllCategories() {
   const cardsHtml = topBooksData
     .map(el => {
       return `<div>
-        <h2>${el.list_name}</h2>
-        ${bestBooks(el.books)}
+        <h2 class='category-name'>${el.list_name}</h2>
+        <div class='category-books-container'>${bestBooks(el.books)}</div>
       </div>`;
     })
     .join('');
@@ -31,10 +31,10 @@ function bestBooks(books) {
 
 // Рендер однієї книги
 function cardBook(book) {
-  return `<div>
+  return `<div class='one-book-container'>
+        <img class='book-img' src="${book.book_image}" width="180px" height="226px" />
         <h3 class='book-title'>${book.title}</h3>
         <p class='book-author'>${book.author}</p>
-        <img class='book-img' src="${book.book_image}" width="180px" height="226px" />
       </div>`;
 }
 

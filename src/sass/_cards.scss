@@ -2,10 +2,26 @@
     width: 100%;    
 }
 
+.one-book-container {
+    @media only screen and (min-width: 375px) {
+            width: 218px;
+            height: 366px;
+        }
+    
+        @media only screen and (min-width: 768px) {
+            width: 180px;
+            height: 306px;
+        }
+}
+
 .book-title {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .book-author {
@@ -14,6 +30,10 @@
     line-height: 14px;
     font-style: italic;
     color: #B4AFAF;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .book-img {
@@ -28,4 +48,17 @@
         width: 180px;
         height: 256px;
     }
+}
+
+.category-books-container {
+    display: flex;
+    gap: 8px;
+}
+
+.category-name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #B4AFAF;
 }
