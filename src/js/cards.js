@@ -33,15 +33,15 @@ async function bestBooksAllCategories() {
 //Рендер 5 книг
 function bestBooks(books) {
   return books
-    .map(el => {
-      return cardBook(el);
+    .map((el, index, array) => {
+      return cardBook(el, index);
     })
     .join('');
 }
 
 // Рендер однієї книги
-export function cardBook(book) {
-  return `<div class='one-book-container'>
+export function cardBook(book, index) {
+  return `<div class='one-book-container col-${index}'>
         <img class='book-img js-card-click' data-id="${book._id}" src="${book.book_image}" width="180px" height="226px" />
         <div>
         <h3 class='book-title'>${book.title}</h3>

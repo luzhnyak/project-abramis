@@ -105,3 +105,17 @@
 //     clip: rect(0 0 0 0);
 //     overflow: hidden;
 // }
+
+.col-3, .col-4 {
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }    
+}
+
+
+.col-1, .col-2{
+    @media only screen and (max-width: 1427px) {
+        display: none;
+    }    
+}
+
