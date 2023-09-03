@@ -39,7 +39,7 @@ function bestBooks(books) {
 }
 
 // Рендер однієї книги
-function cardBook(book) {
+export function cardBook(book) {
   return `<div class='one-book-container'>
         <img class='book-img js-card-click' data-id="${book._id}" src="${book.book_image}" width="180px" height="226px" />
         <div>
