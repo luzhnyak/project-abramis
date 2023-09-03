@@ -1,7 +1,7 @@
 const shoppingListEl = document.querySelector('.js-shopping_list');
-import store1 from '../images/modal/store1.jpg';
-import store2 from '../images/modal/store2.jpg';
-import store3 from '../images/modal/store3.jpg';
+import store1 from '../images/modal/store1.png';
+import store2 from '../images/modal/store2.png';
+import store3 from '../images/modal/store3.png';
 
 //Рендер списку
 function markupShoppingList(books) {
