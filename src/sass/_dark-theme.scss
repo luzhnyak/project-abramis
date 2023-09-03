@@ -31,6 +31,10 @@
     &:hover{
     color: var(--black-color);
     }
+
+    &:focus{
+    color: var(--black-color);
+    }
     }
 
 
@@ -42,3 +46,17 @@ background-color: var(--black-color);
     }
 }
 
+
+.categorie-btn{
+    &.dark{
+        color: rgba(255, 255, 255, 0.60);
+        background-color: #202024;
+        &:hover{
+            color: var(--yellow-color);
+            }
+        
+        &:focus{
+            color: var(--yellow-color);
+            }
+    }
+}
