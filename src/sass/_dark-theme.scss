@@ -106,3 +106,19 @@ fill: var(--white-color);
   }
 
 }
+
+/**
+  |============================
+  | dark styles SHOPPING LIST
+  |============================
+*/
+
+.body-dark{
+  .shopping_list-title{
+    color: var(--white-color);
+   
+  }
+  .shopping_list-empty-text{
+    color: rgba(255, 255, 255, 0.60);
+  }
+}
