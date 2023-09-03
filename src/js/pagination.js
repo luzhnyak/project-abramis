@@ -39,7 +39,7 @@ const pagination = new Pagination(paginationContainer, options);
 pagination.on('beforeMove', event => {
   const currentPage = event.page;
   const booksForPage = getPageBooks(currentPage, itemsPerPage);
-  renderBooks(booksForPage);
+  //   renderBooks(booksForPage);
 });
 
 pagination.movePageTo(1);
