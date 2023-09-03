@@ -42,7 +42,7 @@
 
 .part-one {
   display: flex;
-  gap: 32px;
+  // gap: 32px;
   align-items: center;
 }
 
@@ -74,10 +74,13 @@
 }
 
 .menu-item {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
-  transition: background, border-radius, padding;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  transition: background, border-radius;
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -85,7 +88,7 @@
 .menu-item:hover,
 .menu-item:focus {
   border-radius: 36px;
-  padding: 8px 16px;
+
   background: #EAC645;
   color: black;
 }
