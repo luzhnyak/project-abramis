@@ -1,9 +1,9 @@
 import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
 import iconClose from '../images/x-close.png';
-import store1 from '../images/modal/store1.jpg';
-import store2 from '../images/modal/store2.jpg';
-import store3 from '../images/modal/store3.jpg';
+import store1 from '../images/modal/store1.png';
+import store2 from '../images/modal/store2.png';
+import store3 from '../images/modal/store3.png';
 
 const bookEl = document.querySelector('.js-test-modal');
 bookEl.addEventListener('click', onBookClick);
@@ -31,7 +31,7 @@ const instance = basicLightbox.create(`<div class="js-modal"></div>`, {
   },
 });
 
-async function markupBook(id) {
+export async function markupBook(id) {
   bookData = await booksApi.fetchDetailsByBookId(id);
   const { book_image, title, author, description, buy_links } = bookData;
 
