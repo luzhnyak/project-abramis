@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping list - Bookshelf</title>
-    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
-    <link rel="stylesheet" href="./sass/index.scss" />
-  </head>
-  <body>
-    <include src="./partials/header.html"></include>
-    <main class="main">
-      <div class="container main-wrapper">
-        <div class="sidebar sidebar-shopping-list">
-          <include src="./partials/funds.html"></include>
-        </div>
-        <div>
-          <include src="./partials/shoping-list.html"></include>
-          <include src="./partials/pagination.html"></include>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping list - Bookshelf</title>
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+  <link rel="stylesheet" href="./sass/index.scss" />
+</head>
+
+<body>
+  <include src="./partials/header.html"></include>
+  <main class="main">
+    <div class="container main-wrapper">
+      <div class="sidebar sidebar-shopping-list">
+        <include src="./partials/funds.html"></include>
       </div>
-    </main>
-    <script type="module" src="./list.js"></script>
-  </body>
+      <div>
+        <include src="./partials/shoping-list.html"></include>
+        <include src="./partials/pagination.html"></include>
+        <include src="./partials/scroll-up.html"></include>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="./list.js"></script>
+</body>
+
 </html>
