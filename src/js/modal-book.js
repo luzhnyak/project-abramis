@@ -129,7 +129,7 @@ function saveData(data) {
 
 // Тестові дані
 
-testData = [
+const testData = [
   {
     _id: '643282b1e85766588626a0dc',
     list_name: 'Advice How-To and Miscellaneous',

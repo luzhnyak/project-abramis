@@ -1,15 +1,15 @@
-.sh-title {
+.shopping_list-section {
+  width: 100%;
+}
+.shopping_list-title{
   margin-bottom: 40px;
   font-size: 32px;
   line-height: 1.19;
   letter-spacing: -1.28px;
-}
-
-.shopping-title {
   color: var(--black-color);
 }
 
-.title-span {
+.violet {
   color: var(--violet-color);
 }
 
@@ -18,12 +18,10 @@
   width: 265px;
 }
 
-.shopping-list {
+.shopping_list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.sh-list-section {
-  width: 100%;
-}
+
