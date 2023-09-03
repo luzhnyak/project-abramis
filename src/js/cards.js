@@ -6,7 +6,7 @@ const cardsEl = document.querySelector('.js-cards');
 const booksApi = new BookshelfApiService();
 
 // Рендер категорій по 5 книг
-async function bestBooksAllCategories() {
+export async function bestBooksAllCategories() {
   const topBooksData = await booksApi.fetchTopBooks();
 
   const cardsHtml = topBooksData
