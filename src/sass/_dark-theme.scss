@@ -126,4 +126,16 @@ fill: var(--white-color);
   .shopping_list-empty-text{
     color: rgba(255, 255, 255, 0.60);
   }
+  .shop-list-item-title{
+    color: var(--white-color);
+  }
+  .shop-list-item-category{
+    color: var(--grey-color);
+  }
+  .shop-list-item-description{
+    color: var(--white-color);
+  }
+  .shop-list-item-author{
+    color: var(--grey-color);
+  }
 }
