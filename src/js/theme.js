@@ -21,6 +21,8 @@ const menuLinks = document.querySelectorAll('.menu-link')
 const headerElements = Object.values(header)
 
 
+
+
 /**
   |============================
   | збереження останньої теми
@@ -55,12 +57,7 @@ localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
 
 function onLigth() {
     body.classList.remove('body-dark');
-// for (const el of headerElements){
-//   el.classList.remove('dark')
-// }
-// for (const link of menuLinks){
-//   link.classList.remove ('dark')
-// }
+
 }
   
 /**
@@ -73,15 +70,12 @@ function onLigth() {
 
       body.classList.add('body-dark');
       
-// for (const el of headerElements){
-//   el.classList.add('dark')
-// }
-// for (const link of menuLinks){
-//   link.classList.add ('dark')
-// }
-
     }
     
+
+
+
+
 
     /**
       |============================
@@ -91,7 +85,9 @@ function onLigth() {
 
  function toggle(){
   if(header.switcher.checked){
+
     onDark()
+
   } 
   else{
     localStorage.clear()

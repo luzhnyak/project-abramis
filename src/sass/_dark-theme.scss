@@ -78,10 +78,47 @@ fill: var(--white-color);
     }
     .modal-close-btn{
         stroke: var(--white-color);
+        fill: var(--white-color);
     }
 
     .add-to-shoping-list{
         background-color: var(--black-light-color);
         color: var(--white-color);
     }
+  .store-1{
+    filter:brightness(0) invert(1);
+
+    &:hover{
+        filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+    }
+  }
+  .store-2{
+    filter: grayscale(100%);
+    &:hover{
+      filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+  }
+  }
+  .store-3{
+    filter: grayscale(100%);
+    &:hover{
+      filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+  }
+  }
+
+}
+
+/**
+  |============================
+  | dark styles SHOPPING LIST
+  |============================
+*/
+
+.body-dark{
+  .shopping_list-title{
+    color: var(--white-color);
+   
+  }
+  .shopping_list-empty-text{
+    color: rgba(255, 255, 255, 0.60);
+  }
 }
