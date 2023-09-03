@@ -67,23 +67,3 @@
 }
 
 
-/**
-  |============================
-  | dark theme
-  |============================
-*/
-.body-dark {
-    .categoryes::-webkit-scrollbar-thumb {
-        background: rgb(17, 17, 17, 0.6);
-    
-      }
-      
-      .categorie-btn {
-        color: rgb(255, 255, 255, 0.6);
-      }
-      
-      .categorie-btn:hover,
-      .categorie-btn:focus {
-        color: var(--yellow-color);
-      }
-}
