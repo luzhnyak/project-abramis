@@ -1,9 +1,11 @@
 .shopping_list-section {
   width: 100%;
 }
-.shopping_list-title{
-  margin-bottom: 40px;
-  font-size: 32px;
+.shopping_list-title {
+  margin-bottom: 140px;
+
+  font-weight: 700;
+  font-size: 48px;
   line-height: 1.19;
   letter-spacing: -1.28px;
   color: var(--black-color);
@@ -24,4 +26,10 @@
   gap: 20px;
 }
 
-
+.shopping_list-content {
+  margin-left: 315px;
+  width: 349px;
+  text-align: center;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
