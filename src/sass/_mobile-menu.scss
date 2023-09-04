@@ -1,17 +1,3 @@
-.header__toggle {
-  // position: relative;
-  margin-right: 20px;
-  stroke: #000000;
-  fill: #000000;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-
-  @media only screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
 /* Mobile toogle styles */
 
 .menu-toggle {
@@ -56,7 +42,6 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  // gap: 200px;
   top: 0;
   left: 0;
   width: 100vw;
@@ -81,7 +66,7 @@
 .mobile__header {
   display: flex;
   margin: 0 auto;
-  padding: 14px 17px;
+  padding: 14px 20px;
   width: 100%;
   justify-content: space-between;
 
@@ -94,7 +79,7 @@
 }
 
 .mobile__header .switch {
-  margin: 0;
+  // margin: 0;
 }
 
 .side-two {
@@ -107,8 +92,8 @@
 
 .mobile__toogle {
   display: block;
-  width: 24px;
-  height: 24px;
+  // width: 28px;
+  height: 20px;
   background-color: transparent;
   border: none;
 
@@ -169,7 +154,7 @@
 }
 
 .header__registr-icon {
-  margin-left: 18px;
+  // margin-left: 18px;
 }
 
 .mobile-menu-item {
@@ -218,3 +203,7 @@
   fill: black;
 }
 
+
+.sing-in-text{
+  margin-right: 4px;
+}

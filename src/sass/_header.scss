@@ -7,11 +7,26 @@
 }
 
 .header-container {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 14px;
   padding-bottom: 14px;
-  align-items: center;
+ 
+}
+
+.header__toggle {
+  height: 28px;
+  stroke: #000000;
+  fill: #000000;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .part-two {
@@ -172,7 +187,7 @@
 
 .registration {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   border: 1.5px solid #000;
@@ -184,7 +199,7 @@
 }
 
 .header__registr-icon {
-  position: relative;
+  // position: relative;
   top: 1px;
   right: 14px;
 }
@@ -241,84 +256,3 @@
 }
 
 @media only screen and (min-width: 375px) {}
-
-// @media only screen and (min-width: 768px) {
-//   .menu-icon {
-//     display: none;
-//   }
-
-//   .close-icon {
-//     display: none;
-//   }
-
-//   .log-out {
-//     display: none;
-//   }
-//   .registration {
-//     display: flex;
-//   }
-
-//   .container-mobile {
-//     display: none;
-//   }
-
-//   .log-desc-tab {
-//     display: none;
-//   }
-
-//   .logo {
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   .part-one {
-//     display: flex;
-//     gap: 40px;
-//   }
-
-//   .menu {
-//     display: flex;
-//     margin-right: 101px;
-//   }
-
-//   .switch {
-//     margin-right: 24px;
-//   }
-// }
-
-// @media only screen and (min-width: 1440px) {
-//   .menu-icon {
-//     display: none;
-//   }
-
-//   .part-one {
-//     display: flex;
-//     gap: 92px;
-//     height: 28px;
-//   }
-
-//   .close-icon {
-//     display: none;
-//   }
-
-//   .log-out {
-//     display: none;
-//   }
-
-//   .menu {
-//     display: flex;
-//     margin-right: 745px;
-//   }
-
-//   .switch {
-//     margin-right: 24px;
-//   }
-
-//   .container-mobile {
-//     display: none;
-//   }
-
-//   .log-desc-tab {
-//     display: none;
-//   }
-// }
