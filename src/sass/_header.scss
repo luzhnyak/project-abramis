@@ -185,17 +185,25 @@
 
 // __________________________________________________________________________
 
-.registration {
+.signin-btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 14px;
 
-  border: 1.5px solid #000;
+  border: 1px solid #000;
   width: 184px;
   height: 48px;
   background-color: var(--violet-color);
   border-radius: 18px;
   color: var(--white-color);
+}
+
+.signin-btn:hover,
+.signin-btn:focus {
+  color: var(--black-color);
+  background-color: var(--white-color);
+  transition: 0.4s;
 }
 
 .header__registr-icon {
@@ -204,12 +212,6 @@
   right: 14px;
 }
 
-.registration:hover,
-.registration:focus {
-  color: var(--black-color);
-  background-color: var(--white-color);
-  transition: 0.4s;
-}
 
 .log-out {
   display: flex;
