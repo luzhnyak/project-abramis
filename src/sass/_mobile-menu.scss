@@ -8,9 +8,10 @@
   padding: 0;
 
   @media only screen and (min-width: 768px) {
-   display: none;
+    display: none;
   }
 }
+
 /* Mobile toogle styles */
 
 .menu-toggle {
@@ -42,11 +43,20 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.bg-image {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/background-mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+  background-size: 100% 100%;
+}
+
 .mobile__container {
   display: flex;
   flex-direction: column;
   position: fixed;
-  gap: 200px;
+  // gap: 200px;
   top: 0;
   left: 0;
   width: 100vw;
@@ -55,12 +65,7 @@
   background: radial-gradient(189.32% 190.93% at 59.76% -23.42%,
       #4f2ee8 18.03%,
       #fff 100%);
-  background-image: url(../images/background-mobile.png),
-    radial-gradient(189.32% 190.93% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #fff 100%);
-  background-repeat: no-repeat;
-  background-position: bottom 0px right 0px;
+
   z-index: 999;
 
   transform: translateX(100%);
@@ -113,6 +118,7 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+  margin-top: 126px;
 
   font-size: 14px;
   font-style: normal;
@@ -182,9 +188,9 @@
 }
 
 .mobile-menu-item:hover,
-.mobile-menu-item:focus{ 
+.mobile-menu-item:focus {
   border-radius: 36px;
-  
+
   background: #EAC645;
   color: black;
 }
@@ -201,4 +207,3 @@
 .mobile-menu-link:focus {
   color: black;
 }
-
