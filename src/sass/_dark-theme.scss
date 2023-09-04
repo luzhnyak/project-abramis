@@ -19,15 +19,22 @@
   |============================
 */
 .body-dark{
-.header{
+.header,
+.mobile__header{
     background: var(--black-color);
     color: var(--white-color);
     border: 1.5px solid var(--white-color);
 }
 
-.logo {
+.logo{
 
     color: var(--white-color);
+   
+}
+
+.mobile__icon,
+.header__toggle {
+  stroke: white;
 }
 
 
