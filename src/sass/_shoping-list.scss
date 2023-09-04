@@ -96,7 +96,7 @@
   right: 12px;
   // width: 32px;
   // height: 32px;
-  transition: opacity 0.5s;
+  transition: opacity var(--transition);
   &:hover {
     opacity: 0.85;
   }
@@ -119,6 +119,8 @@
 .shop-list-item-img {
   width: 100px;
   height: 142px;
+
+  border-radius: 8px;
 
   @media only screen and (min-width: 768px) {
     width: 116px;
@@ -198,7 +200,7 @@
     height: 53px;
     // white-space: nowrap;
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1440px) {
     margin-bottom: 52px;
     width: 808px;
     height: 53px;
@@ -222,6 +224,9 @@
   letter-spacing: -0.48px;
 
   @media only screen and (min-width: 357px) {
+    width: 97px;
+  }
+  @media only screen and (min-width: 768px) {
     width: 100%;
   }
 }
@@ -240,7 +245,7 @@
   align-items: center;
   @media only screen and (min-width: 375px) {
     gap: 8px;
-    width: 110px;
+    width: 80px;
   }
   @media only screen and (min-width: 768px) {
     gap: 16px;
