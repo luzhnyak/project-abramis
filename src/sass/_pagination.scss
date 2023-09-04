@@ -10,7 +10,7 @@
     line-height: 1;
     font-size: 18px;
     font-weight: 700;
-    font-style: DM Sans;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .tui-pagination .tui-next {
@@ -29,4 +29,36 @@
 
 .tui-pagination .tui-last {
     height: 44px;
+}
+
+// hover and focus
+.tui-pagination .tui-is-selected {
+    background-color: #111111;
+    border-color: #111111;
+}
+
+.tui-pagination .tui-is-selected:hover {
+    background-color: #111111;
+    border-color: #111111;
+}
+
+.tui-pagination .tui-page-btn:hover {
+    background-color: #111111;
+    color: #fff;
+}
+
+.tui-pagination .tui-first {
+    background-color: #111111;
+}
+
+.tui-pagination .tui-next {
+    background-color: #EAC645;
+}
+
+.tui-pagination .tui-last {
+    background-color: #EAC645;
+}
+
+.tui-pagination .tui-prev {
+    background-color: #111111;
 }
