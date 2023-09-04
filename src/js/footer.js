@@ -32,44 +32,42 @@ function disableBodyScroll() {
       <button class="modal-close-btn" type="button" aria-label="close">
         <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24"/>
       </button>
-      <div class="modal modal-our-team">
+      <div class="modal modal-our-team container">
       <ul class="list team-list">
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-      <li>
-      <h2>name</h2>
-      <p>position</p>
+      <li class = "team-item">
+      <h2 class = "team-name">name</h2>
+      <p class = "team-position">position</p>
       </li>
-            <li>
-      <h2>name</h2>
-      <p>position</p>
-      </li>
+      
+      
       </ul>
     </div>
     `;
