@@ -1,7 +1,16 @@
 .body-dark{
+
     background-color: var(--black-light-color);
     color: var(--white-color);
+    transition: all 0.4s;
+
+    
 }
+// .body-dark{
+//   *{
+//     transition: all 1s;
+//   }
+// }
 
 
 /**
@@ -138,5 +147,21 @@ fill: var(--white-color);
   }
   .shop-list-item-author{
     color: var(--grey-color);
+  }
+}
+
+/**
+  |============================
+  | dark styles CARDS
+  |============================
+*/
+
+.body-dark{
+  .general-title{
+    color: var(--white-color);
+
+  }
+  .see-more-btn{
+    color: var(--white-color);
   }
 }
