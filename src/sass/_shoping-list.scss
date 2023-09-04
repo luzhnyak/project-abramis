@@ -119,6 +119,11 @@
 .shop-list-item-img {
   width: 100px;
   height: 142px;
+
+  @media only screen and (min-width: 768px) {
+    width: 116px;
+    height: 165px;
+  }
 }
 
 .shop-list-description-wrapper {
@@ -170,7 +175,7 @@
   width: 150px;
   height: 56px;
   text-overflow: ellipsis;
-  // white-space: nowrap;
+
   overflow: hidden;
 
   color: var(--black-color);
@@ -188,7 +193,16 @@
   }
 
   @media only screen and (min-width: 768px) {
-    width: 100%;
+    margin-bottom: 52px;
+    width: 508px;
+    height: 53px;
+    // white-space: nowrap;
+  }
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 52px;
+    width: 808px;
+    height: 53px;
+    // white-space: nowrap;
   }
 }
 
@@ -226,7 +240,7 @@
   align-items: center;
   @media only screen and (min-width: 375px) {
     gap: 8px;
-    width: 100px;
+    width: 110px;
   }
   @media only screen and (min-width: 768px) {
     gap: 16px;
