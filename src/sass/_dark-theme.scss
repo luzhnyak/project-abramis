@@ -172,3 +172,16 @@ fill: var(--white-color);
     color: var(--white-color);
   }
 }
+
+/**
+  |============================
+  | dark styles FOOTER
+  |============================
+*/
+
+.body-dark{
+  .footer{
+    background: var(--black-color);
+    border: 1.5px solid var(--white-color);
+  }
+}
