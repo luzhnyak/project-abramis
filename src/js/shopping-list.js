@@ -57,9 +57,9 @@ function cardBook({
         </button>
         <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
       <div class="shop-list-description-wrapper"> 
-      <div class="truncate-text">  
+       
         <h3 class="shop-list-item-title">${title}</h3>
-        </div
+        
         <p class="shop-list-item-category">${list_name}</p>
         <p class="shop-list-item-description">${description}</p>
         <div class="buy-item-wrapper">

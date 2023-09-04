@@ -103,9 +103,13 @@
 }
 
 .icon-dump {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 
+  @media only screen and (min-width: 375px) {
+    width: 28px;
+    height: 28px;
+  }
   @media only screen and (min-width: 768px) {
     width: 34px;
     height: 34px;
@@ -123,6 +127,10 @@
 
 .shop-list-item-title {
   margin-bottom: 4px;
+  width: 95px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   font-size: 16px;
   font-weight: 700;
@@ -130,24 +138,40 @@
   letter-spacing: -0.64px;
   color: var(--black-color);
 
-  white-space: nowrap;
-  overflow: hidden;
+  @media only screen and (min-width: 375px) {
+    width: 144px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
 
 .shop-list-item-category {
   margin-bottom: 8px;
+  width: 138px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 
   color: var(--grey-color);
 
-  font-size: 12px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: 0.36px;
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
 
 .shop-list-item-description {
-  // margin-bottom: 30px;
+  margin-bottom: 26px;
+  width: 150px;
+  height: 56px;
+  text-overflow: ellipsis;
+  // white-space: nowrap;
+  overflow: hidden;
 
   color: var(--black-color);
 
@@ -156,8 +180,25 @@
   font-weight: 400;
   line-height: 1.28;
   letter-spacing: -0.56px;
+
+  @media only screen and (min-width: 357px) {
+    margin-bottom: 14px;
+    width: 193px;
+    height: 68px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+  }
 }
+
 .shop-list-item-author {
+  width: 50px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
   color: var(--grey-color);
 
   font-size: 12px;
@@ -165,6 +206,10 @@
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: -0.48px;
+
+  @media only screen and (min-width: 357px) {
+    width: 100%;
+  }
 }
 
 .buy-item-wrapper {
@@ -175,10 +220,14 @@
 
 .buy-list-shop {
   display: flex;
-  gap: 8px;
+  gap: 6px;
 
   width: 80px;
   align-items: center;
+  @media only screen and (min-width: 375px) {
+    gap: 8px;
+    width: 100px;
+  }
   @media only screen and (min-width: 768px) {
     gap: 16px;
     width: 140px;
@@ -187,8 +236,6 @@
 
 .store-1 {
   filter: grayscale(100%);
-  // width: 32px;
-  // height: 16px;
 
   &:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
@@ -196,8 +243,6 @@
 }
 .store-2 {
   filter: grayscale(100%);
-  // width: 16px;
-  // height: 16px;
 
   &:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
@@ -205,8 +250,6 @@
 }
 .store-3 {
   filter: grayscale(100%);
-  // width: 16px;
-  // height: 16px;
 
   &:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
