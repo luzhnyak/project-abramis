@@ -1,64 +1,64 @@
 .tui-page-btn {
-    border-radius: 50%;
-    margin: 10px;
-    height: 44px;
+  border-radius: 50%;
+  margin: 10px;
+  height: 44px;
 }
 
 .tui-pagination .tui-page-btn {
-    width: 44px;
-    padding: 13px;
-    line-height: 1;
-    font-size: 18px;
-    font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
+  width: 44px;
+  padding: 13px;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .tui-pagination .tui-next {
-    margin-left: 24px;
-    height: 44px;
+  margin-left: 24px;
+  height: 44px;
 }
 
 .tui-pagination .tui-first {
-    height: 44px;
+  height: 44px;
 }
 
 .tui-pagination .tui-prev {
-    margin-right: 24px;
-    height: 44px;
+  margin-right: 24px;
+  height: 44px;
 }
 
 .tui-pagination .tui-last {
-    height: 44px;
+  height: 44px;
 }
 
 // hover and focus
 .tui-pagination .tui-is-selected {
-    background-color: #111111;
-    border-color: #111111;
+  background-color: #111111;
+  border-color: #111111;
 }
 
 .tui-pagination .tui-is-selected:hover {
-    background-color: #111111;
-    border-color: #111111;
+  background-color: #111111;
+  border-color: #111111;
 }
 
 .tui-pagination .tui-page-btn:hover {
-    background-color: #111111;
-    color: #fff;
+  background-color: #111111;
+  color: #fff;
 }
 
 .tui-pagination .tui-first {
-    background-color: #111111;
+  background-color: #111111;
 }
 
 .tui-pagination .tui-next {
-    background-color: #EAC645;
+  background-color: #eac645;
 }
 
 .tui-pagination .tui-last {
-    background-color: #EAC645;
+  background-color: #eac645;
 }
 
 .tui-pagination .tui-prev {
-    background-color: #111111;
+  background-color: #111111;
 }
