@@ -1,7 +1,16 @@
 .body-dark{
+
     background-color: var(--black-light-color);
     color: var(--white-color);
+    transition: all 0.4s;
+
+    
 }
+// .body-dark{
+//   *{
+//     transition: all 1s;
+//   }
+// }
 
 
 /**
