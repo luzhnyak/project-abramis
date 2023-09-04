@@ -140,3 +140,19 @@ fill: var(--white-color);
     color: var(--grey-color);
   }
 }
+
+/**
+  |============================
+  | dark styles CARDS
+  |============================
+*/
+
+.body-dark{
+  .general-title{
+    color: var(--white-color);
+
+  }
+  .see-more-btn{
+    color: var(--white-color);
+  }
+}
