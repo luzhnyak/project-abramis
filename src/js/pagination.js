@@ -1,45 +1,30 @@
+// =============== Pagination
+
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.min.css';
-import { shoppingListData } from './shopping-list';
+import { shoppingListData, markupShoppingList } from './shopping-list';
 
-// Дані для пагінації (ваш список книжок, наприклад)
-const booksData = [];
+export function createPagination(totalItems) {
+  const options = {
+    totalItems: totalItems,
+    itemsPerPage: 3,
+    visiblePages: 5,
+    usageStatistics: false,
+  };
 
-// Функція для відображення книжок на сторінці
-// function renderBooks(books) {
-//   const booksContainer = document.getElementById('books-container');
-//   booksContainer.innerHTML = '';
+  const container = document.getElementById('tui-pagination-container');
 
-//   books.forEach(book => {
-//     const bookElement = document.createElement('div');
-//     bookElement.className = 'book';
-//     bookElement.textContent = book.title;
-//     booksContainer.appendChild(bookElement);
-//   });
-// }
+  const pagination = new Pagination(container, options);
 
-// function getPageBooks(page, itemsPerPage) {
-//   const start = (page - 1) * itemsPerPage;
-//   const end = start + itemsPerPage;
-//   return booksData.slice(start, end);
-// }
+  pagination.on('beforeMove', function (eventData) {
+    markupShoppingList(shoppingListData, eventData.page, 3);
+  });
 
-// Створення пагінації
-// const paginationContainer = document.getElementById('pagination');
-// const itemsPerPage = 3;
-// const options = {
-//   totalItems: booksData.length,
-//   itemsPerPage,
-//   visiblePages: 4,
-//   centerAlign: false,
-// };
+  return pagination;
+}
 
-// const pagination = new Pagination(paginationContainer, options);
-
-// pagination.on('beforeMove', event => {
-//   const currentPage = event.page;
-//   const booksForPage = getPageBooks(currentPage, itemsPerPage);
-//   //   renderBooks(booksForPage);
+// pagination.on('afterMove', function (eventData) {
+//   alert('The current page is ' + eventData.page);
 // });
 
-// pagination.movePageTo(1);
+// pagination.getCurrentPage();

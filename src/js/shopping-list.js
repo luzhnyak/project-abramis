@@ -1,4 +1,6 @@
 import Notiflix from 'notiflix';
+import { createPagination } from './pagination';
+
 import dumpIcon from '../images/dump-icon.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';
@@ -7,7 +9,7 @@ import store3 from '../images/modal/store3.png';
 const shoppingListEl = document.querySelector('.js-shopping_list');
 
 //Рендер списку
-function markupShoppingList(books) {
+export function markupShoppingList(books, page, perPage) {
   Notiflix.Loading.standard();
 
   if (books.length === 0) {
@@ -16,6 +18,7 @@ function markupShoppingList(books) {
   }
 
   shoppingListEl.innerHTML = books
+    .slice((page - 1) * perPage, page * perPage)
     .map(el => {
       return `<ul class="shopping-list list">
       ${cardBook(el)}
@@ -34,8 +37,23 @@ function markupShoppingList(books) {
 
       shoppingListData = shoppingListData.filter(book => book._id !== id);
       saveData(shoppingListData);
+
+      if (shoppingListData.length === 0)
+        if (shoppingListData.length <= (page - 1) * perPage) {
+          // markupShoppingList(shoppingListData, page - 1, perPage);
+          pagination = createPagination(shoppingListData.length);
+          pagination.movePageTo(page - 1);
+        }
+
+      // createPagination(shoppingListData);
+
+      // pagination = new Pagination(container, options);
+      // pagination.totalItems = shoppingListData.length;
+      // pagination.reset();
     });
   });
+
+  let pagination = createPagination(shoppingListData.length);
 
   Notiflix.Loading.remove();
 }
@@ -84,7 +102,7 @@ function onClickBtnDump(event) {}
 export let shoppingListData = [];
 let bookData = {};
 loadData();
-markupShoppingList(shoppingListData);
+markupShoppingList(shoppingListData, 1, 3);
 
 function bookInList(id) {
   shoppingListData.find(book => book._id === id);
