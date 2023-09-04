@@ -54,6 +54,7 @@ export function markupShoppingList(books, page, perPage) {
 }
 
 // Рендер однієї книги
+
 function cardBook({
   _id,
   book_image,
@@ -68,8 +69,10 @@ function cardBook({
           <img class="icon-dump" src="${dumpIcon}" alt="" />
         </button>
         <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
-      <div class="shop-list-description-wrapper">      
+      <div class="shop-list-description-wrapper"> 
+       
         <h3 class="shop-list-item-title">${title}</h3>
+        
         <p class="shop-list-item-category">${list_name}</p>
         <p class="shop-list-item-description">${description}</p>
         <div class="buy-item-wrapper">
@@ -114,3 +117,15 @@ function loadData() {
 function saveData(data) {
   localStorage.setItem('shopping-list', JSON.stringify(data));
 }
+
+// function shortenTitle() {
+//   const element = document.querySelector('.shop-list-item-title');
+
+//   const maxLength = 16; // Set your desired maximum length
+//   const text = element.textContent;
+//   if (text.length > maxLength) {
+//     element.textContent = text.slice(0, maxLength) + '...';
+//   }
+// }
+
+// shortenTitle();
