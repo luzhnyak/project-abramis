@@ -9,6 +9,7 @@ const booksApi = new BookshelfApiService();
 // Рендер категорій по 5 книг
 export async function bestBooksAllCategories() {
   Notiflix.Loading.standard();
+
   const topBooksData = await booksApi.fetchTopBooks();
 
   const cardsHtml = topBooksData

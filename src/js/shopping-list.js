@@ -1,12 +1,20 @@
-const shoppingListEl = document.querySelector('.js-shopping_list');
+import Notiflix from 'notiflix';
 import dumpIcon from '../images/dump-icon.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';
 import store3 from '../images/modal/store3.png';
 
+const shoppingListEl = document.querySelector('.js-shopping_list');
+
 //Рендер списку
 function markupShoppingList(books) {
-  if (books.length === 0) return;
+  Notiflix.Loading.standard();
+
+  if (books.length === 0) {
+    Notiflix.Loading.remove();
+    return;
+  }
+
   shoppingListEl.innerHTML = books
     .map(el => {
       return `<ul class="shopping-list list">
@@ -19,15 +27,17 @@ function markupShoppingList(books) {
 
   allBtnDumpEl.forEach(el => {
     el.addEventListener('click', event => {
-      console.log(event.currentTarget);
-      console.log(event.currentTarget.dataset.id);
-      const slItemEl = document.querySelector(
-        `.js-sl-item-${event.currentTarget.dataset.id}`
-      );
+      const id = event.currentTarget.dataset.id;
 
+      const slItemEl = document.querySelector(`.js-sl-item-${id}`);
       slItemEl.remove();
+
+      shoppingListData = shoppingListData.filter(book => book._id !== id);
+      saveData(shoppingListData);
     });
   });
+
+  Notiflix.Loading.remove();
 }
 
 // Рендер однієї книги
