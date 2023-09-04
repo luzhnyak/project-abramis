@@ -81,21 +81,35 @@
 //   position: relative;
 // }
 
-.icon-dump {
+.btn-dump {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
   top: 12px;
-  left: 289px;
-  width: 28px;
-  height: 28px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
   @media only screen and (min-width: 768px) {
-    left: 646px;
-    width: 28px;
-    height: 28px;
+    
   }
   @media only screen and (min-width: 1440px) {
-    left: 955px;
-    width: 28px;
-    height: 28px;
+    
+  }
+}
+
+.icon-dump {
+  
+  width: 28px;
+  height: 28px;
+
+  @media only screen and (min-width: 768px) {
+  }
+
+  @media only screen and (min-width: 1440px) {
   }
 }
 

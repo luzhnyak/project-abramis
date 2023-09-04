@@ -14,10 +14,25 @@ function markupShoppingList(books) {
       </ul>`;
     })
     .join('');
+
+  const allBtnDumpEl = document.querySelectorAll('.js-btn-dump');
+
+  allBtnDumpEl.forEach(el => {
+    el.addEventListener('click', event => {
+      console.log(event.currentTarget);
+      console.log(event.currentTarget.dataset.id);
+      const slItemEl = document.querySelector(
+        `.js-sl-item-${event.currentTarget.dataset.id}`
+      );
+
+      slItemEl.remove();
+    });
+  });
 }
 
 // Рендер однієї книги
 function cardBook({
+  _id,
   book_image,
   title,
   list_name,
@@ -25,8 +40,10 @@ function cardBook({
   description,
   buy_links,
 }) {
-  return `<li class="shopping-list-book-item">
-        <img class="icon-dump" src="${dumpIcon}" alt="" /> </svg>
+  return `<li class="shopping-list-book-item js-sl-item-${_id}">
+        <button class="btn-dump js-btn-dump" typy="button" data-id=${_id}> 
+          <img class="icon-dump" src="${dumpIcon}" alt="" />
+        </button>
         <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
       <div class="shop-list-description-wrapper">      
         <h3 class="shop-list-item-title">${title}</h3>
@@ -49,6 +66,8 @@ function cardBook({
       </div>
       </li>`;
 }
+
+function onClickBtnDump(event) {}
 
 // ================ Local Storage
 
