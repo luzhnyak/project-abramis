@@ -38,23 +38,18 @@ export function markupShoppingList(books, page, perPage) {
       shoppingListData = shoppingListData.filter(book => book._id !== id);
       saveData(shoppingListData);
 
-      if (shoppingListData.length === 0)
-        if (shoppingListData.length <= (page - 1) * perPage) {
-          // markupShoppingList(shoppingListData, page - 1, perPage);
-          pagination = createPagination(shoppingListData.length);
-          pagination.movePageTo(page - 1);
-        }
+      // if (shoppingListData.length === 0)
 
-      // createPagination(shoppingListData);
-
-      // pagination = new Pagination(container, options);
-      // pagination.totalItems = shoppingListData.length;
-      // pagination.reset();
+      if (shoppingListData.length <= pagination._options.totalItems - 3) {
+        // markupShoppingList(shoppingListData, page - 1, perPage);
+        pagination = createPagination(shoppingListData.length);
+        pagination.setTotalItems = shoppingListData.length;
+        pagination.movePageTo(page - 1);
+      }
     });
   });
 
   let pagination = createPagination(shoppingListData.length);
-
   Notiflix.Loading.remove();
 }
 
