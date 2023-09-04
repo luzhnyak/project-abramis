@@ -244,36 +244,51 @@
   display: flex;
   gap: 6px;
 
-  width: 80px;
   align-items: center;
   @media only screen and (min-width: 375px) {
     gap: 8px;
-    width: 80px;
   }
   @media only screen and (min-width: 768px) {
     gap: 16px;
-    width: 140px;
   }
 }
 
 .store-1 {
   filter: grayscale(100%);
+  width: 46px;
+  height: 15px;
 
   &:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+  }
+  @media only screen and (max-width: 767px) {
+    width: 32px;
+    height: 11px;
   }
 }
 .store-2 {
   filter: grayscale(100%);
+  width: 33px;
+  height: 25px;
 
   &:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
   }
+  @media only screen and (max-width: 767px) {
+    width: 16px;
+    height: 16px;
+  }
 }
 .store-3 {
   filter: grayscale(100%);
+  width: 32px;
+  height: 30px;
 
   &:hover {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+  }
+  @media only screen and (max-width: 767px) {
+    width: 16px;
+    height: 16px;
   }
 }
