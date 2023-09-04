@@ -1,6 +1,21 @@
 import * as basicLightbox from 'basiclightbox';
+import { BookshelfApiService } from './api-service';
+import iconClose from '../images/x-close.png';
 
-`<div class="modal-uath">
+const instance = basicLightbox.create(`<div class="js-modal-auth"></div>`, {
+  onShow: () => {
+    document.addEventListener('keydown', onEscDown);
+    disableBodyScroll();
+  },
+  onClose: () => {
+    document.removeEventListener('keydown', onEscDown);
+    enableBodyScroll();
+  },
+});
+
+const instanceEl = document.querySelector('.js-modal');
+
+instanceEl.innerHTML = `<div class="modal-uath">
   <button class="modal-uath-cls-btn" type="button" aria-label="close">
     <img
       class="modal-close-svg"
