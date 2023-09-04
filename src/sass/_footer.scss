@@ -18,6 +18,16 @@ background-color: transparent;
 border: none;
 }
 
+.heart-text{
+position: relative;
+z-index: 10;
+color: var(--white-color);
+font-size: 12px;
+top: 16px;
+left: 10px;
+}
+
+
 .heart {
     position: absolute;
     width: 100px;
@@ -26,6 +36,7 @@ border: none;
     left: 50%;
     margin-top: -30px;
     margin-left: -50px;
+    z-index: 1;
     
     &:before,
     &:after {
@@ -36,6 +47,7 @@ border: none;
       height: 60px;
       background: var(--violet-color);
       border-radius: 50px 50px 0 0;
+
     }
     
     &:before {
@@ -49,6 +61,7 @@ border: none;
       transform: rotate(45deg);
       transform-origin: 100% 100%;
     }
+
   }
   
   .heart-bg {
@@ -56,12 +69,14 @@ border: none;
     left: 50%;
     &:before,
     &:after {
-      background-color: #4f2ee84d;
+      background-color: #502ee8a0;
+      
     }
   }
   
   .heart-main {
     animation: pounding .7s linear infinite alternate;
+    
   }
   
   @keyframes pounding {
@@ -90,7 +105,7 @@ border: none;
     }
     100% {
       opacity: 0;
-      transform: scale(1);
+      transform: scale(1.1);
     }
   }
 
@@ -102,9 +117,6 @@ border: none;
     gap: 20px;
   }
 
-  .team-item{
-
-  }
 
   .team-name{
 font-size: 18px;
