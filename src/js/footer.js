@@ -45,7 +45,7 @@ function disableBodyScroll() {
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Anna Boichuk</h3>
-      <p class = "team-position">Developed dark theme feature, modal 'Our team'</p>
+      <p class = "team-position">Developed dark theme feature, footer, modal 'Our team'</p>
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Bohdana Taraskina</h3>
