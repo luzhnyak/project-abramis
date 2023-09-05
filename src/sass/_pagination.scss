@@ -4,6 +4,25 @@
     height: 44px;
 }
 
+@media only screen and (min-width: 340px) {
+    .tui-page-btn {
+        height: 32px;
+    }
+}
+
+@media only screen and (min-width: 340px) {
+    .tui-pagination {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .tui-pagination {
+        display: block;
+    }
+}
+
+// ==========================
 .tui-pagination .tui-page-btn {
     width: 44px;
     padding: 13px;
@@ -13,22 +32,71 @@
     font-family: 'DM Sans', sans-serif;
 }
 
+@media only screen and (min-width: 340px) {
+    .tui-pagination .tui-page-btn {
+        width: 32px;
+        padding: 8px;
+        line-height: 1;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'DM Sans', sans-serif;
+    }
+}
+
+// @media only screen and (max-width: 767px) {
+//     .tui-pagination .tui-page-btn {
+//         width: 44px;
+//         padding: 13px;
+//         line-height: 1;
+//         font-size: 18px;
+//         font-weight: 700;
+//         font-family: 'DM Sans', sans-serif;
+//     }
+// }
+// ==================================
 .tui-pagination .tui-next {
     margin-left: 24px;
     height: 44px;
 }
 
+@media only screen and (min-width: 340px) {
+    .tui-pagination .tui-next {
+        height: 32px;
+    }
+}
+
+//===================================
 .tui-pagination .tui-first {
     height: 44px;
 }
 
+@media only screen and (min-width: 340px) {
+    .tui-pagination .tui-first {
+        height: 32px;
+    }
+}
+
+// =====================================
 .tui-pagination .tui-prev {
     margin-right: 24px;
     height: 44px;
 }
 
+@media only screen and (min-width: 340px) {
+    .tui-pagination .tui-prev {
+        height: 32px;
+    }
+}
+
+// =========================
 .tui-pagination .tui-last {
     height: 44px;
+}
+
+@media only screen and (min-width: 340px) {
+    .tui-pagination .tui-last {
+        height: 32px;
+    }
 }
 
 // hover and focus
@@ -43,8 +111,9 @@
 }
 
 .tui-pagination .tui-page-btn:hover {
-    background-color: #111111;
+    background-color: #EAC645;
     color: #fff;
+    border-color: #EAC645;
 }
 
 .tui-pagination .tui-first {
@@ -52,11 +121,11 @@
 }
 
 .tui-pagination .tui-next {
-    background-color: #EAC645;
+    background-color: #111111;
 }
 
 .tui-pagination .tui-last {
-    background-color: #EAC645;
+    background-color: #111111;
 }
 
 .tui-pagination .tui-prev {
