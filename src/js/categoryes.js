@@ -15,7 +15,7 @@ async function listCategories() {
       </li>`;
     })
     .join('');
-  allCategories.innerHTML = `<ul class="categorie-list list"><li><button class="categorie-btn active">All categories</button></li>${listHtml}</ul>`;
+  allCategories.innerHTML = `<ul class="categorie-list list"><li class="categorie-item"><button class="categorie-btn active">All categories</button></li>${listHtml}</ul>`;
 
   const catsBtn = document.querySelectorAll('.categorie-btn');
 
