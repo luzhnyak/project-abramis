@@ -83,62 +83,77 @@ export class FirebaseService {
       });
   }
 
-  signInUser(email, password) {
-    signInWithEmailAndPassword(this.auth, email, password)
-      .then(userCredential => {
-        // Signed in
-        this.readUserData(this.userID).then(data => {
-          this.userName = data.displayName;
+  async signInUser(email, password, callback) {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        this.auth,
+        email,
+        password
+      );
 
-          this.userID = userCredential.user.uid;
-          this.email = email;
+      this.userID = userCredential.user.uid;
+      this.email = email;
+      console.log(this.userID);
 
-          const userData = {
-            isAuth: true,
-            userName: this.userName,
-            userID: this.userID,
-          };
+      const data = await this.readUserData(this.userID);
+      console.log(data);
+      this.userName = data.displayName;
 
-          localStorage.setItem('auth', JSON.stringify(userData));
-          // console.log(this.userID);
-          // console.log(data);
-        });
+      const userData = {
+        isAuth: true,
+        userName: this.userName,
+        userID: this.userID,
+      };
 
-        // Notify.success('Login success' + this.userID);
-      })
-      .catch(error => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error('Error adding name to the database:', error);
-        Notify.failure(error.message);
-      });
+      localStorage.setItem('auth', JSON.stringify(userData));
+
+      callback();
+    } catch (error) {
+      console.error('Error adding name to the database:', error);
+    }
+
+    // .then(userCredential => {
+    //     // Signed in
+
+    // console.log(data);
+    //   });
+    // })
+    // .catch(error => {
+    //
+    // });
   }
 
   writeUserDataToDB(userID, name, email) {
+    if (!userID) return;
+
     const dbRef = ref(this.db, 'users/' + userID);
     set(dbRef, {
       displayName: name,
     })
       .then(() => {
-        Notify.success('Name added to the database successfully.');
+        console.log('Name added to the database successfully.');
       })
       .catch(error => {
-        console.error('Error adding name to the database:', error);
+        console.error('Error adding user to the database:', error);
       });
   }
 
-  writeBooksToDB(userId, data) {
-    const dbRef = ref(this.db, 'users/' + userId + '/books');
+  writeBooksToDB(userID, data) {
+    if (!userID) return;
+
+    const dbRef = ref(this.db, 'users/' + userID + '/books');
     set(dbRef, data)
       .then(() => {
-        Notify.success('Book added to the database successfully.');
+        console.log('Book added to the database successfully.');
       })
       .catch(error => {
-        console.error('Error adding name to the database:', error);
+        console.error('Error adding book to the database:', error);
       });
   }
 
   async readUserData(userID) {
+    // if (!userID) return;
+
     const dbRef = ref(this.db);
     const snapshot = await get(child(dbRef, `users/${userID}`));
 

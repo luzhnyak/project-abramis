@@ -63,5 +63,3 @@ import { authVisual } from './auth-user';
     link.addEventListener('click', closeMenu);
   });
 })();
-
-authVisual();
