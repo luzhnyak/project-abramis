@@ -37,13 +37,15 @@ export class FirebaseService {
     this.db = getDatabase(this.app);
 
     this.isAuth = false;
-    this.userName;
+    this.userName = 'User';
     this.userID;
     this.email;
 
     const localUser = localStorage.getItem('auth');
 
     if (!localUser) return;
+
+    console.log(localUser);
 
     const userData = JSON.parse(localUser);
 
@@ -85,18 +87,24 @@ export class FirebaseService {
     signInWithEmailAndPassword(this.auth, email, password)
       .then(userCredential => {
         // Signed in
-        this.userName = 'NOne';
-        this.userID = userCredential.user.uid;
-        this.email = email;
+        this.readUserData(this.userID).then(data => {
+          this.userName = data.displayName;
 
-        const userData = {
-          isAuth: true,
-          userName: this.userName,
-          userID: this.userID,
-        };
+          this.userID = userCredential.user.uid;
+          this.email = email;
 
-        localStorage.setItem('auth', JSON.stringify(userData));
-        Notify.success('Login success' + this.userID);
+          const userData = {
+            isAuth: true,
+            userName: this.userName,
+            userID: this.userID,
+          };
+
+          localStorage.setItem('auth', JSON.stringify(userData));
+          // console.log(this.userID);
+          // console.log(data);
+        });
+
+        // Notify.success('Login success' + this.userID);
       })
       .catch(error => {
         const errorCode = error.code;
@@ -145,17 +153,3 @@ export class FirebaseService {
     // });
   }
 }
-
-const data = {
-  ddd: 'ffff',
-  ssss: 'sssss',
-};
-
-export const user = new FirebaseService();
-// user.signInUser('testffdsgr9@mail.com', 'Potayto3447');
-// user.signUpUser('Admin', 'testffdsgr9@mail.com', 'Potayto3447');
-// user.readUserData('0p1zBHaRgLTHVX7icxwAqHQS5El1');
-console.log(user);
-// console.log(user.userName);
-
-// user.writeBooksToDB(user.userID, data);

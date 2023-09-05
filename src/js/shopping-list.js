@@ -1,6 +1,6 @@
 import Notiflix from 'notiflix';
 import { createPagination } from './pagination';
-import { user } from './firebase-service';
+import { user } from './auth-user';
 
 import dumpIcon from '../images/dump-icon.png';
 import bookColumn1 from '../images/book-column@1x.png';

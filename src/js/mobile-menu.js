@@ -1,3 +1,5 @@
+import { authVisual } from './auth-user';
+
 // alert("test")
 
 // document.addEventListener('DOMContentLoaded', function () {
@@ -20,7 +22,6 @@
 //     body.style.overflow = 'auto';
 //   });
 // });
-
 
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
@@ -62,3 +63,5 @@
     link.addEventListener('click', closeMenu);
   });
 })();
+
+authVisual();

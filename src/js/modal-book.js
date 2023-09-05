@@ -1,6 +1,6 @@
 import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
-import { user } from './firebase-service';
+import { user } from './auth-user';
 import iconClose from '../images/x-close.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';

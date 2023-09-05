@@ -4,7 +4,7 @@ import './categoryes';
 import './funds';
 import './modal-book';
 import './cards';
-// import './auth';
+import './auth-user';
 import './firebase';
 import './scroll-up';
 import './footer';

@@ -6,6 +6,7 @@ import './firebase';
 import './scroll-up';
 import './footer';
 import './pagination';
+import './auth-user';
 
 const activeMenu = document.querySelector('.js-list_menu');
 activeMenu.classList.add('active');
