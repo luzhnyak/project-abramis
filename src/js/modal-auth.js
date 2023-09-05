@@ -18,7 +18,7 @@ const instance = basicLightbox.create(
   `<div class="js-modal-auth">
     <div class="modal-uath">
         <button class="modal-uath-cls-btn" type="button" aria-label="close">
-            <img  class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24">
+            <img  class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24" loading="lazy">
         </button>
 
         <form class="signin-form js-signup-form">

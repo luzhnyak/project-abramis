@@ -81,9 +81,9 @@ function cardBook({
 }) {
   return `<li class="shopping-list-book-item js-sl-item-${_id}">
         <button class="btn-dump js-btn-dump" typy="button" data-id=${_id} aria-label="dump"> 
-          <img class="icon-dump" src="${dumpIcon}" alt="" width="34" height="34" />
+          <img class="icon-dump" src="${dumpIcon}" alt="" width="34" height="34" loading="lazy"/>
         </button>
-        <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
+        <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" loading="lazy"/>  
       <div class="shop-list-description-wrapper"> 
        
         <h3 class="shop-list-item-title">${title}</h3>
@@ -94,13 +94,13 @@ function cardBook({
           <p class="shop-list-item-author">${author}</p>
           <ul class="buy-list-shop list">
             <li class="buy-item">
-              <a href="${buy_links[0].url}"><img class="store-1 store-1-sl" src="${store1}" alt="" width="46" /></a>
+              <a href="${buy_links[0].url}"><img class="store-1 store-1-sl" src="${store1}" alt="" width="46" loading="lazy"/></a>
             </li>
             <li class="buy-item">
-              <a href="${buy_links[1].url}"><img class="store-2 store-2-sl" src="${store2}" alt="" width="33" /></a>
+              <a href="${buy_links[1].url}"><img class="store-2 store-2-sl" src="${store2}" alt="" width="33" loading="lazy"/></a>
             </li>
             <li class="buy-item">
-              <a href="${buy_links[2].url}"><img class="store-3 store-3-sl" src="${store3}" alt="" width="32" /></a>
+              <a href="${buy_links[2].url}"><img class="store-3 store-3-sl" src="${store3}" alt="" width="32" loading="lazy"/></a>
             </li>
           </ul>
         </div>
