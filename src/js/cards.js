@@ -48,9 +48,16 @@ export async function bestBooksAllCategories() {
 // Рендер всіх книг однієї категорії
 export async function booksCategory(catName) {
   Notiflix.Loading.standard();
-  const books = await booksApi.fetchBooksByCategory(catName);
+  try {
+    const books = await booksApi.fetchBooksByCategory(catName);
+    if (catName === 'All categories') {
+      bestBooksAllCategories();
+      return;
+    }
 
-  if (books.length) {
+    if (books.length === 0) {
+      throw new Error('No books found in this category');
+    }
     const booksHtml = books
       .map(el => {
         return cardBook(el, 0);
@@ -76,11 +83,10 @@ export async function booksCategory(catName) {
         markupBook(event.target.dataset.id);
       });
     });
-
-    Notiflix.Loading.remove();
-  } else {
-    bestBooksAllCategories();
+  } catch (error) {
+    Notiflix.Notify.failure(error.message);
   }
+  Notiflix.Loading.remove();
 }
 
 //Рендер 5 книг
