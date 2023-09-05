@@ -60,10 +60,11 @@ function onEscDown(event) {
 }
 
 const signinBtnEl = document.querySelector('.js-signin-btn');
-const submitBtnEl = document.querySelector('.js-sing-btn');
 
 signinBtnEl.addEventListener('click', event => {
   instance.show();
+
+  const submitBtnEl = document.querySelector('.js-sing-btn');
 
   const closeBtn = document.querySelector('.modal-uath-cls-btn');
   closeBtn.addEventListener('click', onClickClose);
