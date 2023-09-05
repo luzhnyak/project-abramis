@@ -1,9 +1,17 @@
 .header {
+ 
   border-radius: 0px 0px 8px 8px;
   border: 1.5px solid #111;
   background: #ffffff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 2;
+
+  @media only screen and (max-width: 768px) {
+    width: 375px;
+    margin: 0 auto;
+  }
+ 
+
 }
 
 .header-container {
@@ -13,7 +21,9 @@
   align-items: center;
   padding-top: 14px;
   padding-bottom: 14px;
- 
+
+
+
 }
 
 .header__toggle {
@@ -32,12 +42,12 @@
 .part-two {
   display: none;
   position: relative;
- 
+
   // gap: 24px;
   //   top: -15px;
   @media only screen and (min-width: 768px) {
     display: flex;
-   }
+  }
 }
 
 .logo {
@@ -52,7 +62,7 @@
 
   @media only screen and (min-width: 768px) {
     margin-right: 40px;
-   }
+  }
 }
 
 .part-one {
@@ -67,10 +77,11 @@
   align-items: center;
   margin-right: 14px;
   margin-left: auto;
+
   @media only screen and (min-width: 768px) {
     gap: 36px;
   }
-  
+
 }
 
 .menu {
@@ -85,12 +96,13 @@
   text-transform: uppercase;
 
   display: none;
+
   @media only screen and (min-width: 768px) {
     display: flex;
     gap: 32px;
     align-items: center;
   }
- 
+
 }
 
 .menu-item {
