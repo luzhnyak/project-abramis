@@ -98,8 +98,8 @@ function onClickLogout(event) {
 // };
 
 export const user = new FirebaseService();
-user.signInUser('tedsadstffdsgr9@mail.com', 'Potayto3447', authVisual);
-// user.signUpUser('Administrator', 'tedsadstffdsgr9@mail.com', 'Potayto3447');
+user.signInUser('admin@mail.com', 'Potayto0106', authVisual);
+// user.signUpUser('Admin', 'admin@mail.com', 'Potayto0106');
 // user.readUserData('0p1zBHaRgLTHVX7icxwAqHQS5El1');
 // console.log(user);
 // console.log(user.userName);

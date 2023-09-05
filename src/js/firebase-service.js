@@ -96,8 +96,9 @@ export class FirebaseService {
       console.log(this.userID);
 
       const data = await this.readUserData(this.userID);
-      console.log(data);
+
       this.userName = data.displayName;
+      this.isAuth = true;
 
       const userData = {
         isAuth: true,
@@ -152,6 +153,7 @@ export class FirebaseService {
   }
 
   async readUserData(userID) {
+    console.log(userID);
     // if (!userID) return;
 
     const dbRef = ref(this.db);

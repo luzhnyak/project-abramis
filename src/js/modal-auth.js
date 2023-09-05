@@ -17,42 +17,21 @@ const instance = basicLightbox.create(
             <img  class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24">
         </button>
 
-        <form class="signin-form js-signin-form">
-            <div class="contacts-feedback">
-            <input
-                class="log-name"
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Your name..."
-                required
-            />
-            <input
-                type="mail"
-                class="log-mail"
-                name="mail"
-                id="mail"
-                placeholder="Your mail..."
-                required
-            />
-            <input
-                type="password"
-                class="log-password"
-                name="password"
-                id="password"
-                placeholder="Your password"
-                required
-            />
-            <button class="sing-btn" type="submit">
-                SING UP
-            </button>
+        <form class="signin-form js-signup-form">
+            <div class="userdata-inputs">
+              <input class="userdata-input name" type="text" name="name" id="name" placeholder="Your name...">            
+              <input class="userdata-input mail" type="email"  name="email" id="mail" placeholder="Your mail..." required>            
+              <input class="userdata-input password" type="password" name="password" id="password" placeholder="Your password" required>            
+              <button class="sing-btn" type="submit">
+                  SING UP
+              </button>
             </div>
         </form>
         <div class="sign">
-            <a href="">SIGN UP</a>
-            <a href="">SIGN IN</a>
+            <a href="" class="js-choose-signup">SIGN UP</a>
+            <a href="" class="js-choose-signin">SIGN IN</a>
         </div>
-</div>
+  </div>
 </div>`,
   {
     onShow: () => {
