@@ -34,9 +34,18 @@
   background-color: transparent;
   padding: 0;
 
+  transition: stroke;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   @media only screen and (min-width: 768px) {
     display: none;
   }
+}
+
+.header__toggle:hover,
+.header__toggle:focus {
+  stroke: var(--violet-color);
 }
 
 .part-two {
@@ -195,7 +204,7 @@
   -ms-transform: translateX(19px);
 }
 
-// __________________________________________________________________________
+// ================================================  Buttton
 
 .signin-btn {
   display: flex;
@@ -224,23 +233,22 @@
   right: 14px;
 }
 
-
 .log-out {
+  position: absolute;
+  top:46px;
   display: flex;
+  padding: 14px 24px;
   justify-content: space-between;
   align-items: center;
-
-  border: 1.5px solid #000;
+  border: 1px solid #000;
   width: 118px;
   height: 48px;
   background-color: var(--white-color);
   border-radius: 18px;
-}
-
-.header__unregistr-icon {
-  position: relative;
-  top: 1px;
-  right: 14px;
+  @media only screen and (min-width: 768px) {
+    width: 184px;
+    padding: 14px;
+  }
 }
 
 .log-out:hover,
@@ -250,23 +258,34 @@
   transition: 0.4s;
 }
 
-.log-desc-tab {
-  color: #fff;
+.header__unregistr-icon {
+  position: relative;
+  top: 1px;
+  right: 14px;
+}
 
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.44px;
+
+.log-desc-tab {  
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   width: 184px;
   height: 45px;
   border: none;
   border-radius: 37px;
-  align-items: center;
+  
   background-color: var(--violet-color);
+  color: var(--white-color);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+    
 }
+
 
 @media only screen and (min-width: 375px) {}

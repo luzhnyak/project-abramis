@@ -33,7 +33,7 @@ function disableBodyScroll() {
       <button class="modal-close-btn" type="button" aria-label="close">
         <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24"/>
       </button>
-       <h2>The best team</h2>
+       <h2 class = "title-team">Team Shark-JS</h2>
       <ul class="list team-list">
       <li class = "team-item">
       <h3 class = "team-name">Oleh Luzhniak</h3>
@@ -45,11 +45,11 @@ function disableBodyScroll() {
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Anna Boichuk</h3>
-      <p class = "team-position">Developed dark theme feature, modal 'Our team'</p>
+      <p class = "team-position">Developed dark theme feature, footer, modal 'Our team'</p>
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Bohdana Taraskina</h3>
-      <p class = "team-position">position</p>
+      <p class = "team-position">Developed cards for books for each category</p>
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Viktoria Lytvyn</h3>

@@ -23,17 +23,18 @@ const instance = basicLightbox.create(
 
         <form class="signin-form js-signup-form">
             <div class="userdata-inputs">
-              <input class="userdata-input name js-name" type="text" name="name" id="name" placeholder="Your name...">            
-              <input class="userdata-input mail" type="email"  name="email" id="mail" placeholder="Your mail..." required>            
-              <input class="userdata-input password" type="password" name="password" id="password" placeholder="Your password" required>            
-              <button class="sing-btn" type="submit">
-                  SING UP
+
+              <input class="userdata-input name js-name" type="text" name="name" id="name" placeholder="NAME">            
+              <input class="userdata-input mail" type="email"  name="email" id="mail" placeholder="MAIL" required>            
+              <input class="userdata-input password" type="password" name="password" id="password" placeholder="PASSWORD" required>            
+              <button class="sing-btn js-sing-btn" type="submit">
+                  SIGN UP
               </button>
             </div>
         </form>
         <div class="sign">
-            <a href="" class="js-choose-signup">SIGN UP</a>
-            <a href="" class="js-choose-signin">SIGN IN</a>
+            <a href="" class="sign-active js-choose-signup">SIGN UP</a>
+            <a href="" class="sign-active js-choose-signin">SIGN IN</a>
         </div>
   </div>
 </div>`,
@@ -64,6 +65,8 @@ const signinBtnEl = document.querySelector('.js-signin-btn');
 signinBtnEl.addEventListener('click', event => {
   instance.show();
 
+  const submitBtnEl = document.querySelector('.js-sing-btn');
+
   const closeBtn = document.querySelector('.modal-uath-cls-btn');
   closeBtn.addEventListener('click', onClickClose);
 
@@ -75,6 +78,7 @@ signinBtnEl.addEventListener('click', event => {
   chooseSignupEl.addEventListener('click', event => {
     event.preventDefault();
     inOrUp = 'in';
+    submitBtnEl.textContent = 'SIGN IN';
     inputNameEl.style.display = 'none';
   });
 
@@ -82,6 +86,7 @@ signinBtnEl.addEventListener('click', event => {
   chooseSigninEl.addEventListener('click', event => {
     event.preventDefault();
     inOrUp = 'up';
+    submitBtnEl.textContent = 'SIGN UP';
     inputNameEl.style.display = 'block';
   });
 });
@@ -97,7 +102,11 @@ function onSubmitForm(event) {
     return alert('Please fill in all the fields!');
   }
 
-  data = { name: name.value, email: email.value, password: password.value };
+  const data = {
+    name: name.value,
+    email: email.value,
+    password: password.value,
+  };
 
   event.currentTarget.reset();
 
