@@ -15,7 +15,6 @@
   border-radius: 50%;
   outline: none;
 
-  stroke: var(--color-navy-blue);
 }
 
 @media (min-width: 768px) {
@@ -98,9 +97,16 @@
   border: none;
 
   stroke: black;
-  fill: black;
-
   cursor: pointer;
+
+  transition: stroke;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile__toogle:hover,
+.mobile__toogle:focus {
+  stroke: var(--violet-color);
 }
 
 .mobile-menu {
@@ -151,10 +157,6 @@
   left: 44px;
 
   max-width: 118px;
-}
-
-.header__registr-icon {
-  // margin-left: 18px;
 }
 
 .mobile-menu-item {

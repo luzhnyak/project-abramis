@@ -11,7 +11,8 @@ const markup = fundsData
         <img class="funds-image" 
           src="${fund.img}" 
           alt="${fund.title}"
-          target="_parent">
+          target="_parent"
+          min-width="62">
          </a>
     </li> 
         `
