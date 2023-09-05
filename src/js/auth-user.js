@@ -39,7 +39,7 @@ function onClickLogout(event) {
 }
 
 export const user = new FirebaseService();
-// authVisual();
+authVisual();
 
 // //sign in the user
 // function onSignIn(e) {

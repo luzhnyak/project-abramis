@@ -125,7 +125,7 @@ function loadData() {
   // if (!data) return;
 
   user.readUserData(user.userID).then(data => {
-    if (data) shoppingListData = JSON.parse(data.books);
+    if (data.books) shoppingListData = JSON.parse(data.books);
     markupShoppingList(shoppingListData, 1, 3);
   });
 
