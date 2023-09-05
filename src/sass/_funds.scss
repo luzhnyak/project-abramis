@@ -77,6 +77,13 @@
 
 }
 
+.funds-item:hover,
+.funds-item:focus {
+ border-bottom: 1.5px solid var(--white-color);
+//  border-radius: 3px;
+}
+
+
 .funds-scroll-btn {
   position: absolute;
 
@@ -100,6 +107,7 @@
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .funds-scroll-btn:hover,
 .funds-scroll-btn:focus {

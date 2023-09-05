@@ -21,9 +21,16 @@
   </div>
 
   <div class="mobile__menu">
-    <button class="registration">
-      <span class="sing-in-text">Sign in</span>
+    <button class="signin-btn registration js-signin-btn">
+      Sign up
       <svg class="header__registr-icon" width="20" height="20">
+        <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
+      </svg>
+    </button>
+
+    <button class="log-out js-logout-btn" style="display: none">
+      Log out
+      <svg class="header__unregistr-icon" width="20" height="20">
         <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
       </svg>
     </button>
