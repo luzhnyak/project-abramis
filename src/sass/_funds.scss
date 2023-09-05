@@ -77,6 +77,13 @@
 
 }
 
+.funds-item:hover,
+.funds-item:focus {
+ border-bottom: 1.5px solid var(--white-color);
+//  border-radius: 3px;
+}
+
+
 .funds-scroll-btn {
   position: absolute;
 
