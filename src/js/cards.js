@@ -95,7 +95,12 @@ function bestBooks(books) {
 // Рендер однієї книги
 export function cardBook(book, index) {
   return `<div class='one-book-container col-${index}'>
+       <div class="wrap">
         <img class='book-img js-card-click' data-id="${book._id}" src="${book.book_image}" width="180px" height="226px"  alt="${book.title}" />
+        <div class="overlay">
+          <p class="overlay-text">QUICK VIEW</p>
+        </div>
+       </div>
         <div>
         <h3 class='book-title'>${book.title}</h3>
         <p class='book-author'>${book.author}</p>
