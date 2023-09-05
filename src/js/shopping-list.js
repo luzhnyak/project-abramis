@@ -1,7 +1,10 @@
 import Notiflix from 'notiflix';
 import { createPagination } from './pagination';
+import { user } from './auth-user';
 
 import dumpIcon from '../images/dump-icon.png';
+import bookColumn1 from '../images/book-column@1x.png';
+import bookColumn2 from '../images/book-column@2x.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';
 import store3 from '../images/modal/store3.png';
@@ -13,6 +16,18 @@ export function markupShoppingList(books, page, perPage) {
   Notiflix.Loading.standard();
 
   if (books.length === 0) {
+    shoppingListEl.innerHTML = `
+      <div class="shopping_list-content">
+
+        <p class="shopping_list-empty-text">
+          This page is empty, add some books and proceed to order.
+        </p>
+        <img class="book-column-img" srcset="${bookColumn1} 1x, ${bookColumn2} 2x"
+          src="${bookColumn1}" alt="book-column" loading="lazy" />
+
+    </div>`;
+    const pagination = document.querySelector('.tui-pagination');
+    pagination.classList.add('visually-hidden');
     Notiflix.Loading.remove();
     return;
   }
@@ -65,7 +80,7 @@ function cardBook({
   buy_links,
 }) {
   return `<li class="shopping-list-book-item js-sl-item-${_id}">
-        <button class="btn-dump js-btn-dump" typy="button" data-id=${_id}> 
+        <button class="btn-dump js-btn-dump" typy="button" data-id=${_id} aria-label="dump"> 
           <img class="icon-dump" src="${dumpIcon}" alt="" width="34" height="34" />
         </button>
         <img class="shop-list-item-img" src="${book_image}" alt="${book_image}" width="100" height="142" />  
@@ -79,13 +94,13 @@ function cardBook({
           <p class="shop-list-item-author">${author}</p>
           <ul class="buy-list-shop list">
             <li class="buy-item">
-              <a href="${buy_links[0].url}"><img class="store-1" src="${store1}" alt="" width="48" height="15"/></a>
+              <a href="${buy_links[0].url}"><img class="store-1 store-1-sl" src="${store1}" alt="" width="46" /></a>
             </li>
             <li class="buy-item">
-              <a href="${buy_links[1].url}"><img class="store-2" src="${store2}" alt="" width="28" height="27"/></a>
+              <a href="${buy_links[1].url}"><img class="store-2 store-2-sl" src="${store2}" alt="" width="33" /></a>
             </li>
             <li class="buy-item">
-              <a href="${buy_links[2].url}"><img class="store-3" src="${store3}" alt="" width="32" height="30"/></a>
+              <a href="${buy_links[2].url}"><img class="store-3 store-3-sl" src="${store3}" alt="" width="32" /></a>
             </li>
           </ul>
         </div>
@@ -96,36 +111,28 @@ function cardBook({
 function onClickBtnDump(event) {}
 
 // ================ Local Storage
-
 export let shoppingListData = [];
 let bookData = {};
 loadData();
-markupShoppingList(shoppingListData, 1, 3);
 
 function bookInList(id) {
   shoppingListData.find(book => book._id === id);
 }
 
 function loadData() {
-  const data = localStorage.getItem('shopping-list');
+  // const data = localStorage.getItem('shopping-list');
 
-  if (!data) return;
+  // if (!data) return;
 
-  shoppingListData = JSON.parse(data);
+  user.readUserData(user.userID).then(data => {
+    if (data.books) shoppingListData = JSON.parse(data.books);
+    markupShoppingList(shoppingListData, 1, 3);
+  });
+
+  // shoppingListData = JSON.parse(user.readUserData(user.userID).books);
 }
 
 function saveData(data) {
-  localStorage.setItem('shopping-list', JSON.stringify(data));
+  // localStorage.setItem('shopping-list', JSON.stringify(data));
+  user.writeBooksToDB(user.userID, JSON.stringify(data));
 }
-
-// function shortenTitle() {
-//   const element = document.querySelector('.shop-list-item-title');
-
-//   const maxLength = 16; // Set your desired maximum length
-//   const text = element.textContent;
-//   if (text.length > maxLength) {
-//     element.textContent = text.slice(0, maxLength) + '...';
-//   }
-// }
-
-// shortenTitle();

@@ -7,12 +7,13 @@
       Bookshelf
     </a>
     <div class="side-two">
-      <label class="switch">
-        <input class="theme theme-mobile js-theme" type="checkbox"/>
+      <label class="switch" for="mobile-theme">
+        <input class="theme theme-mobile js-theme" type="checkbox" id="mobile-theme"/>
         <span class="switch-slider"></span>
       </label>
-      <button class="mobile__toogle js-close-menu">
-        <svg class="mobile__icon" width="24" height="24">
+      <button class="mobile__toogle js-close-menu" aria-expanded="false"
+      aria-label="mobile-toogle">
+        <svg class="mobile__icon" width="20" height="20">
           <use href="/src/images/icons.svg#icon-close"></use>
         </svg>
       </button>
@@ -20,9 +21,16 @@
   </div>
 
   <div class="mobile__menu">
-    <button class="registration">
-      Sign in
+    <button class="signin-btn registration js-signin-btn">
+      Sign up
       <svg class="header__registr-icon" width="20" height="20">
+        <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
+      </svg>
+    </button>
+
+    <button class="log-out js-logout-btn" style="display: none">
+      Log out
+      <svg class="header__unregistr-icon" width="20" height="20">
         <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
       </svg>
     </button>

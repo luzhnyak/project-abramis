@@ -1,0 +1,131 @@
+.modal-uath {
+  position: relative;
+
+  // padding: 24px;
+  border: 2px solid var(--black-color);
+  border-radius: 18px;
+  background-color: white;
+  width: 300px;
+  padding: 40 20 40 20;
+
+  @media only screen and (min-width: 375px) {
+    width: 335px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 580px;
+    padding: 80 40 40 40;
+  }
+}
+
+.modal-uath-cls-btn {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 12;
+  right: 12;
+  position: absolute;
+  border: none;
+  background: transparent;
+  @media only screen and (min-width: 375px) {
+    top: 16;
+    right: 16;
+  }
+  @media only screen and (min-width: 768px) {
+    top: 24;
+    right: 24;
+  }
+}
+.userdata-input {
+  display: block;
+  width: 260px;
+  height: 50px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 2px solid var(--black-color);
+  padding-left: 24px;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  @media only screen and (min-width: 375px) {
+    width: 295px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 500px;
+    height: 64px;
+    border-radius: 32px;
+
+    font-size: 18px;
+    letter-spacing: -0.18px;
+  }
+}
+.sing-btn {
+  width: 260px;
+  height: 50px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  color: var(--white-color);
+  background-color: rgb(36, 34, 34);
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  @media only screen and (min-width: 375px) {
+    width: 295px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 500px;
+    height: 64px;
+    border-radius: 32px;
+
+    font-size: 18px;
+    letter-spacing: -0.18px;
+  }
+}
+.sing-btn:hover,
+.sing-btn:focus {
+  background-color: var(--black-color);
+  transition: var(--transition);
+}
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.js-choose-signup {
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.14px;
+  text-transform: uppercase;
+  @media only screen and (min-width: 768px) {
+    line-height: 24px;
+    font-size: 18px;
+    letter-spacing: -0.18px;
+  }
+}
+.js-choose-signin {
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.14px;
+  text-transform: uppercase;
+  @media only screen and (min-width: 768px) {
+    line-height: 24px;
+    font-size: 18px;
+    letter-spacing: -0.18px;
+  }
+}
+.sign-active {
+  color: rgba(79, 46, 232, 1);
+}
+a {
+  text-decoration: none;
+}
