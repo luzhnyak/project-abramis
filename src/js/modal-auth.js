@@ -34,7 +34,7 @@ const instance = basicLightbox.create(
         </form>
         <div class="sign">
             <a href="" class="sign-active js-choose-signup">SIGN UP</a>
-            <a href="" class="sign-active js-choose-signin">SIGN IN</a>
+            <a href="" class="js-choose-signin">SIGN IN</a>
         </div>
   </div>
 </div>`,
@@ -60,36 +60,42 @@ function onEscDown(event) {
   }
 }
 
-const signinBtnEl = document.querySelector('.js-signin-btn');
+const signinBtnElAll = document.querySelectorAll('.js-signin-btn');
 
-signinBtnEl.addEventListener('click', event => {
-  instance.show();
+signinBtnElAll.forEach(el =>
+  el.addEventListener('click', event => {
+    instance.show();
 
-  const submitBtnEl = document.querySelector('.js-sing-btn');
+    const submitBtnEl = document.querySelector('.js-sing-btn');
 
-  const closeBtn = document.querySelector('.modal-uath-cls-btn');
-  closeBtn.addEventListener('click', onClickClose);
+    const closeBtn = document.querySelector('.modal-uath-cls-btn');
+    closeBtn.addEventListener('click', onClickClose);
 
-  const formEl = document.querySelector('.js-signup-form');
-  formEl.addEventListener('submit', onSubmitForm);
+    const formEl = document.querySelector('.js-signup-form');
+    formEl.addEventListener('submit', onSubmitForm);
 
-  const chooseSignupEl = document.querySelector('.js-choose-signin');
-  const inputNameEl = document.querySelector('.js-name');
-  chooseSignupEl.addEventListener('click', event => {
-    event.preventDefault();
-    inOrUp = 'in';
-    submitBtnEl.textContent = 'SIGN IN';
-    inputNameEl.style.display = 'none';
-  });
+    const chooseSignupEl = document.querySelector('.js-choose-signin');
+    const inputNameEl = document.querySelector('.js-name');
+    chooseSignupEl.addEventListener('click', event => {
+      event.preventDefault();
+      inOrUp = 'in';
+      submitBtnEl.textContent = 'SIGN IN';
+      inputNameEl.style.display = 'none';
+      chooseSignupEl.classList.add('sign-active');
+      chooseSigninEl.classList.remove('sign-active');
+    });
 
-  const chooseSigninEl = document.querySelector('.js-choose-signup');
-  chooseSigninEl.addEventListener('click', event => {
-    event.preventDefault();
-    inOrUp = 'up';
-    submitBtnEl.textContent = 'SIGN UP';
-    inputNameEl.style.display = 'block';
-  });
-});
+    const chooseSigninEl = document.querySelector('.js-choose-signup');
+    chooseSigninEl.addEventListener('click', event => {
+      event.preventDefault();
+      inOrUp = 'up';
+      submitBtnEl.textContent = 'SIGN UP';
+      inputNameEl.style.display = 'block';
+      chooseSignupEl.classList.remove('sign-active');
+      chooseSigninEl.classList.add('sign-active');
+    });
+  })
+);
 
 function onSubmitForm(event) {
   event.preventDefault();

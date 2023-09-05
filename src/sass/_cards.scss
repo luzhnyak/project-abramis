@@ -36,6 +36,7 @@
   border-radius: 40px;
   border: solid 2px #4f2ee8;
   background-color: transparent;
+  transition: background-color, color var(--transition);
 
   @media only screen and (min-width: 768px) {
     margin-top: 20px;
@@ -45,6 +46,13 @@
     margin-top: 32px;
   }
 }
+
+.see-more-btn:hover,
+.see-more-btn:focus {
+  color: #fff;
+  background-color: #4f2ee8;
+}
+
 
 .category-name {
   padding-bottom: 18px;
@@ -59,6 +67,7 @@
   width: 335px;
   height: 535px;
   margin-bottom: 8px;
+  cursor: pointer;
   transition: transform var(--transition);
 
   @media only screen and (min-width: 768px) {
@@ -190,17 +199,3 @@
   }
 }
 
-// .visually-hidden {
-//     position: absolute;
-
-//     width: 1px;
-//     height: 1px;
-//     margin: -1px;
-//     border: 0;
-//     padding: 0;
-
-//     white-space: nowrap;
-//     clip-path: inset(100%);
-//     clip: rect(0 0 0 0);
-//     overflow: hidden;
-// }

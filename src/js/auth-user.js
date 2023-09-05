@@ -2,14 +2,16 @@
 // import { auth, app } from './firebase';
 import { FirebaseService } from './firebase-service';
 
+const signInBtnElAll = document.querySelectorAll('.js-signin-btn');
 const signInBtnEl = document.querySelector('.js-signin-btn');
 const authBtnEl = document.querySelector('.js-auth-btn');
 const displayNameEl = document.querySelector('.js-display-name');
+const logoutBtnElAll = document.querySelectorAll('.js-logout-btn');
 const logoutBtnEl = document.querySelector('.js-logout-btn');
 
 let isVisibleLogOut = false;
 
-logoutBtnEl.addEventListener('click', onClickLogout);
+logoutBtnElAll.forEach(el => el.addEventListener('click', onClickLogout));
 
 authBtnEl.addEventListener('click', event => {
   isVisibleLogOut = !isVisibleLogOut;
@@ -17,14 +19,13 @@ authBtnEl.addEventListener('click', event => {
 });
 
 export function authVisual() {
-  console.log(user.isAuth);
-
   if (user.isAuth) {
-    signInBtnEl.style.display = 'none';
+    signInBtnElAll.forEach(el => (el.style.display = 'none'));
     authBtnEl.style.display = 'flex';
     if (user.userName) displayNameEl.textContent = user.userName.slice(0, 8);
   } else {
-    signInBtnEl.style.display = 'flex';
+    signInBtnElAll.forEach(el => (el.style.display = 'flex'));
+    logoutBtnElAll[1].classList.remove('visually-hidden');
     authBtnEl.style.display = 'none';
     displayNameEl.textContent = 'User';
   }

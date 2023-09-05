@@ -45,8 +45,6 @@ export class FirebaseService {
 
     if (!localUser) return;
 
-    console.log(localUser);
-
     const userData = JSON.parse(localUser);
 
     this.isAuth = userData.isAuth;
@@ -80,7 +78,7 @@ export class FirebaseService {
       .catch(error => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.error('Ошибка регистрации:', errorMessage);
+        console.error('Error registretion:', errorMessage);
         // Notify.failure('Error');
       });
   }
@@ -95,7 +93,6 @@ export class FirebaseService {
 
       this.userID = userCredential.user.uid;
       this.email = email;
-      console.log(this.userID);
 
       const data = await this.readUserData(this.userID);
 
@@ -155,8 +152,7 @@ export class FirebaseService {
   }
 
   async readUserData(userID) {
-    console.log(userID);
-    // if (!userID) return;
+    if (!userID) return;
 
     const dbRef = ref(this.db);
     const snapshot = await get(child(dbRef, `users/${userID}`));

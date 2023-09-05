@@ -32,7 +32,7 @@ export async function bestBooksAllCategories() {
 
   allCardsEl.forEach(el => {
     el.addEventListener('click', event => {
-      markupBook(event.target.dataset.id);
+      markupBook(event.currentTarget.dataset.id);
     });
   });
 
@@ -56,7 +56,7 @@ export async function booksCategory(catName) {
     }
 
     if (books.length === 0) {
-      throw new Error('No books found in this category');
+      Notiflix.Notify.failure('No books found in this category');
     }
     const booksHtml = books
       .map(el => {
@@ -80,7 +80,7 @@ export async function booksCategory(catName) {
 
     allCardsEl.forEach(el => {
       el.addEventListener('click', event => {
-        markupBook(event.target.dataset.id);
+        markupBook(event.currentTarget.dataset.id);
       });
     });
   } catch (error) {
@@ -100,10 +100,10 @@ function bestBooks(books) {
 
 // Рендер однієї книги
 export function cardBook(book, index) {
-  return `<div class='one-book-container col-${index}'>
+  return `<div class='one-book-container col-${index} js-card-click' data-id="${book._id}">
        <div class="wrap">
-        <img class='book-img js-card-click' data-id="${book._id}" src="${book.book_image}" width="180px" height="226px"  alt="${book.title}"  loading="lazy"/>
-        <div class="overlay">
+        <img class='book-img' src="${book.book_image}" width="180px" height="226px"  alt="${book.title}"  loading="lazy"/>
+        <div class="overlay" >
           <p class="overlay-text">QUICK VIEW</p>
         </div>
        </div>

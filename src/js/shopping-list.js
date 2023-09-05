@@ -112,7 +112,6 @@ function onClickBtnDump(event) {}
 
 // ================ Local Storage
 export let shoppingListData = [];
-let bookData = {};
 loadData();
 
 function bookInList(id) {
@@ -121,10 +120,10 @@ function bookInList(id) {
 
 function loadData() {
   // const data = localStorage.getItem('shopping-list');
-
-  // if (!data) return;
+  if (!user.userID) return;
 
   user.readUserData(user.userID).then(data => {
+    if (!data) return;
     if (data.books) shoppingListData = JSON.parse(data.books);
     markupShoppingList(shoppingListData, 1, 3);
   });
