@@ -1,6 +1,9 @@
 import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
 import iconClose from '../images/x-close.png';
+import { user, authVisual } from './auth-user';
+
+let inOrUp = 'up';
 
 function disableBodyScroll() {
   document.body.style.overflow = 'hidden';
@@ -19,7 +22,7 @@ const instance = basicLightbox.create(
 
         <form class="signin-form js-signup-form">
             <div class="userdata-inputs">
-              <input class="userdata-input name" type="text" name="name" id="name" placeholder="Your name...">            
+              <input class="userdata-input name js-name" type="text" name="name" id="name" placeholder="Your name...">            
               <input class="userdata-input mail" type="email"  name="email" id="mail" placeholder="Your mail..." required>            
               <input class="userdata-input password" type="password" name="password" id="password" placeholder="Your password" required>            
               <button class="sing-btn" type="submit">
@@ -45,7 +48,7 @@ const instance = basicLightbox.create(
   }
 );
 
-function onClickbBtn(event) {
+function onClickClose(event) {
   instance.close();
 }
 
@@ -59,6 +62,49 @@ const signinBtnEl = document.querySelector('.js-signin-btn');
 
 signinBtnEl.addEventListener('click', event => {
   instance.show();
+
   const closeBtn = document.querySelector('.modal-uath-cls-btn');
-  closeBtn.addEventListener('click', onClickbBtn);
+  closeBtn.addEventListener('click', onClickClose);
+
+  const formEl = document.querySelector('.js-signup-form');
+  formEl.addEventListener('submit', onSubmitForm);
+
+  const chooseSignupEl = document.querySelector('.js-choose-signin');
+  const inputNameEl = document.querySelector('.js-name');
+  chooseSignupEl.addEventListener('click', event => {
+    event.preventDefault();
+    inOrUp = 'in';
+    inputNameEl.style.display = 'none';
+  });
+
+  const chooseSigninEl = document.querySelector('.js-choose-signup');
+  chooseSigninEl.addEventListener('click', event => {
+    event.preventDefault();
+    inOrUp = 'up';
+    inputNameEl.style.display = 'block';
+  });
 });
+
+function onSubmitForm(event) {
+  event.preventDefault();
+
+  const {
+    elements: { name, email, password },
+  } = event.currentTarget;
+
+  if (email.value === '' || password.value === '') {
+    return alert('Please fill in all the fields!');
+  }
+
+  data = { name: name.value, email: email.value, password: password.value };
+
+  event.currentTarget.reset();
+
+  if (inOrUp === 'up') {
+    user.signUpUser(data.name, data.email, data.password, authVisual);
+  } else {
+    user.signInUser(data.email, data.password, authVisual);
+  }
+
+  instance.close();
+}

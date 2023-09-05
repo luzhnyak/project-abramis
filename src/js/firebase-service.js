@@ -55,7 +55,7 @@ export class FirebaseService {
     // this.email = userData.email;
   }
 
-  signUpUser(userName, email, password) {
+  signUpUser(userName, email, password, callback) {
     createUserWithEmailAndPassword(this.auth, email, password)
       .then(userCredential => {
         // Signed in
@@ -74,6 +74,8 @@ export class FirebaseService {
         };
 
         localStorage.setItem('auth', JSON.stringify(userData));
+
+        callback();
       })
       .catch(error => {
         const errorCode = error.code;
