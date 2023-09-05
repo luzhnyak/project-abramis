@@ -1,14 +1,16 @@
 .footer{
     border-radius: 0px 0px 8px 8px;
-    padding-top: 65px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     
 }
 .footer-container{
     position: relative;
     height: 100px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+
 }
 
 .btn-footer{
@@ -16,96 +18,127 @@ background-color: transparent;
 border: none;
 }
 
-.heart-text{
-position: relative;
-z-index: 10;
-color: var(--white-color);
-font-size: 12px;
-top: 16px;
-left: 10px;
+.team-shark{
+  position: relative;
+  color: var(--black-color);
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.team-shark:hover{
+  border-radius: 36px;
+
+  background: #EAC645;
+  color: black;
 }
 
+.team-shark:focus{
+  border-radius: 36px;
 
-.heart {
-    position: absolute;
-    width: 100px;
-    height: 90px;
-    top: 50%;
-    left: 50%;
-    margin-top: -30px;
-    margin-left: -50px;
-    z-index: 1;
-    
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 40px;
-      height: 60px;
-      background: var(--violet-color);
-      border-radius: 50px 50px 0 0;
+  background: #EAC645;
+  color: black;
+}
 
-    }
-    
-    &:before {
-      left: 60px;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-    }
-    
-    &:after {
-      left: 20px;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
-    }
+.team-shark:after{
+  content: '\1F988';
+  position: absolute;
+  font-size: 50px;
+  left: 25px;
+  top: 40px;
+}
 
-  }
+// .heart-text{
+// position: relative;
+// z-index: 10;
+// color: var(--white-color);
+// font-size: 12px;
+// top: 16px;
+// left: 10px;
+// }
+
+
+// .heart {
+//     position: absolute;
+//     width: 100px;
+//     height: 90px;
+//     top: 50%;
+//     left: 50%;
+//     margin-top: -30px;
+//     margin-left: -50px;
+//     z-index: 1;
+    
+//     &:before,
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       width: 40px;
+//       height: 60px;
+//       background: var(--violet-color);
+//       border-radius: 50px 50px 0 0;
+
+//     }
+    
+//     &:before {
+//       left: 60px;
+//       transform: rotate(-45deg);
+//       transform-origin: 0 100%;
+//     }
+    
+//     &:after {
+//       left: 20px;
+//       transform: rotate(45deg);
+//       transform-origin: 100% 100%;
+//     }
+
+//   }
   
-  .heart-bg {
-    animation: heart-anim 1.5s linear .4s infinite;
-    left: 50%;
-    &:before,
-    &:after {
-      background-color: #502ee8a0;
+//   .heart-bg {
+//     animation: heart-anim 1.5s linear .4s infinite;
+//     left: 50%;
+//     &:before,
+//     &:after {
+//       background-color: #502ee8a0;
       
-    }
-  }
+//     }
+//   }
   
-  .heart-main {
-    animation: pounding .7s linear infinite alternate;
+//   .heart-main {
+//     animation: pounding .7s linear infinite alternate;
     
-  }
+//   }
   
-  @keyframes pounding {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0.7);
-    }
-  }
+//   @keyframes pounding {
+//     0% {
+//       transform: scale(1);
+//     }
+//     100% {
+//       transform: scale(0.7);
+//     }
+//   }
   
-  @keyframes heart-anim {
-    45% {
-      transform: scale(0.5);
-    }
+//   @keyframes heart-anim {
+//     45% {
+//       transform: scale(0.5);
+//     }
     
-    50%{
-        transform: scale(0.7);
-    }
+//     50%{
+//         transform: scale(0.7);
+//     }
 
-    52% {
-      transform: scale(0.8);
-    }
-    55% {
-      transform: scale(0.9);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(1.1);
-    }
-  }
+//     52% {
+//       transform: scale(0.8);
+//     }
+//     55% {
+//       transform: scale(0.9);
+//     }
+//     100% {
+//       opacity: 0;
+//       transform: scale(1.1);
+//     }
+//   }
 
   // .modal-team{
   //   position: relative;

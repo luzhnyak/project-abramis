@@ -49,7 +49,7 @@ function disableBodyScroll() {
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Bohdana Taraskina</h3>
-      <p class = "team-position">position</p>
+      <p class = "team-position">Developed cards for books for each category</p>
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Viktoria Lytvyn</h3>

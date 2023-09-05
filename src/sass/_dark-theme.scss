@@ -179,12 +179,11 @@ fill: var(--white-color);
   |============================
 */
 
-// .body-dark{
-//   .footer{
-//     background: var(--black-color);
-//   }
-// }
-
+.body-dark{
+  .team-shark{
+    color: var(--white-color);
+  }
+}
 /**
   |============================
   | dark styles PAGINATION
