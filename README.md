@@ -31,7 +31,9 @@
 3. **Vlad Kravchenko** - секція All Categories, Scrollbar (додано стилі темної теми).
 4. **Anna Boichuk** - розробка темної теми, футер із модальним вікном 'Our team'.
 5. **Viktoria Lytvyn** - блок із фондами, хедер, мобільне меню.
-6. **Bohdana Taraskina** - position
+6. **Bohdana Taraskina** - розробка карток для книг по категоріям.
 7. **Vitalii Lisnychenko** - модальне вікно для перегляду інформації про книжку.
-8. **Yaroslav** - пагінація
-9. **Illya**
+8. **Yaroslav** - пагінація.
+9. **Illya** - хедер.
+
+
