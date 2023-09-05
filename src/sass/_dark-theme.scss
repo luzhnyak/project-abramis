@@ -179,9 +179,19 @@ fill: var(--white-color);
   |============================
 */
 
-.body-dark{
-  .footer{
-    background: var(--black-color);
-    border: 1.5px solid var(--white-color);
-  }
-}
+// .body-dark{
+//   .footer{
+//     background: var(--black-color);
+//   }
+// }
+
+/**
+  |============================
+  | dark styles PAGINATION
+  |============================
+*/
+// .body-dark{
+//   .tui-pagination .tui-first{
+//     border: none;
+//   }
+// }
