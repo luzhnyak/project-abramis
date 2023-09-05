@@ -7,10 +7,9 @@
   z-index: 2;
 
   @media only screen and (max-width: 768px) {
-    width: 375px;
+    max-width: 375px;
     margin: 0 auto;
   }
- 
 
 }
 
@@ -21,8 +20,6 @@
   align-items: center;
   padding-top: 14px;
   padding-bottom: 14px;
-
-
 
 }
 
@@ -268,5 +265,3 @@
   align-items: center;
   background-color: var(--violet-color);
 }
-
-@media only screen and (min-width: 375px) {}
