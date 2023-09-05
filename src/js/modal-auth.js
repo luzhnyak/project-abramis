@@ -97,7 +97,11 @@ function onSubmitForm(event) {
     return alert('Please fill in all the fields!');
   }
 
-  data = { name: name.value, email: email.value, password: password.value };
+  const data = {
+    name: name.value,
+    email: email.value,
+    password: password.value,
+  };
 
   event.currentTarget.reset();
 
