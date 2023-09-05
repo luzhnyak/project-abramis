@@ -1,5 +1,6 @@
 import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
+import { user } from './firebase-service';
 import iconClose from '../images/x-close.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';
@@ -120,8 +121,10 @@ function loadData() {
   if (!data) return;
 
   shoppingListData = JSON.parse(data);
+  user.readUserData(user.userID, shoppingListData);
 }
 
 function saveData(data) {
   localStorage.setItem('shopping-list', JSON.stringify(data));
+  user.writeBooksToDB(user.userID, JSON.stringify(data));
 }

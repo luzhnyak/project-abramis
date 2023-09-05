@@ -14,122 +14,148 @@ import { log } from 'console';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-firebaseConfig = {
-  apiKey: 'AIzaSyDS0DuqLbmpznNhiwCXHv-oM-VF44DW1h0',
-  authDomain: 'bookshelf-b9aa2.firebaseapp.com',
-  databaseURL:
-    'https://bookshelf-b9aa2-default-rtdb.europe-west1.firebasedatabase.app',
-  projectId: 'bookshelf-b9aa2',
-  storageBucket: 'bookshelf-b9aa2.appspot.com',
-  messagingSenderId: '40570077936',
-  appId: '1:40570077936:web:eecbed5fd61fb7aa02f835',
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
-
-const db = getDatabase(app);
-
-function signUpCreateUser(
-  login = 'admin3',
-  email = 'test3@mail.com',
-  password = 'Potayto3447'
-) {
-  createUserWithEmailAndPassword(auth, email, password)
-    .then(userCredential => {
-      // Signed in
-
-      const user = userCredential.user;
-      const userId = auth.currentUser.uid;
-      // modal.classList.toggle('is-hidden');
-      // Notify.success('Success registretion');
-
-      // setUserToDb(userId, login, email, password);
-      // getUserFromDb(userId);
-      // authorizedUser(login);
-    })
-    .catch(error => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error('Ошибка регистрации:', errorMessage);
-      // Notify.failure('Error');
-    });
-}
-
-function signIn(email, password) {
-  signInWithEmailAndPassword(auth, email, password)
-    .then(userCredential => {
-      // Signed in
-      const user = userCredential.user;
-      const userId = auth.currentUser.uid;
-      console.log(userId);
-      // getUserFromDb(userId);
-      // authorizedUser(login);
-
-      modal.classList.toggle('is-hidden');
-      // Notify.success('Success');
-      // logoutButton.style.transform = "translateX(-500px)";
-    })
-    .catch(error => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      Notify.failure('Error');
-    });
-}
-
-function setUserToDb(id, login, email, password) {
-  set(ref(db, 'users/' + id), {
-    login,
-    email,
-    password,
-  });
-}
-
-signIn('test3@mail.com', 'Potayto3447');
-// signUpCreateUser();
-
-// ==============================
-
 export class FirebaseService {
   constructor() {
-    this.searchQuery = '';
-    this.page = 1;
-    this.per_page = 12;
-    this.total = 0;
+    // Your web app's Firebase configuration
+    this.firebaseConfig = {
+      apiKey: 'AIzaSyDS0DuqLbmpznNhiwCXHv-oM-VF44DW1h0',
+      authDomain: 'bookshelf-b9aa2.firebaseapp.com',
+      databaseURL:
+        'https://bookshelf-b9aa2-default-rtdb.europe-west1.firebasedatabase.app',
+      projectId: 'bookshelf-b9aa2',
+      storageBucket: 'bookshelf-b9aa2.appspot.com',
+      messagingSenderId: '40570077936',
+      appId: '1:40570077936:web:eecbed5fd61fb7aa02f835',
+    };
+
+    // Initialize Firebase
+    this.app = initializeApp(this.firebaseConfig);
+
+    // Initialize Firebase Authentication and get a reference to the service
+    this.auth = getAuth(this.app);
+
+    this.db = getDatabase(this.app);
+
+    this.isAuth = false;
+    this.userName;
+    this.userID;
+    this.email;
+
+    const localUser = localStorage.getItem('auth');
+
+    if (!localUser) return;
+
+    const userData = JSON.parse(localUser);
+
+    this.isAuth = userData.isAuth;
+    this.userName = userData.userName;
+    this.userID = userData.userID;
+    // this.email = userData.email;
   }
 
-  async fetchAuth() {
-    const responce = await axios.get(BASE_URL, {
-      params: {
-        key: API_KEY,
-        query: this.searchQuery,
-        page: this.page,
-        // image_type: 'photo',
-        // orientation: 'horizontal',
-        // safesearch: 'true',
-        per_page: this.per_page,
-      },
-      headers: { Authorization: API_KEY },
-    });
+  signUpUser(userName, email, password) {
+    createUserWithEmailAndPassword(this.auth, email, password)
+      .then(userCredential => {
+        // Signed in
 
-    this.total = responce.data.total_results;
+        this.userName = userName;
+        console.log(userCredential.user);
+        this.userID = this.auth.currentUser.uid;
+        this.email = email;
 
-    return responce.data.photos.map(element => {
-      return {
-        small: element.src.large,
-        large: element.src.original,
-        description: element.alt,
-        filename:
-          element.src.original.split('/')[
-            element.src.original.split('/').length - 1
-          ],
-      };
-    });
+        this.writeUserDataToDB(this.userID, this.userName, this.email);
+
+        const userData = {
+          isAuth: true,
+          userName: this.userName,
+          userID: this.userID,
+        };
+
+        localStorage.setItem('auth', JSON.stringify(userData));
+      })
+      .catch(error => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error('Ошибка регистрации:', errorMessage);
+        // Notify.failure('Error');
+      });
   }
 
-  incrementPage() {}
+  signInUser(email, password) {
+    signInWithEmailAndPassword(this.auth, email, password)
+      .then(userCredential => {
+        // Signed in
+        this.userName = 'NOne';
+        this.userID = userCredential.user.uid;
+        this.email = email;
+
+        const userData = {
+          isAuth: true,
+          userName: this.userName,
+          userID: this.userID,
+        };
+
+        localStorage.setItem('auth', JSON.stringify(userData));
+        Notify.success('Login success' + this.userID);
+      })
+      .catch(error => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error('Error adding name to the database:', error);
+        Notify.failure(error.message);
+      });
+  }
+
+  writeUserDataToDB(userID, name, email) {
+    const dbRef = ref(this.db, 'users/' + userID);
+    set(dbRef, {
+      displayName: name,
+    })
+      .then(() => {
+        Notify.success('Name added to the database successfully.');
+      })
+      .catch(error => {
+        console.error('Error adding name to the database:', error);
+      });
+  }
+
+  writeBooksToDB(userId, data) {
+    const dbRef = ref(this.db, 'users/' + userId + '/books');
+    set(dbRef, data)
+      .then(() => {
+        Notify.success('Book added to the database successfully.');
+      })
+      .catch(error => {
+        console.error('Error adding name to the database:', error);
+      });
+  }
+
+  async readUserData(userID) {
+    const dbRef = ref(this.db);
+    const snapshot = await get(child(dbRef, `users/${userID}`));
+
+    if (snapshot.exists()) {
+      return snapshot.val();
+    } else {
+      console.log('No data available');
+    }
+
+    // .catch(error => {
+    //   console.error(error);
+    // });
+  }
 }
+
+const data = {
+  ddd: 'ffff',
+  ssss: 'sssss',
+};
+
+export const user = new FirebaseService();
+// user.signInUser('testffdsgr9@mail.com', 'Potayto3447');
+// user.signUpUser('Admin', 'testffdsgr9@mail.com', 'Potayto3447');
+// user.readUserData('0p1zBHaRgLTHVX7icxwAqHQS5El1');
+console.log(user);
+// console.log(user.userName);
+
+// user.writeBooksToDB(user.userID, data);
