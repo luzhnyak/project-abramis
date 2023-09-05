@@ -24,9 +24,18 @@
   background-color: transparent;
   padding: 0;
 
+  transition: stroke;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   @media only screen and (min-width: 768px) {
     display: none;
   }
+}
+
+.header__toggle:hover,
+.header__toggle:focus {
+  stroke: var(--violet-color);
 }
 
 .part-two {

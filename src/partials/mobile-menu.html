@@ -7,11 +7,12 @@
       Bookshelf
     </a>
     <div class="side-two">
-      <label class="switch">
-        <input class="theme theme-mobile js-theme" type="checkbox"/>
+      <label class="switch" for="mobile-theme">
+        <input class="theme theme-mobile js-theme" type="checkbox" id="mobile-theme"/>
         <span class="switch-slider"></span>
       </label>
-      <button class="mobile__toogle js-close-menu">
+      <button class="mobile__toogle js-close-menu" aria-expanded="false"
+      aria-label="mobile-toogle">
         <svg class="mobile__icon" width="20" height="20">
           <use href="/src/images/icons.svg#icon-close"></use>
         </svg>
