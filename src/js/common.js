@@ -4,7 +4,6 @@ import './categoryes';
 import './funds';
 import './modal-book';
 import './cards';
-import './firebase';
 import './scroll-up';
 import './footer';
 import './firebase-service';
