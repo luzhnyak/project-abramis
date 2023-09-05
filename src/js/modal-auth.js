@@ -26,7 +26,7 @@ const instance = basicLightbox.create(
               <input class="userdata-input name js-name" type="text" name="name" id="name" placeholder="Your name...">            
               <input class="userdata-input mail" type="email"  name="email" id="mail" placeholder="Your mail..." required>            
               <input class="userdata-input password" type="password" name="password" id="password" placeholder="Your password" required>            
-              <button class="sing-btn" type="submit">
+              <button class="sing-btn js-sing-btn" type="submit">
                   SING UP
               </button>
             </div>
@@ -60,6 +60,7 @@ function onEscDown(event) {
 }
 
 const signinBtnEl = document.querySelector('.js-signin-btn');
+const submitBtnEl = document.querySelector('.js-sing-btn');
 
 signinBtnEl.addEventListener('click', event => {
   instance.show();
@@ -75,6 +76,7 @@ signinBtnEl.addEventListener('click', event => {
   chooseSignupEl.addEventListener('click', event => {
     event.preventDefault();
     inOrUp = 'in';
+    submitBtnEl.textContent = 'SIGN IN';
     inputNameEl.style.display = 'none';
   });
 
@@ -82,6 +84,7 @@ signinBtnEl.addEventListener('click', event => {
   chooseSigninEl.addEventListener('click', event => {
     event.preventDefault();
     inOrUp = 'up';
+    submitBtnEl.textContent = 'SIGN UP';
     inputNameEl.style.display = 'block';
   });
 });
