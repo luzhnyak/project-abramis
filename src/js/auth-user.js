@@ -38,6 +38,9 @@ function onClickLogout(event) {
   });
 }
 
+export const user = new FirebaseService();
+// authVisual();
+
 // //sign in the user
 // function onSignIn(e) {
 //   e.preventDefault();
@@ -97,8 +100,7 @@ function onClickLogout(event) {
 //   ssss: 'sssss',
 // };
 
-export const user = new FirebaseService();
-user.signInUser('admin@mail.com', 'Potayto0106', authVisual);
+// user.signInUser('admin@mail.com', 'Potayto0106', authVisual);
 // user.signUpUser('Admin', 'admin@mail.com', 'Potayto0106');
 // user.readUserData('0p1zBHaRgLTHVX7icxwAqHQS5El1');
 // console.log(user);

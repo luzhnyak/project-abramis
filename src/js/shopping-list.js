@@ -120,10 +120,10 @@ function bookInList(id) {
 }
 
 function loadData() {
-  const data = localStorage.getItem('shopping-list');
+  // const data = localStorage.getItem('shopping-list');
 
-  if (!data) return;
-  console.log();
+  // if (!data) return;
+
   user.readUserData(user.userID).then(data => {
     if (data) shoppingListData = JSON.parse(data.books);
     markupShoppingList(shoppingListData, 1, 3);
@@ -133,6 +133,6 @@ function loadData() {
 }
 
 function saveData(data) {
-  localStorage.setItem('shopping-list', JSON.stringify(data));
+  // localStorage.setItem('shopping-list', JSON.stringify(data));
   user.writeBooksToDB(user.userID, JSON.stringify(data));
 }

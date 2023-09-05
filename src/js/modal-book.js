@@ -116,15 +116,18 @@ function bookInList(id) {
 }
 
 function loadData() {
-  const data = localStorage.getItem('shopping-list');
+  // const data = localStorage.getItem('shopping-list');
 
-  if (!data) return;
+  // if (!data) return;
 
-  shoppingListData = JSON.parse(data);
-  user.readUserData(user.userID, shoppingListData);
+  // shoppingListData = JSON.parse(data);
+
+  user.readUserData(user.userID).then(data => {
+    if (data) shoppingListData = JSON.parse(data.books);
+  });
 }
 
 function saveData(data) {
-  localStorage.setItem('shopping-list', JSON.stringify(data));
+  // localStorage.setItem('shopping-list', JSON.stringify(data));
   user.writeBooksToDB(user.userID, JSON.stringify(data));
 }
