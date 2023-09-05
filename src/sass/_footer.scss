@@ -115,12 +115,14 @@ left: 10px;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    text-align: center;
   }
 
 
   .team-name{
 font-size: 18px;
 font-weight: 700;
+margin-bottom: 8px;
   }
   .team-position{
   color: var(--grey-color);

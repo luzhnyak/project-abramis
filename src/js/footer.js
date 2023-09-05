@@ -35,32 +35,32 @@ function disableBodyScroll() {
       <div class="modal modal-our-team container">
       <ul class="list team-list">
       <li class = "team-item">
-      <h2 class = "team-name">name</h2>
+      <h2 class = "team-name">Oleh Luzhniak</h2>
+      <p class = "team-position">Team leader</p>
+      </li>
+      <li class = "team-item">
+      <h2 class = "team-name">Anna Matsarska</h2>
+      <p class = "team-position">Scrum master</p>
+      </li>
+      <li class = "team-item">
+      <h2 class = "team-name">Anna Boichuk</h2>
+      <p class = "team-position">Developed dark theme feature, modal 'Our team'</p>
+      </li>
+      <li class = "team-item">
+      <h2 class = "team-name">Bohdana Taraskina</h2>
       <p class = "team-position">position</p>
       </li>
       <li class = "team-item">
-      <h2 class = "team-name">name</h2>
-      <p class = "team-position">position</p>
+      <h2 class = "team-name">Viktoria Lytvyn</h2>
+      <p class = "team-position">Developed funds, mobile menu and header</p>
       </li>
       <li class = "team-item">
-      <h2 class = "team-name">name</h2>
-      <p class = "team-position">position</p>
+      <h2 class = "team-name">Vitalii Lisnychenko</h2>
+      <p class = "team-position">Developed modal for book preview</p>
       </li>
       <li class = "team-item">
-      <h2 class = "team-name">name</h2>
-      <p class = "team-position">position</p>
-      </li>
-      <li class = "team-item">
-      <h2 class = "team-name">name</h2>
-      <p class = "team-position">position</p>
-      </li>
-      <li class = "team-item">
-      <h2 class = "team-name">name</h2>
-      <p class = "team-position">position</p>
-      </li>
-      <li class = "team-item">
-      <h2 class = "team-name">name</h2>
-      <p class = "team-position">position</p>
+      <h2 class = "team-name">Vlad Kravchenko</h2>
+      <p class = "team-position">Developed section All Categories, Scrollbar menu (added dark theme styles)</p>
       </li>
       <li class = "team-item">
       <h2 class = "team-name">name</h2>
