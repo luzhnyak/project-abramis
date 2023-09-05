@@ -23,17 +23,17 @@ const instance = basicLightbox.create(
 
         <form class="signin-form js-signup-form">
             <div class="userdata-inputs">
-              <input class="userdata-input name js-name" type="text" name="name" id="name" placeholder="Your name...">            
-              <input class="userdata-input mail" type="email"  name="email" id="mail" placeholder="Your mail..." required>            
-              <input class="userdata-input password" type="password" name="password" id="password" placeholder="Your password" required>            
+              <input class="userdata-input name js-name" type="text" name="name" id="name" placeholder="NAME">            
+              <input class="userdata-input mail" type="email"  name="email" id="mail" placeholder="MAIL" required>            
+              <input class="userdata-input password" type="password" name="password" id="password" placeholder="PASSWORD" required>            
               <button class="sing-btn" type="submit">
-                  SING UP
+                  SIGN UP
               </button>
             </div>
         </form>
         <div class="sign">
-            <a href="" class="js-choose-signup">SIGN UP</a>
-            <a href="" class="js-choose-signin">SIGN IN</a>
+            <a href="" class="sign-active js-choose-signup">SIGN UP</a>
+            <a href="" class="sign-active js-choose-signin">SIGN IN</a>
         </div>
   </div>
 </div>`,
