@@ -94,13 +94,13 @@ function cardBook({
           <p class="shop-list-item-author">${author}</p>
           <ul class="buy-list-shop list">
             <li class="buy-item">
-              <a href="${buy_links[0].url}"><img class="store-1" src="${store1}" alt="" width="46" height="15"/></a>
+              <a href="${buy_links[0].url}"><img class="store-1 store-1-sl" src="${store1}" alt="" width="46" /></a>
             </li>
             <li class="buy-item">
-              <a href="${buy_links[1].url}"><img class="store-2" src="${store2}" alt="" width="33" height="25"/></a>
+              <a href="${buy_links[1].url}"><img class="store-2 store-2-sl" src="${store2}" alt="" width="33" /></a>
             </li>
             <li class="buy-item">
-              <a href="${buy_links[2].url}"><img class="store-3" src="${store3}" alt="" width="32" height="30"/></a>
+              <a href="${buy_links[2].url}"><img class="store-3 store-3-sl" src="${store3}" alt="" width="32" /></a>
             </li>
           </ul>
         </div>
