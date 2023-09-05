@@ -31,7 +31,7 @@ function disableBodyScroll() {
     instanceEl.innerHTML = `<div class="modal modal-our-team container">
     <section class="our-team">
       <button class="modal-close-btn" type="button" aria-label="close">
-        <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24"/>
+        <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24" loading="lazy"/>
       </button>
        <h2 class = "title-team">Team Shark-JS</h2>
       <ul class="list team-list">

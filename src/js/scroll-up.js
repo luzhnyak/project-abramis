@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (currentScroll > 0) {
       window.requestAnimationFrame(smoothScrollToTop);
-      window.scrollTo(0, currentScroll - currentScroll / 15); // You can adjust the scroll speed by changing the divisor (e.g., / 8).
+      window.scrollTo(0, currentScroll - currentScroll / 15);
     }
   }
 });
