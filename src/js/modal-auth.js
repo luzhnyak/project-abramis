@@ -48,6 +48,10 @@ const instance = basicLightbox.create(
             </button>
             </div>
         </form>
+        <div class="sign">
+            <a href="">SIGN UP</a>
+            <a href="">SIGN IN</a>
+        </div>
 </div>
 </div>`,
   {
@@ -62,6 +66,10 @@ const instance = basicLightbox.create(
   }
 );
 
+function onClickbBtn(event) {
+  instance.close();
+}
+
 function onEscDown(event) {
   if (event.code === 'Escape') {
     instance.close();
@@ -72,4 +80,6 @@ const signinBtnEl = document.querySelector('.js-signin-btn');
 
 signinBtnEl.addEventListener('click', event => {
   instance.show();
+  const closeBtn = document.querySelector('.modal-uath-cls-btn');
+  closeBtn.addEventListener('click', onClickbBtn);
 });

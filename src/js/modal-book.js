@@ -47,13 +47,13 @@ export async function markupBook(id) {
     <p class="description">${description}</p>
     <ul class="buy-list list">
       <li class="buy-item">
-        <a href="${buy_links[0].url}"><img class="store-1" src="${store1}" alt="" width="" height=""/></a>
+        <a href="${buy_links[0].url}"><img class="store-1" src="${store1}" alt="" width="62" height=""/></a>
       </li>
       <li class="buy-item">
-        <a href="${buy_links[1].url}"><img class="store-2" src="${store2}" alt="" width="" height=""/></a>
+        <a href="${buy_links[1].url}"><img class="store-2" src="${store2}" alt="" width="33" height=""/></a>
       </li>
       <li class="buy-item">
-        <a href="${buy_links[2].url}"><img class="store-3" src="${store3}" alt="" width="" height=""/></a>
+        <a href="${buy_links[2].url}"><img class="store-3" src="${store3}" alt="" width="38" height=""/></a>
       </li>
     </ul>
     </div>
