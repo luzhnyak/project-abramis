@@ -18,7 +18,7 @@ export function authVisual() {
   if (user.isAuth) {
     signInBtnEl.style.display = 'none';
     authBtnEl.style.display = 'flex';
-    displayNameEl.textContent = user.userName.slice(0, 8);
+    if (user.userName) displayNameEl.textContent = user.userName.slice(0, 8);
   } else {
     signInBtnEl.style.display = 'flex';
     authBtnEl.style.display = 'none';
@@ -31,6 +31,8 @@ export function authVisual() {
 function onClickLogout(event) {
   event.preventDefault();
   logoutBtnEl.style.display = 'none';
+  signInBtnEl.style.display = 'flex';
+  authBtnEl.style.display = 'none';
   user.auth.signOut().then(() => {
     localStorage.removeItem('auth');
   });
