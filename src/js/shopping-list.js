@@ -1,5 +1,6 @@
 import Notiflix from 'notiflix';
 import { createPagination } from './pagination';
+import { user } from './firebase-service';
 
 import dumpIcon from '../images/dump-icon.png';
 import bookColumn1 from '../images/book-column@1x.png';
@@ -110,11 +111,9 @@ function cardBook({
 function onClickBtnDump(event) {}
 
 // ================ Local Storage
-
 export let shoppingListData = [];
 let bookData = {};
 loadData();
-markupShoppingList(shoppingListData, 1, 3);
 
 function bookInList(id) {
   shoppingListData.find(book => book._id === id);
@@ -124,10 +123,16 @@ function loadData() {
   const data = localStorage.getItem('shopping-list');
 
   if (!data) return;
+  console.log();
+  user.readUserData(user.userID).then(data => {
+    shoppingListData = JSON.parse(data.books);
+    markupShoppingList(shoppingListData, 1, 3);
+  });
 
-  shoppingListData = JSON.parse(data);
+  // shoppingListData = JSON.parse(user.readUserData(user.userID).books);
 }
 
 function saveData(data) {
   localStorage.setItem('shopping-list', JSON.stringify(data));
+  user.writeBooksToDB(user.userID, JSON.stringify(data));
 }
