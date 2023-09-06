@@ -124,7 +124,7 @@
   border-radius: 8px;
   width: 100%;
   height: 485px;
-  object-fit: cover;
+
   cursor: pointer;
   margin-bottom: 14px;
 
@@ -207,8 +207,8 @@
   }
 }
 
-.col-4 .book-img {
-  @media only screen and (min-width: 1440px) {
-    border-right: 1px black solid;
-  }
+.col-1 .book-img,
+.col-2 .book-img,
+.col-3 .book-img {
+  object-fit: cover;
 }
