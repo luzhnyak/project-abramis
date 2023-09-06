@@ -279,4 +279,10 @@ fill: var(--white-color);
   .sign-active{
     color: var(--violet-color);
   }
+
+  .log-out{
+    background-color: var(--black-color);
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+  }
 }
