@@ -37,12 +37,15 @@
       color: var(--black-color);
     }
   }
+    .active .menu-link{
+      color: var(--black-color);
+    }
 
   .switch {
     background-color: var(--black-color);
   }
   .icon-shoping-list {
-    // fill: var(--white-color);
+    fill: var(--white-color);
   }
 }
 /**
@@ -181,12 +184,7 @@
   .tui-prev {
     border: none;
   }
-  .tui-ico-first {
-    filter: brightness(100) invert(0);
-  }
-  .tui-ico-prev {
-    filter: brightness(100) invert(0);
-  }
+  
   .tui-pagination .tui-is-selected {
     border: none;
     background-color: var(--white-color);
@@ -198,23 +196,19 @@
     color: var(--white-color);
   }
   .tui-pagination .tui-next {
-    background-color: var(--yellow-color);
+    background-color: var(--black-pagination-color);
     border: 1px solid var(--black-color);
   }
   .tui-ico-ellip {
     filter: brightness(100) invert(0);
   }
 
-  .tui-ico-next {
-    filter: brightness(100) invert(1);
-  }
+
   .tui-pagination .tui-last {
-    background-color: var(--yellow-color);
+    background-color: var(--black-pagination-color);
     border: 1px solid var(--black-color);
   }
-  .tui-ico-last {
-    filter: brightness(100) invert(1);
-  }
+
 }
 
 /**
