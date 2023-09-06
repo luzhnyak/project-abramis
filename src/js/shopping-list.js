@@ -119,8 +119,7 @@ function bookInList(id) {
 }
 
 function loadData() {
-  // const data = localStorage.getItem('shopping-list');
-  if (!user.isAuth) window.location.href = '/index.html';
+  if (!user.isAuth) window.location.href = './index.html';
 
   if (!user.userID) return;
 
