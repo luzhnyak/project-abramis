@@ -2,23 +2,10 @@ const STORAGE_KEY = "saved-theme"
 
 
 const body = document.querySelector('body')
-
-/**
-  |============================
-  | dark style HEADER
-  |============================
-*/
-
 const header = {
- generalHeader: document.querySelector('.header'),
- logo: document.querySelector('.logo'),
- toggle: document.querySelector('.switch'),
  switcher: document.querySelector('.theme'),
  switcherMobile: document.querySelector('.theme-mobile')
 }
-
-
-
 
 /**
   |============================
@@ -71,10 +58,9 @@ function onLigth() {
       
     }
     
-
     /**
       |============================
-      | слухач
+      | слухачі
       |============================
     */
 

@@ -112,33 +112,42 @@
 }
 
 .menu-item {
-  padding-top: 8px;
-  padding-bottom: 8px;
 
-  padding-left: 16px;
-  padding-right: 16px;
 
-  transition: background, border-radius;
+  transition: border-radius;
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-item:hover,
-.menu-item:focus {
+.menu-item.active
+{
   border-radius: 36px;
+  background: var(--yellow-color);
+  color: (--black-color);
+}
 
-  background: #EAC645;
-  color: black;
+.menu-link:hover,
+.menu-link:focus {
+  border-radius: 36px;
+  background: var(--yellow-color);
+  color: (--black-color);
 }
 
 .menu-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  
+    padding-left: 16px;
+    padding-right: 16px;
   color: #111;
   display: flex;
   gap: 4px;
   align-items: center;
 }
 
-// .icon-shoping-list {}
+.icon-shoping-list {
+  margin-right: 8px;
+}
 
 // .menu-link:hover,
 // .menu-link:focus {

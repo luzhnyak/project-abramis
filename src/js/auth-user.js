@@ -8,6 +8,8 @@ const authBtnElAll = document.querySelectorAll('.js-auth-btn');
 const displayNameElAll = document.querySelectorAll('.js-display-name');
 const logoutBtnElAll = document.querySelectorAll('.js-logout-btn');
 const logoutBtnEl = document.querySelector('.js-logout-btn');
+const menuListElAll = document.querySelectorAll('.js-list_menu');
+
 // let isList;
 
 logoutBtnElAll.forEach(el => el.addEventListener('click', onClickLogout));
@@ -20,11 +22,10 @@ authBtnElAll.forEach(el =>
 
 export function authVisual() {
   if (user.isAuth) {
+    menuListElAll.forEach(el => el.classList.remove('visually-hidden'));
     signInBtnElAll.forEach(el => el.classList.add('visually-hidden'));
     logoutBtnElAll.forEach(el => el.classList.add('visually-hidden'));
     authBtnElAll.forEach(el => el.classList.remove('visually-hidden'));
-    // authBtnEl.style.display = 'flex';
-    // authBtnElAll;
     if (user.userName) {
       displayNameElAll.forEach(
         el => (el.textContent = user.userName.slice(0, 8))
@@ -33,6 +34,7 @@ export function authVisual() {
       displayNameElAll.forEach(el => (el.textContent = 'User'));
     }
   } else {
+    menuListElAll.forEach(el => el.classList.add('visually-hidden'));
     signInBtnElAll.forEach(el => el.classList.remove('visually-hidden'));
     logoutBtnElAll.forEach(el => el.classList.add('visually-hidden'));
     // logoutBtnElAll.forEach(el => el.classList.remove('visually-hidden'));
@@ -55,6 +57,7 @@ function onClickLogout(event) {
     localStorage.removeItem('auth');
     user.isAuth = false;
     authVisual();
+    window.location.href = '/index.html';
     // if (isList) {
     //   markupShoppingList([], 1, 3);
     // }

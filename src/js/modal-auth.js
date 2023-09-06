@@ -2,7 +2,7 @@ import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
 import iconClose from '../images/x-close.png';
 import { user, authVisual } from './auth-user';
-import { markupShoppingList, shoppingListData } from './shopping-list/';
+// import { markupShoppingList, shoppingListData } from './shopping-list/';
 
 let inOrUp = 'up';
 
