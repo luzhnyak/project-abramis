@@ -10,5 +10,5 @@ import './firebase-service';
 import './auth-user';
 import './modal-auth';
 
-const activeMenu = document.querySelector('.js-index_menu');
-activeMenu.classList.add('active');
+const activeMenuAll = document.querySelectorAll('.js-index_menu');
+activeMenuAll.forEach(el => el.classList.add('active'));

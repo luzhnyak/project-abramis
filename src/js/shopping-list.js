@@ -16,18 +16,18 @@ export function markupShoppingList(books, page, perPage) {
   Notiflix.Loading.standard();
 
   if (books.length === 0) {
-    // shoppingListEl.innerHTML = `
-    //   <div class="shopping_list-content">
+    shoppingListEl.innerHTML = `
+      <div class="shopping_list-content">
 
-    //     <p class="shopping_list-empty-text">
-    //       This page is empty, add some books and proceed to order.
-    //     </p>
-    //     <img class="book-column-img" srcset="${bookColumn1} 1x, ${bookColumn2} 2x"
-    //       src="${bookColumn1}" alt="book-column" loading="lazy" />
+        <p class="shopping_list-empty-text">
+          This page is empty, add some books and proceed to order.
+        </p>
+        <img class="book-column-img" srcset="${bookColumn1} 1x, ${bookColumn2} 2x"
+          src="${bookColumn1}" alt="book-column" loading="lazy" />
 
-    // </div>`;
-    // const pagination = document.querySelector('.tui-pagination');
-    // pagination.classList.add('visually-hidden');
+    </div>`;
+    const pagination = document.querySelector('.tui-pagination');
+    pagination.classList.add('visually-hidden');
     Notiflix.Loading.remove();
     return;
   }
@@ -120,6 +120,8 @@ function bookInList(id) {
 
 function loadData() {
   // const data = localStorage.getItem('shopping-list');
+  if (!user.isAuth) window.location.href = '/index.html';
+
   if (!user.userID) return;
 
   user.readUserData(user.userID).then(data => {

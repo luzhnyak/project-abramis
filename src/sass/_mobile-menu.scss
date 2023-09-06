@@ -164,19 +164,28 @@
   justify-content: center;
   align-items: center;
   gap: 2px;
-  padding: 8px 16px;
-
-  transition: background, border-radius, color;
+  
+  transition: border-radius, color;
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.mobile-menu-item:hover,
-.mobile-menu-item:focus {
+.mobile-menu-item.active {
   border-radius: 36px;
-  background: #EAC645;
-  color: black;
+  background: var(--yellow-color);
+  color: (--black-color);
+}
+
+.mobile-menu-link{
+  padding: 8px 16px;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
+  border-radius: 36px;
+  background: var(--yellow-color);
+  color: (--black-color);
 }
 
 .mobile-menu-item:hover .mobile-menu-link,
@@ -195,6 +204,7 @@
 
 .mobile-icon {
   fill: white;
+  margin-right: 16px;
   transition: fill;
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -202,7 +212,7 @@
 
 .mobile-menu-item:hover .mobile-icon,
 .mobile-menu-item:focus .mobile-icon {
-  fill: black;
+  fill:currentColor;
 }
 
 

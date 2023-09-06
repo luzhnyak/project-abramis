@@ -8,9 +8,6 @@ import './pagination';
 import './firebase-service';
 import './auth-user';
 import './modal-auth';
-// import { isList } from './auth-user';
 
-const activeMenu = document.querySelector('.js-list_menu');
-activeMenu.classList.add('active');
-
-// isList = true;
+const activeMenuAll = document.querySelectorAll('.js-list_menu');
+activeMenuAll.forEach(el => el.classList.add('active'));
