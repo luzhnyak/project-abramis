@@ -194,3 +194,47 @@ fill: var(--white-color);
 //     border: none;
 //   }
 // }
+
+/**
+  |============================
+  | dark styles AUTH
+  |============================
+*/
+
+.body-dark{
+  .modal-uath{
+    background-color: var(--black-light-color);
+    border: 2px solid var(--white-color);
+    
+  }
+  .modal-close-svg{
+    filter:brightness(0) invert(1);
+  }
+  .userdata-input{
+    background-color: var(--black-light-color);
+    border: 2px solid var(--white-color);
+  }
+
+  .userdata-input::placeholder{
+    color: var(--white-color);
+  }
+  .sing-btn{
+    background-color:  var(--white-color);
+    color: var(--black-light-color);
+    border: none;
+  }
+  
+  .sing-btn:hover{
+    background-color: var(--grey-color);
+    color: var(--white-color);
+  }
+.js-choose-signup{
+  color: rgba(246, 246, 246, 0.50);
+}
+  .js-choose-signin{
+    color: rgba(246, 246, 246, 0.50);
+  }
+  .sign-active{
+    color: var(--violet-color);
+  }
+}
