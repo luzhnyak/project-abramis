@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 // Import the functions you need from the SDKs you need
@@ -50,7 +49,6 @@ export class FirebaseService {
     this.isAuth = userData.isAuth;
     this.userName = userData.userName;
     this.userID = userData.userID;
-    // this.email = userData.email;
   }
 
   signUpUser(userName, email, password, callback) {
@@ -111,16 +109,6 @@ export class FirebaseService {
     } catch (error) {
       console.error('Error adding name to the database:', error);
     }
-
-    // .then(userCredential => {
-    //     // Signed in
-
-    // console.log(data);
-    //   });
-    // })
-    // .catch(error => {
-    //
-    // });
   }
 
   writeUserDataToDB(userID, name, email) {
@@ -131,7 +119,7 @@ export class FirebaseService {
       displayName: name,
     })
       .then(() => {
-        console.log('Name added to the database successfully.');
+        // console.log('Name added to the database successfully.');
       })
       .catch(error => {
         console.error('Error adding user to the database:', error);
@@ -144,7 +132,7 @@ export class FirebaseService {
     const dbRef = ref(this.db, 'users/' + userID + '/books');
     set(dbRef, data)
       .then(() => {
-        console.log('Book added to the database successfully.');
+        // console.log('Book added to the database successfully.');
       })
       .catch(error => {
         console.error('Error adding book to the database:', error);
@@ -162,9 +150,5 @@ export class FirebaseService {
     } else {
       console.log('No data available');
     }
-
-    // .catch(error => {
-    //   console.error(error);
-    // });
   }
 }
