@@ -2,7 +2,7 @@ import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
 import iconClose from '../images/x-close.png';
 import { user, authVisual } from './auth-user';
-import { log } from 'console';
+import { markupShoppingList, shoppingListData } from './shopping-list/';
 
 let inOrUp = 'up';
 
@@ -121,6 +121,9 @@ function onSubmitForm(event) {
   } else {
     user.signInUser(data.email, data.password, authVisual);
   }
+  // if (isList) {
+  //   markupShoppingList(shoppingListData, 1, 3);
+  // }
 
   instance.close();
 }
