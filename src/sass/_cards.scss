@@ -78,14 +78,6 @@
     width: calc((100% - 96px) / 5);
     height: 306px;
     margin-bottom: 32px;
-    transition: transform var(--transition);
-  }
-}
-
-.one-book-container:hover,
-.one-book-container:focus {
-  @media only screen and (min-width: 1440px) {
-    transform: scale(1.05);
   }
 }
 
@@ -127,6 +119,10 @@
 
   cursor: pointer;
   margin-bottom: 14px;
+
+  @media only screen and (max-width: 767px) {
+    object-fit: cover;
+  }
 
   @media only screen and (min-width: 768px) {
     height: 316px;
