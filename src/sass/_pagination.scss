@@ -131,3 +131,22 @@
 .tui-pagination .tui-prev {
     background-color: #111111;
 }
+
+// Dark 
+.body-dark .tui-is-selected {
+    background-color: #fff;
+    border-color: #fff;
+    color: #111111;
+}
+
+.body-dark .tui-is-disabled {
+    background-color: #EAC645;
+}
+
+.body-dark .tui-page-btn:hover {
+    background-color: #EAC645;
+    color: #111111;
+    border-color: #EAC645;
+}
+
+// .shop-list-item-description   tui-is-disabled
