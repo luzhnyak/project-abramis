@@ -6,6 +6,9 @@
   position: relative;
 }
 .modal {
+  position: fixed;
+  top: -50vh;
+  left: -150px;
   width: 300px;
   border: 1px solid var(--black-color);
   border-radius: 18px;
@@ -16,8 +19,8 @@
   padding-right: 18px;
   @media only screen and (min-width: 375px) {
     display: grid;
+    left: -164.5px;
     width: 335px;
-    // min-height: 762;
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -26,6 +29,7 @@
   }
 
   @media only screen and (min-width: 768px) {
+    position: static;
     width: 579px;
     min-height: 465px;
     padding-left: 40px;
