@@ -84,7 +84,7 @@ function onLigth() {
     header.switcherMobile.checked = true
   } 
   else{
-    localStorage.clear()
+    localStorage.removeItem("saved-theme")
     onLigth()
     header.switcherMobile.checked = false
   }
@@ -97,7 +97,7 @@ function onLigth() {
     header.switcher.checked = true
   } 
   else{
-    localStorage.clear()
+    localStorage.removeItem("saved-theme")
     onLigth()
     header.switcher.checked = false
     
