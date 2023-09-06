@@ -1,64 +1,49 @@
-.body-dark{
-
-    background-color: var(--black-light-color);
-    color: var(--white-color);
-    transition: all 0.4s;
-
-    
+.body-dark {
+  background-color: var(--black-light-color);
+  color: var(--white-color);
+  transition: all 0.4s;
 }
-// .body-dark{
-//   *{
-//     transition: all 1s;
-//   }
-// }
-
 
 /**
   |============================
   | dark style HEADER
   |============================
 */
-.body-dark{
-.header,
-.mobile__header{
+.body-dark {
+  .header,
+  .mobile__header {
     background: var(--black-color);
     color: var(--white-color);
     border: 1.5px solid var(--white-color);
-}
+  }
 
-.logo{
-
+  .logo {
     color: var(--white-color);
-   
-}
+  }
 
-.mobile__icon,
-.header__toggle {
-  stroke: white;
-}
+  .mobile__icon,
+  .header__toggle {
+    stroke: white;
+  }
 
-
-.menu-link{
+  .menu-link {
     color: var(--white-color);
 
-    &:hover{
-    color: var(--black-color);
+    &:hover {
+      color: var(--black-color);
     }
 
-    &:focus{
-    color: var(--black-color);
+    &:focus {
+      color: var(--black-color);
     }
-    
+  }
 
-}
-
-.switch{
-background-color: var(--black-color);
-
-}
-.icon-shoping-list{
-fill: var(--white-color);
-}
+  .switch {
+    background-color: var(--black-color);
+  }
+  .icon-shoping-list {
+    fill: var(--white-color);
+  }
 }
 /**
   |============================
@@ -66,66 +51,64 @@ fill: var(--white-color);
   |============================
 */
 .body-dark {
-    .categoryes::-webkit-scrollbar-thumb {
-        background: rgb(17, 17, 17, 0.6);
-    
-      }
-      
-      .categorie-btn {
-        color: rgb(255, 255, 255, 0.6);
-      }
-      
-      .categorie-btn.active {
-        color: var(--yellow-color);
-        text-transform: uppercase;
-      }
+  .categoryes::-webkit-scrollbar-thumb {
+    background: rgb(17, 17, 17, 0.6);
+  }
 
-      .categorie-btn:hover,
-      .categorie-btn:focus {
-        color: var(--yellow-color);
-      }
+  .categorie-btn {
+    color: rgb(255, 255, 255, 0.6);
+  }
+
+  .categorie-btn.active {
+    color: var(--yellow-color);
+    text-transform: uppercase;
+  }
+
+  .categorie-btn:hover,
+  .categorie-btn:focus {
+    color: var(--yellow-color);
+  }
 }
-
 
 /**
   |============================
   | dark theme MODAL
   |============================
 */
-.body-dark{
-    .modal{
-        border: 2px solid var(--white-color);
-        background-color: var(--black-light-color);
-    }
-    .modal-close-btn{
-      filter:brightness(0) invert(1);
-    }
+.body-dark {
+  .modal {
+    border: 2px solid var(--white-color);
+    background-color: var(--black-light-color);
+  }
+  .modal-close-btn {
+    filter: brightness(0) invert(1);
+  }
 
-    .add-to-shoping-list{
-        background-color: var(--black-light-color);
-        color: var(--white-color);
-    }
-  .store-1{
-    filter:brightness(0) invert(1);
+  .add-to-shoping-list {
+    background-color: var(--black-light-color);
+    color: var(--white-color);
+  }
+  .store-1 {
+    filter: brightness(0) invert(1);
 
-    &:hover{
-        filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+    &:hover {
+      filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
     }
   }
-  .store-2{
+  .store-2 {
     filter: grayscale(100%);
-    &:hover{
+    &:hover {
       filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+    }
   }
-  }
-  .store-3{
+  .store-3 {
     filter: grayscale(100%);
-    &:hover{
+    &:hover {
       filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+    }
   }
-  }
-  .text-info{
-    color: rgba(255, 255, 255, 0.50);
+  .text-info {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -135,24 +118,23 @@ fill: var(--white-color);
   |============================
 */
 
-.body-dark{
-  .shopping_list-title{
-    color: var(--white-color);
-   
-  }
-  .shopping_list-empty-text{
-    color: rgba(255, 255, 255, 0.60);
-  }
-  .shop-list-item-title{
+.body-dark {
+  .shopping_list-title {
     color: var(--white-color);
   }
-  .shop-list-item-category{
+  .shopping_list-empty-text {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .shop-list-item-title {
+    color: var(--white-color);
+  }
+  .shop-list-item-category {
     color: var(--grey-color);
   }
-  .shop-list-item-description{
+  .shop-list-item-description {
     color: var(--white-color);
   }
-  .shop-list-item-author{
+  .shop-list-item-author {
     color: var(--grey-color);
   }
 }
@@ -163,12 +145,11 @@ fill: var(--white-color);
   |============================
 */
 
-.body-dark{
-  .general-title{
+.body-dark {
+  .general-title {
     color: var(--white-color);
-
   }
-  .see-more-btn{
+  .see-more-btn {
     color: var(--white-color);
   }
 }
@@ -179,8 +160,8 @@ fill: var(--white-color);
   |============================
 */
 
-.body-dark{
-  .team-shark{
+.body-dark {
+  .team-shark {
     color: var(--white-color);
   }
 }
@@ -189,51 +170,50 @@ fill: var(--white-color);
   | dark styles PAGINATION
   |============================
 */
-.body-dark{
-  .tui-page-btn{
-  border: 1px solid var(--white-color);
-  color: white;
+.body-dark {
+  .tui-page-btn {
+    border: 1px solid var(--white-color);
+    color: white;
   }
-  .tui-first{
+  .tui-first {
     border: none;
   }
-  .tui-prev{
+  .tui-prev {
     border: none;
   }
-.tui-ico-first{
-
-  filter:brightness(100) invert(0);
+  .tui-ico-first {
+    filter: brightness(100) invert(0);
   }
-  .tui-ico-prev{
-    filter:brightness(100) invert(0);
+  .tui-ico-prev {
+    filter: brightness(100) invert(0);
   }
-  .tui-pagination .tui-is-selected{
+  .tui-pagination .tui-is-selected {
     border: none;
     background-color: var(--white-color);
     color: var(--black-color);
   }
 
- .tui-last-child{
+  .tui-last-child {
     border: 1px solid var(--white-color);
     color: var(--white-color);
   }
-  .tui-pagination .tui-next{
+  .tui-pagination .tui-next {
     background-color: var(--yellow-color);
     border: 1px solid var(--black-color);
   }
-  .tui-ico-ellip{
-    filter:brightness(100) invert(0);
+  .tui-ico-ellip {
+    filter: brightness(100) invert(0);
   }
 
-.tui-ico-next{
-    filter:brightness(100) invert(1);
+  .tui-ico-next {
+    filter: brightness(100) invert(1);
   }
-  .tui-pagination .tui-last{
+  .tui-pagination .tui-last {
     background-color: var(--yellow-color);
     border: 1px solid var(--black-color);
   }
-  .tui-ico-last{
-    filter:brightness(100) invert(1);
+  .tui-ico-last {
+    filter: brightness(100) invert(1);
   }
 }
 
@@ -243,45 +223,44 @@ fill: var(--white-color);
   |============================
 */
 
-.body-dark{
-  .modal-uath{
+.body-dark {
+  .modal-uath {
     background-color: var(--black-light-color);
     border: 2px solid var(--white-color);
-    
   }
-  .modal-close-svg{
-    filter:brightness(0) invert(1);
+  .modal-close-svg {
+    filter: brightness(0) invert(1);
   }
-  .userdata-input{
+  .userdata-input {
     background-color: var(--black-light-color);
     border: 2px solid var(--white-color);
     color: var(--white-color);
   }
 
-  .userdata-input::placeholder{
+  .userdata-input::placeholder {
     color: var(--white-color);
   }
-  .sing-btn{
-    background-color:  var(--white-color);
+  .sing-btn {
+    background-color: var(--white-color);
     color: var(--black-light-color);
     border: none;
   }
-  
-  .sing-btn:hover{
+
+  .sing-btn:hover {
     background-color: var(--grey-color);
     color: var(--white-color);
   }
-.js-choose-signup{
-  color: rgba(246, 246, 246, 0.50);
-}
-  .js-choose-signin{
-    color: rgba(246, 246, 246, 0.50);
+  .js-choose-signup {
+    color: rgba(246, 246, 246, 0.5);
   }
-  .sign-active{
+  .js-choose-signin {
+    color: rgba(246, 246, 246, 0.5);
+  }
+  .sign-active {
     color: var(--violet-color);
   }
 
-  .log-out{
+  .log-out {
     background-color: var(--black-color);
     border: 1px solid var(--white-color);
     color: var(--white-color);
