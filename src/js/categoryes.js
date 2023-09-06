@@ -36,7 +36,7 @@ async function listCategories() {
       });
     });
   } catch (error) {
-    Notiflix.Notify.failure(error.message);
+    Notify.failure(error.message);
   }
 }
 
