@@ -18,15 +18,17 @@ background-color: transparent;
 border: none;
 }
 .modal-our-team{
-  padding-top: 60px;
   text-align: center;
 }
 
 .title-team{
-margin-bottom: 30px;
-border: 2px solid transparent;
-border-color: var(--violet-color);
+  font-size: 35px;
+margin-bottom: 20px;
 padding: 10px 15px;
+}
+.title-shark{
+  color: var(--violet-color);
+
 }
 
 .team-shark{
