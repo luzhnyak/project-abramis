@@ -4,7 +4,8 @@
   letter-spacing: 0.02em;
   overflow-y: auto;
   padding-right: 20px;
-
+  font-size: 16px;
+  // letter-spacing: -.24px;
   /* 320 < Screen < 374 */
   @media only screen and (max-width: 374px) {
     max-height: 228px;
@@ -55,8 +56,8 @@
 
 
 .categorie-btn {
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
   color: var(--grey-color);
   background-color: transparent;
   border: none;
@@ -71,6 +72,9 @@
 .categorie-btn.active {
   color: var(--violet-color);
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  font-size: 15px;
 }
 
 .categorie-btn:hover,
