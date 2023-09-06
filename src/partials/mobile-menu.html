@@ -1,67 +1,69 @@
 <div class="mobile__container js-menu-container" id="mobile__list">
-  <div class="mobile__header">
-    <a class="logo logo-mobile link" href="./index.html">
-      <svg class="header__logo-name" width="28" height="28">
-        <use href="/src/images/icons.svg#icon-logo-no-text"></use>
-      </svg>
-      Bookshelf
-    </a>
-    <div class="side-two">
-      <label class="switch" for="mobile-theme">
-        <input
-          class="theme theme-mobile js-theme"
-          type="checkbox"
-          id="mobile-theme"
-        />
-        <span class="switch-slider"></span>
-      </label>
-      <button
-        class="mobile__toogle js-close-menu"
-        aria-expanded="false"
-        aria-label="mobile-toogle"
-      >
-        <svg class="mobile__icon" width="20" height="20">
-          <use href="/src/images/icons.svg#icon-close"></use>
+  <div class="mobile-menu-section">
+    <div class="mobile__header">
+      <a class="logo logo-mobile link" href="./index.html">
+        <svg class="header__logo-name" width="28" height="28">
+          <use href="/src/images/icons.svg#icon-logo-no-text"></use>
+        </svg>
+        Bookshelf
+      </a>
+      <div class="side-two">
+        <label class="switch" for="mobile-theme">
+          <input
+            class="theme theme-mobile js-theme"
+            type="checkbox"
+            id="mobile-theme"
+          />
+          <span class="switch-slider"></span>
+        </label>
+        <button
+          class="mobile__toogle js-close-menu"
+          aria-expanded="false"
+          aria-label="mobile-toogle"
+        >
+          <svg class="mobile__icon" width="20" height="20">
+            <use href="/src/images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile__menu">
+      <button class="mobile-log-desc-tab log-desc-tab js-auth-btn">
+        <svg class="user-icon" width="37" height="37">
+          <use href="/src/images/icon-user.svg#icon-user"></use>
+        </svg>
+        <span class="js-display-name">Name</span>
+        <svg class="header__registr-icon" width="20" height="20">
+          <use href="/src/images/icons.svg#icon-user-arrow-down"></use>
         </svg>
       </button>
-    </div>
-  </div>
 
-  <div class="mobile__menu">
-    <button class="mobile-log-desc-tab log-desc-tab js-auth-btn">
-      <svg class="user-icon" width="37" height="37">
-        <use href="/src/images/icon-user.svg#icon-user"></use>
-      </svg>
-      <span class="js-display-name">Name</span>
-      <svg class="header__registr-icon" width="20" height="20">
-        <use href="/src/images/icons.svg#icon-user-arrow-down"></use>
-      </svg>
-    </button>
-
-    <button class="mobile-signin-btn signin-btn registration js-signin-btn">
-      Sign up
-      <svg class="header__registr-icon" width="20" height="20">
-        <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
-      </svg>
-    </button>
-
-    <button class="mobile-log-out log-out js-logout-btn visually-hidden">
-      Log out
-      <svg class="header__unregistr-icon" width="20" height="20">
-        <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
-      </svg>
-    </button>
-    <ul class="mobile-menu list">
-      <li class="mobile-menu-item js-index_menu">
-        <a class="mobile-menu-link link" href="./index.html">Home</a>
-      </li>
-      <li class="mobile-menu-item js-list_menu">
-        <a class="mobile-menu-link link" href="./list.html"> Shoping list </a>
-        <svg width="16" height="16" class="mobile-icon">
-          <use href="/src/images/icons.svg#icon-cart"></use>
+      <button class="mobile-signin-btn signin-btn registration js-signin-btn">
+        Sign up
+        <svg class="header__registr-icon" width="20" height="20">
+          <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
         </svg>
-      </li>
-    </ul>
+      </button>
+
+      <button class="mobile-log-out log-out js-logout-btn visually-hidden">
+        Log out
+        <svg class="header__unregistr-icon" width="20" height="20">
+          <use href="/src/images/icons.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item js-index_menu">
+          <a class="mobile-menu-link link" href="./index.html">Home</a>
+        </li>
+        <li class="mobile-menu-item js-list_menu">
+          <a class="mobile-menu-link link" href="./list.html"> Shoping list </a>
+          <svg width="16" height="16" class="mobile-icon">
+            <use href="/src/images/icons.svg#icon-cart"></use>
+          </svg>
+        </li>
+      </ul>
+    </div>
+    <div class="bg-image"></div>
   </div>
-  <div class="bg-image"></div>
 </div>

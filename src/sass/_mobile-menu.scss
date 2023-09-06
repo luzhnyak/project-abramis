@@ -1,5 +1,28 @@
 /* Mobile toogle styles */
 
+.mobile-menu-section{
+  background-image: url(../images/background-mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 50%;
+  background-size: auto;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  @media only screen and (min-width: 375px) {
+      width: 375px;
+      
+    }
+  
+    @media only screen and (min-width: 768px) {
+      width: 768px;
+    }
+  
+    @media only screen and (min-width: 1440px) {
+      width: 1440px;
+    }
+}
+
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
@@ -31,10 +54,10 @@
 .bg-image {
   width: 100%;
   height: 100%;
-  background-image: url(../images/background-mobile.png);
-  background-repeat: no-repeat;
-  background-position: bottom 0px right 0px;
-  background-size: 100% 100%;
+  // background-image: url(../images/background-mobile.png);
+  // background-repeat: no-repeat;
+  // background-position: bottom 0px right 50%;
+  // background-size: auto;
 }
 
 .mobile__container {
@@ -43,7 +66,7 @@
   flex-direction: column;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 0;  
   width: 100vw;
   height: 100vh;
 
@@ -55,9 +78,11 @@
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
+
 }
 
 .mobile__container.is-open {
+  // transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -74,6 +99,19 @@
   border: 1.5px solid #111;
   border-radius: 0 0 8px 8px;
   box-shadow: 0 4px 4px #00000040;
+
+  @media only screen and (min-width: 375px) {
+    width: 375px;
+    margin: 0 auto;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    width: 1440px;
+  }
 
 }
 
@@ -115,7 +153,7 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin-top: 126px;
+  margin-top: 200px;
 
   font-size: 14px;
   font-style: normal;
@@ -153,7 +191,7 @@
 
 .registration {
   position: absolute;
-  bottom: 35px;
+  bottom: 44px;
   left: 44px;
 
   max-width: 118px;
@@ -231,7 +269,8 @@
 }
 
 .mobile-log-out{
-position: absolute;
+  position: absolute;
+  width: 184px;
   top: 126px;
   left: 20px;
 }

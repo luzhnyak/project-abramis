@@ -58,23 +58,29 @@ export async function markupBook(id) {
     </ul>
     </div>
     </div>
-    <button class="add-to-shoping-list" data-id=${id} type="button">ADD TO SHOPING LIST</button>
+    <button class="add-to-shoping-list js-add-list-btn" data-id=${id} type="button">ADD TO SHOPING LIST</button>
     <p class="text-info is-hidden" id="text">Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>
   </div>
   </div>
   `;
 
-  const btnAddEl = document.querySelector('.add-to-shoping-list');
+  const closeBtn = document.querySelector('.modal-close-btn');
+  closeBtn.addEventListener('click', onClickbBtn);
+
+  const btnAddEl = document.querySelector('.js-add-list-btn');
   btnAddEl.addEventListener('click', onClickBtnAdd);
+
+  if (!user.isAuth) {
+    btnAddEl.textContent = 'PLEASE SIGN IN TO CONTINUE';
+    btnAddEl.disabled = true;
+    return;
+  }
 
   if (shoppingListData.find(book => book._id === id)) {
     btnAddEl.textContent = 'REMOVE FROM THE SHOPPING LIST';
   } else {
     btnAddEl.textContent = 'ADD TO SHOPING LIST';
   }
-
-  const closeBtn = document.querySelector('.modal-close-btn');
-  closeBtn.addEventListener('click', onClickbBtn);
 }
 
 function onClickbBtn(event) {
