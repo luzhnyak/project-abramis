@@ -33,7 +33,7 @@ function disableBodyScroll() {
       <button class="modal-close-btn" type="button" aria-label="close">
         <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24" loading="lazy"/>
       </button>
-       <h2 class = "title-team">Team Shark-JS</h2>
+       <h2 class = "title-team">Team <span class = "title-shark">Shark-JS</span></h2>
       <ul class="list team-list">
       <li class = "team-item">
       <h3 class = "team-name">Oleh Luzhniak</h3>
@@ -52,6 +52,10 @@ function disableBodyScroll() {
       <p class = "team-position">Developed cards for books for each category</p>
       </li>
       <li class = "team-item">
+      <h3 class = "team-name">Illia Osipov</h3>
+      <p class = "team-position">Developed header</p>
+      </li>
+      <li class = "team-item">
       <h3 class = "team-name">Viktoria Lytvyn</h3>
       <p class = "team-position">Developed funds, mobile menu and header</p>
       </li>
@@ -64,11 +68,9 @@ function disableBodyScroll() {
       <p class = "team-position">Developed section All Categories, Scrollbar menu (added dark theme styles)</p>
       </li>
       <li class = "team-item">
-      <h3 class = "team-name">name</h3>
-      <p class = "team-position">position</p>
+      <h3 class = "team-name">Yaroslav Dovgan</h3>
+      <p class = "team-position">Developed pagination</p>
       </li>
-      
-      
       </ul>
     </section>
     </div>
