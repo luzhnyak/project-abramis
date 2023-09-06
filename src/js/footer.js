@@ -40,7 +40,9 @@ function markupTeam() {
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Anna Matsarska</h3>
-      <p class = "team-position">Scrum master, developed feature "scroll-up", was responsible for API connection </p>
+
+      <p class = "team-position">Scrum master, developed API connection, "Scroll Up" button, styles of shopping list page</p>
+
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Anna Boichuk</h3>
