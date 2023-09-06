@@ -90,7 +90,7 @@
 }
 
 .book-title {
-  width: 274px;
+  width: 270px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -144,6 +144,7 @@
   overflow: hidden;
   height: 485px;
   border-radius: 0 0 8px 8px;
+
   @media only screen and (min-width: 768px) {
     height: 316px;
   }
@@ -203,5 +204,11 @@
 .col-2 {
   @media only screen and (max-width: 1439px) {
     display: none;
+  }
+}
+
+.col-4 .book-img {
+  @media only screen and (min-width: 1440px) {
+    border-right: 1px black solid;
   }
 }
