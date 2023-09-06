@@ -36,11 +36,11 @@ function markupTeam() {
       <ul class="list team-list">
       <li class = "team-item">
       <h3 class = "team-name">Oleh Luzhniak</h3>
-      <p class = "team-position">Team leader</p>
+      <p class = "team-position">Team leader, developed authorization feature</p>
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Anna Matsarska</h3>
-      <p class = "team-position">Scrum master</p>
+      <p class = "team-position">Scrum master, developed feature "scroll-up", was responsible for API connection </p>
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Anna Boichuk</h3>
@@ -60,7 +60,7 @@ function markupTeam() {
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Vitalii Lisnychenko</h3>
-      <p class = "team-position">Developed modal for book preview</p>
+      <p class = "team-position">Developed modal for book preview, modal for authorization </p>
       </li>
       <li class = "team-item">
       <h3 class = "team-name">Vlad Kravchenko</h3>
