@@ -1,6 +1,9 @@
 import * as basicLightbox from 'basiclightbox';
+import Notiflix from 'notiflix';
+
 import { BookshelfApiService } from './api-service';
 import { user } from './auth-user';
+
 import iconClose from '../images/x-close.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';
@@ -28,14 +31,15 @@ const instance = basicLightbox.create(`<div class="js-modal"></div>`, {
 });
 
 export async function markupBook(id) {
-  bookData = await booksApi.fetchDetailsByBookId(id);
-  const { book_image, title, author, description, buy_links } = bookData;
+  try {
+    bookData = await booksApi.fetchDetailsByBookId(id);
+    const { book_image, title, author, description, buy_links } = bookData;
 
-  instance.show();
+    instance.show();
 
-  const instanceEl = document.querySelector('.js-modal');
+    const instanceEl = document.querySelector('.js-modal');
 
-  instanceEl.innerHTML = `<div class="modal container">
+    instanceEl.innerHTML = `<div class="modal container">
     <button class="modal-close-btn" type="button" aria-label="close">
       <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24" loading="lazy"/>
     </button>
@@ -64,22 +68,25 @@ export async function markupBook(id) {
   </div>
   `;
 
-  const closeBtn = document.querySelector('.modal-close-btn');
-  closeBtn.addEventListener('click', onClickbBtn);
+    const closeBtn = document.querySelector('.modal-close-btn');
+    closeBtn.addEventListener('click', onClickbBtn);
 
-  const btnAddEl = document.querySelector('.js-add-list-btn');
-  btnAddEl.addEventListener('click', onClickBtnAdd);
+    const btnAddEl = document.querySelector('.js-add-list-btn');
+    btnAddEl.addEventListener('click', onClickBtnAdd);
 
-  if (!user.isAuth) {
-    btnAddEl.textContent = 'PLEASE SIGN IN TO CONTINUE';
-    btnAddEl.disabled = true;
-    return;
-  }
+    if (!user.isAuth) {
+      btnAddEl.textContent = 'PLEASE SIGN IN TO CONTINUE';
+      btnAddEl.disabled = true;
+      return;
+    }
 
-  if (shoppingListData.find(book => book._id === id)) {
-    btnAddEl.textContent = 'REMOVE FROM THE SHOPPING LIST';
-  } else {
-    btnAddEl.textContent = 'ADD TO SHOPING LIST';
+    if (shoppingListData.find(book => book._id === id)) {
+      btnAddEl.textContent = 'REMOVE FROM THE SHOPPING LIST';
+    } else {
+      btnAddEl.textContent = 'ADD TO SHOPING LIST';
+    }
+  } catch (error) {
+    Notiflix.Notify.failure(error.message);
   }
 }
 
@@ -114,10 +121,6 @@ function onClickBtnAdd(event) {
   }
 
   saveData(shoppingListData);
-}
-
-function bookInList(id) {
-  shoppingListData.find(book => book._id === id);
 }
 
 function loadData() {

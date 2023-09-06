@@ -10,37 +10,41 @@ const booksApi = new BookshelfApiService();
 export async function bestBooksAllCategories() {
   Notiflix.Loading.standard();
 
-  const topBooksData = await booksApi.fetchTopBooks();
+  try {
+    const topBooksData = await booksApi.fetchTopBooks();
 
-  const cardsHtml = topBooksData
-    .map(el => {
-      return `<div>
+    const cardsHtml = topBooksData
+      .map(el => {
+        return `<div>
         <h2 class='category-name'>${el.list_name}</h2>
         <div class='category-books-container'>${bestBooks(el.books)}</div>
         <div class='see-more-btn-container'><button class='see-more-btn' type="button" data-catname="${
           el.list_name
         }">See more</button></div>
       </div>`;
-    })
-    .join('');
+      })
+      .join('');
 
-  cardsEl.innerHTML = `<h1 class="general-title">Best Sellers<span class="violet"> Books</span></h1>
+    cardsEl.innerHTML = `<h1 class="general-title">Best Sellers<span class="violet"> Books</span></h1>
          ${cardsHtml}`;
 
-  const allCardsEl = document.querySelectorAll('.js-card-click');
-  const allSeeMoreEl = document.querySelectorAll('.see-more-btn');
+    const allCardsEl = document.querySelectorAll('.js-card-click');
+    const allSeeMoreEl = document.querySelectorAll('.see-more-btn');
 
-  allCardsEl.forEach(el => {
-    el.addEventListener('click', event => {
-      markupBook(event.currentTarget.dataset.id);
+    allCardsEl.forEach(el => {
+      el.addEventListener('click', event => {
+        markupBook(event.currentTarget.dataset.id);
+      });
     });
-  });
 
-  allSeeMoreEl.forEach(el => {
-    el.addEventListener('click', event => {
-      booksCategory(event.target.dataset.catname);
+    allSeeMoreEl.forEach(el => {
+      el.addEventListener('click', event => {
+        booksCategory(event.target.dataset.catname);
+      });
     });
-  });
+  } catch (error) {
+    Notiflix.Notify.failure(error.message);
+  }
 
   Notiflix.Loading.remove();
 }
@@ -86,6 +90,12 @@ export async function booksCategory(catName) {
   } catch (error) {
     Notiflix.Notify.failure(error.message);
   }
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
   Notiflix.Loading.remove();
 }
 

@@ -1,7 +1,6 @@
 import { BookshelfApiService } from './api-service';
-import { cardBook, bestBooksAllCategories, booksCategory } from './cards';
-import { markupBook } from './modal-book';
-import { Notify } from 'notiflix';
+import { booksCategory } from './cards';
+import Notiflix from 'notiflix';
 
 const cardsEl = document.querySelector('.js-cards');
 const allCategories = document.querySelector('.categoryes');
@@ -20,7 +19,7 @@ async function listCategories() {
     allCategories.innerHTML = `<ul class="categorie-list list"><li class="categorie-item"><button class="categorie-btn active">All categories</button></li>${listHtml}</ul>`;
 
     if (catList.length === 0) {
-      throw new Error('No categories found');
+      Notiflix.Notify.failure('No categories found');
     }
 
     const catsBtn = document.querySelectorAll('.categorie-btn');
@@ -36,7 +35,7 @@ async function listCategories() {
       });
     });
   } catch (error) {
-    Notify.failure(error.message);
+    Notiflix.Notify.failure(error.message);
   }
 }
 

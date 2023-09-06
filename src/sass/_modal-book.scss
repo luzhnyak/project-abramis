@@ -1,25 +1,27 @@
 .basicLightbox {
   height: 100%;
   overflow: scroll;
+
+  @media only screen and (max-width: 374px) {
+    align-items: start;
+  }
 }
+
 .js-modal {
   position: relative;
 }
-.modal {
-  position: fixed;
-  top: -50vh;
-  left: -150px;
-  width: 300px;
+
+.modal {  
+  width: 312px;
   border: 1px solid var(--black-color);
   border-radius: 18px;
-  background-color: white;
+  background-color: var(--white-color);;
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 18px;
-  padding-right: 18px;
-  @media only screen and (min-width: 375px) {
-    display: grid;
-    left: -164.5px;
+  padding-right: 18px;  
+
+  @media only screen and (min-width: 375px) {    
     width: 335px;
     margin: 0 auto;
     padding-top: 40px;
@@ -36,11 +38,13 @@
     padding-right: 40px;
   }
 }
+
 .modal-info {
   @media only screen and (min-width: 768px) {
     display: flex;
   }
 }
+
 .modal-close-btn {
   padding: 0;
   display: flex;
@@ -51,10 +55,12 @@
   position: absolute;
   border: none;
   background: transparent;
+
   @media only screen and (min-width: 375px) {
     top: 16;
     right: 16;
   }
+
   @media only screen and (min-width: 768px) {
     top: 24;
     right: 24;
@@ -64,6 +70,7 @@
 .modal-close-svg {
   width: 16px;
   height: 16px;
+
   @media only screen and (min-width: 375px) {
     width: 18px;
     height: 18px;
@@ -73,6 +80,7 @@
     height: 22px;
   }
 }
+
 .book-image {
   display: block;
   object-fit: cover;
@@ -84,12 +92,14 @@
   border-color: rgba($color: #171717, $alpha: 0.5);
   border-radius: 8px;
   margin-bottom: 14px;
+
   @media only screen and (min-width: 375px) {
     width: 287px;
     height: 408px;
     margin-left: 0;
     margin-right: 0;
   }
+
   @media only screen and (min-width: 768px) {
     width: 192px;
     height: 281px;
@@ -97,34 +107,42 @@
     margin-right: 24px;
   }
 }
+
 .book-info {
   @media only screen and (min-width: 768px) {
     display: block;
   }
 }
+
 .title {
   font-size: 16px;
   margin-bottom: 4px;
+
   @media only screen and (min-width: 375px) {
   }
+
   @media only screen and (min-width: 768px) {
     font-size: 24px;
     margin-bottom: 8px;
   }
 }
+
 .author {
   font-size: 12px;
   margin-bottom: 16px;
   font-style: italic;
   color: #b4afaf;
+
   @media only screen and (min-width: 375px) {
     margin-bottom: 18px;
   }
+
   @media only screen and (min-width: 768px) {
     font-size: 14px;
     margin-bottom: 20px;
   }
 }
+
 .description {
   font-size: 14px;
   line-height: 18px;
@@ -137,15 +155,18 @@
     margin-bottom: 20px;
   }
 }
+
 .buy-list {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-bottom: 24px;
 }
+
 .buy-list > li {
   filter: grayscale(100%);
 }
+
 .buy-list > li:hover,
 .buy-list > li:focus {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
@@ -183,6 +204,7 @@
     border-radius: 32px;
   }
 }
+
 .add-to-shoping-list:hover,
 .add-to-shoping-list:focus {
   @media only screen and (min-width: 1440px) {
@@ -191,6 +213,7 @@
     transition: var(--transition);
   }
 }
+
 .text-info {
   margin-left: auto;
   margin-right: auto;
@@ -201,15 +224,18 @@
   margin-top: 7px;
   letter-spacing: -0.04em;
   color: rgba($color: #171717, $alpha: 0.5);
+
   @media only screen and (min-width: 375px) {
     margin-top: 8px;
   }
+
   @media only screen and (min-width: 768px) {
     font-size: 12px;
     width: 324px;
     height: 28px;
   }
 }
+
 .is-hidden {
   display: none;
 }

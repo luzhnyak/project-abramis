@@ -38,7 +38,7 @@
   border-color: var(--black-pagination-color);
 }
 .tui-pagination .tui-first-child.tui-is-selected {
-  border-left: none;
+  border: none;
 }
 .tui-pagination .tui-is-selected:hover {
   background-color: var(--black-pagination-color);
@@ -78,19 +78,3 @@
   filter: brightness(0) invert(1);
 }
 
-// // Dark
-// .body-dark .tui-is-selected {
-//     background-color: #fff;
-//     border-color: #fff;
-//     color: #111111;
-// }
-
-// .body-dark .tui-is-disabled {
-//     background-color: #EAC645;
-// }
-
-// .body-dark .tui-page-btn:hover {
-//     background-color: #EAC645;
-//     color: #111111;
-//     border-color: #EAC645;
-// }

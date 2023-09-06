@@ -1,14 +1,12 @@
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { onAuthStateChanged } from 'firebase/auth';
-import { onValue, get, update } from 'firebase/database';
-import { getDatabase, ref, set, remove, child, push } from 'firebase/database';
-import { log } from 'console';
+import { get } from 'firebase/database';
+import { getDatabase, ref, set, child } from 'firebase/database';
+
+import Notiflix from 'notiflix';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -74,10 +72,9 @@ export class FirebaseService {
         callback();
       })
       .catch(error => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.error('Error registretion:', errorMessage);
-        // Notify.failure('Error');
+        if ('auth/email-already-in-use') {
+          Notiflix.Notify.failure('This email already in use.');
+        }
       });
   }
 
@@ -107,7 +104,13 @@ export class FirebaseService {
 
       callback();
     } catch (error) {
-      console.error('Error adding name to the database:', error);
+      if ('auth/user-not-found') {
+        Notiflix.Notify.failure('This user not found.');
+      }
+
+      if ('auth/wrong-password') {
+        Notiflix.Notify.failure('Wrong password.');
+      }
     }
   }
 
