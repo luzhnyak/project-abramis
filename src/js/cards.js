@@ -32,7 +32,7 @@ export async function bestBooksAllCategories() {
 
   allCardsEl.forEach(el => {
     el.addEventListener('click', event => {
-      markupBook(event.target.dataset.id);
+      markupBook(event.currentTarget.dataset.id);
     });
   });
 
@@ -48,9 +48,16 @@ export async function bestBooksAllCategories() {
 // Рендер всіх книг однієї категорії
 export async function booksCategory(catName) {
   Notiflix.Loading.standard();
-  const books = await booksApi.fetchBooksByCategory(catName);
+  try {
+    const books = await booksApi.fetchBooksByCategory(catName);
+    if (catName === 'All categories') {
+      bestBooksAllCategories();
+      return;
+    }
 
-  if (books.length) {
+    if (books.length === 0) {
+      Notiflix.Notify.failure('No books found in this category');
+    }
     const booksHtml = books
       .map(el => {
         return cardBook(el, 0);
@@ -73,14 +80,13 @@ export async function booksCategory(catName) {
 
     allCardsEl.forEach(el => {
       el.addEventListener('click', event => {
-        markupBook(event.target.dataset.id);
+        markupBook(event.currentTarget.dataset.id);
       });
     });
-
-    Notiflix.Loading.remove();
-  } else {
-    bestBooksAllCategories();
+  } catch (error) {
+    Notiflix.Notify.failure(error.message);
   }
+  Notiflix.Loading.remove();
 }
 
 //Рендер 5 книг
@@ -94,8 +100,13 @@ function bestBooks(books) {
 
 // Рендер однієї книги
 export function cardBook(book, index) {
-  return `<div class='one-book-container col-${index}'>
-        <img class='book-img js-card-click' data-id="${book._id}" src="${book.book_image}" width="180px" height="226px"  alt="${book.title}" />
+  return `<div class='one-book-container col-${index} js-card-click' data-id="${book._id}">
+       <div class="wrap">
+        <img class='book-img' src="${book.book_image}" width="180px" height="226px"  alt="${book.title}"  loading="lazy"/>
+        <div class="overlay" >
+          <p class="overlay-text">QUICK VIEW</p>
+        </div>
+       </div>
         <div>
         <h3 class='book-title'>${book.title}</h3>
         <p class='book-author'>${book.author}</p>

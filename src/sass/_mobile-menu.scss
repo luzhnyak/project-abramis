@@ -1,17 +1,3 @@
-.header__toggle {
-  // position: relative;
-  margin-right: 20px;
-  stroke: #000000;
-  fill: #000000;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-
-  @media only screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
 /* Mobile toogle styles */
 
 .menu-toggle {
@@ -29,7 +15,6 @@
   border-radius: 50%;
   outline: none;
 
-  stroke: var(--color-navy-blue);
 }
 
 @media (min-width: 768px) {
@@ -53,15 +38,14 @@
 }
 
 .mobile__container {
+  margin: 0;
   display: flex;
   flex-direction: column;
   position: fixed;
-  // gap: 200px;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-
 
   background: radial-gradient(189.32% 190.93% at 59.76% -23.42%,
       #4f2ee8 18.03%,
@@ -81,7 +65,7 @@
 .mobile__header {
   display: flex;
   margin: 0 auto;
-  padding: 14px 17px;
+  padding: 14px 20px;
   width: 100%;
   justify-content: space-between;
 
@@ -94,7 +78,7 @@
 }
 
 .mobile__header .switch {
-  margin: 0;
+  // margin: 0;
 }
 
 .side-two {
@@ -107,15 +91,22 @@
 
 .mobile__toogle {
   display: block;
-  width: 24px;
-  height: 24px;
+  // width: 28px;
+  height: 20px;
   background-color: transparent;
   border: none;
 
   stroke: black;
-  fill: black;
-
   cursor: pointer;
+
+  transition: stroke;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile__toogle:hover,
+.mobile__toogle:focus {
+  stroke: var(--violet-color);
 }
 
 .mobile-menu {
@@ -168,10 +159,6 @@
   max-width: 118px;
 }
 
-.header__registr-icon {
-  margin-left: 18px;
-}
-
 .mobile-menu-item {
   display: flex;
   justify-content: center;
@@ -218,3 +205,27 @@
   fill: black;
 }
 
+
+.sing-in-text{
+  margin-right: 4px;
+}
+
+.mobile__menu{
+  // position: relative;
+}
+
+.mobile-log-desc-tab{
+  position: absolute;
+  top: 78px;
+  left: 20px;
+}
+
+.mobile-log-out{
+position: absolute;
+  top: 126px;
+  left: 20px;
+}
+
+.mobile-signin-btn{
+ 
+}

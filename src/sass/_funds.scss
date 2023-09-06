@@ -66,7 +66,7 @@
   letter-spacing: -0.56px;
 
   color: var(--white-color);
-
+  border-bottom: 1px solid transparent;
 }
 
 .funds-item::before {
@@ -76,6 +76,13 @@
   margin-right: 16px;
 
 }
+
+.funds-item:hover,
+.funds-item:focus {
+ border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+//  border-radius: 3px;
+}
+
 
 .funds-scroll-btn {
   position: absolute;
@@ -96,8 +103,26 @@
 
   cursor: pointer;
 
+  transition: background-color;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+.funds-scroll-btn:hover,
+.funds-scroll-btn:focus {
+  background-color: var(--violet-color);
+}
+
+.funds-icon {
+  fill: var(--violet-color);
+
+}
+
+.funds-scroll-btn:hover .funds-icon,
+.funds-scroll-btn:focus .funds-icon {
+  fill: var(--white-color);
+}
 
 .gerb-icon {
   fill: var(--white-color);

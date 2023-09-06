@@ -1,135 +1,64 @@
-.tui-page-btn {
-    border-radius: 50%;
-    margin: 10px;
-    height: 44px;
-}
-
-@media only screen and (min-width: 340px) {
-    .tui-page-btn {
-        height: 32px;
+.tui-pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  gap: 8px;
+  @media only screen and (max-width: 767px) {
+      gap: 4px;
     }
 }
-
-@media only screen and (min-width: 340px) {
-    .tui-pagination {
-        display: flex;
-    }
-}
-
-@media only screen and (min-width: 767px) {
-    .tui-pagination {
-        display: block;
-    }
-}
-
-// ==========================
+    
 .tui-pagination .tui-page-btn {
-    width: 44px;
-    padding: 13px;
-    line-height: 1;
-    font-size: 18px;
-    font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;  
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 700;  
+
+  @media only screen and (min-width: 768px) {
+      height: 44px;
+      width: 44px;
+  }
 }
 
-@media only screen and (min-width: 340px) {
-    .tui-pagination .tui-page-btn {
-        width: 32px;
-        padding: 8px;
-        line-height: 1;
-        font-size: 18px;
-        font-weight: 700;
-        font-family: 'DM Sans', sans-serif;
-    }
-}
-
-// @media only screen and (max-width: 767px) {
-//     .tui-pagination .tui-page-btn {
-//         width: 44px;
-//         padding: 13px;
-//         line-height: 1;
-//         font-size: 18px;
-//         font-weight: 700;
-//         font-family: 'DM Sans', sans-serif;
-//     }
-// }
-// ==================================
-.tui-pagination .tui-next {
-    margin-left: 24px;
-    height: 44px;
-}
-
-@media only screen and (min-width: 340px) {
-    .tui-pagination .tui-next {
-        height: 32px;
-    }
-}
-
-//===================================
-.tui-pagination .tui-first {
-    height: 44px;
-}
-
-@media only screen and (min-width: 340px) {
-    .tui-pagination .tui-first {
-        height: 32px;
-    }
-}
-
-// =====================================
-.tui-pagination .tui-prev {
-    margin-right: 24px;
-    height: 44px;
-}
-
-@media only screen and (min-width: 340px) {
-    .tui-pagination .tui-prev {
-        height: 32px;
-    }
-}
-
-// =========================
-.tui-pagination .tui-last {
-    height: 44px;
-}
-
-@media only screen and (min-width: 340px) {
-    .tui-pagination .tui-last {
-        height: 32px;
-    }
-}
 
 // hover and focus
 .tui-pagination .tui-is-selected {
-    background-color: #111111;
-    border-color: #111111;
+  background-color:var(--black-pagination-color);
+  border-color:var(--black-pagination-color);
 }
 
 .tui-pagination .tui-is-selected:hover {
-    background-color: #111111;
-    border-color: #111111;
+  background-color:var(--black-pagination-color);
+  border-color:var(--black-pagination-color);
 }
 
 .tui-pagination .tui-page-btn:hover {
-    background-color: #EAC645;
-    color: #fff;
-    border-color: #EAC645;
+    background-color: var(--yellow-color);
+    border-color: var(--yellow-color);
+    color: var(--white-color);
 }
 
 .tui-pagination .tui-first {
-    background-color: #111111;
+  background-color:var(--black-pagination-color);  
 }
 
 .tui-pagination .tui-next {
-    background-color: #111111;
+  background-color:var(--black-pagination-color);  
 }
 
 .tui-pagination .tui-last {
-    background-color: #111111;
+  background-color:var(--black-pagination-color);  
 }
 
 .tui-pagination .tui-prev {
-    background-color: #111111;
+
+    background-color: var(--black-pagination-color);
 }
 
 // Dark 
@@ -149,4 +78,4 @@
     border-color: #EAC645;
 }
 
-// .shop-list-item-description   tui-is-disabled
+

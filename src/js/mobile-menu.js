@@ -1,5 +1,3 @@
-// alert("test")
-
 // document.addEventListener('DOMContentLoaded', function () {
 //   const toggleButton = document.getElementById('toggle-menu');
 //   const mobileMenu = document.getElementById('mobile-menu');
@@ -20,7 +18,6 @@
 //     body.style.overflow = 'auto';
 //   });
 // });
-
 
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');

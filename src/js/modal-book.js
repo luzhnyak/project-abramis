@@ -1,5 +1,6 @@
 import * as basicLightbox from 'basiclightbox';
 import { BookshelfApiService } from './api-service';
+import { user } from './auth-user';
 import iconClose from '../images/x-close.png';
 import store1 from '../images/modal/store1.png';
 import store2 from '../images/modal/store2.png';
@@ -36,23 +37,23 @@ export async function markupBook(id) {
 
   instanceEl.innerHTML = `<div class="modal container">
     <button class="modal-close-btn" type="button" aria-label="close">
-      <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24"/>
+      <img class="modal-close-svg" src="${iconClose}" alt="" width="24" height="24" loading="lazy"/>
     </button>
     <div class="modal-info">
-    <img class="book-image" src="${book_image}" alt=""/>
+    <img class="book-image" src="${book_image}" alt="" loading="lazy"/>
     <div class="book-info">
     <h2 class="title">${title}</h2>
     <h3 class="author">${author}</h3>
     <p class="description">${description}</p>
     <ul class="buy-list list">
       <li class="buy-item">
-        <a href="${buy_links[0].url}"><img class="store-1" src="${store1}" alt="" width="62" height=""/></a>
+        <a href="${buy_links[0].url}"><img class="store-1" src="${store1}" alt="" width="62" height="" loading="lazy"/></a>
       </li>
       <li class="buy-item">
-        <a href="${buy_links[1].url}"><img class="store-2" src="${store2}" alt="" width="33" height=""/></a>
+        <a href="${buy_links[1].url}"><img class="store-2" src="${store2}" alt="" width="33" height="" loading="lazy"/></a>
       </li>
       <li class="buy-item">
-        <a href="${buy_links[2].url}"><img class="store-3" src="${store3}" alt="" width="38" height=""/></a>
+        <a href="${buy_links[2].url}"><img class="store-3" src="${store3}" alt="" width="38" height="" loading="lazy"/></a>
       </li>
     </ul>
     </div>
@@ -115,13 +116,19 @@ function bookInList(id) {
 }
 
 function loadData() {
-  const data = localStorage.getItem('shopping-list');
+  // const data = localStorage.getItem('shopping-list');
 
-  if (!data) return;
+  // if (!data) return;
 
-  shoppingListData = JSON.parse(data);
+  // shoppingListData = JSON.parse(data);
+
+  user.readUserData(user.userID).then(data => {
+    if (!data) return;
+    if (data.books) shoppingListData = JSON.parse(data.books);
+  });
 }
 
 function saveData(data) {
-  localStorage.setItem('shopping-list', JSON.stringify(data));
+  // localStorage.setItem('shopping-list', JSON.stringify(data));
+  user.writeBooksToDB(user.userID, JSON.stringify(data));
 }

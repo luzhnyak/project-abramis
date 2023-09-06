@@ -4,25 +4,24 @@
   letter-spacing: 0.02em;
   overflow-y: auto;
   padding-right: 20px;
-
-  @media only screen and (min-width: 375px) {
-    // max-width: 335px;
+  font-size: 16px;
+  // letter-spacing: -.24px;
+  /* 320 < Screen < 374 */
+  @media only screen and (max-width: 374px) {
     max-height: 228px;
-    // margin: 40px 0;
     font-size: 16px;
   }
 
-  @media only screen and (min-width: 768px) {
-    // max-width: 309px;
-    max-height: 472px;
-    // margin: 40px 32px;
-    font-size: 18px;
-  }
+/* 375 < Screen < 374 */
+@media only screen and (min-width: 375px) {
+  max-height: 228px;
+  font-size: 16px;
+}
 
-  @media only screen and (min-width: 1440px) {
-    // max-width: 328px;
+/* 768 > */
+  @media only screen and (min-width: 768px) {
+    width: 374px;
     max-height: 472px;
-    //    margin: 40px 0;
     font-size: 18px;
   }
 }
@@ -45,24 +44,37 @@
 }
 
 .categorie-list {
+  gap: 32px;
 }
 
 .categorie-item {
-  // margin-bottom: 32px;
+  height: 30px;
+  margin-bottom: 28px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
+
 .categorie-btn {
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
   color: var(--grey-color);
   background-color: transparent;
   border: none;
   text-align: left;
-
-  margin-bottom: 32px;
+  height: 30px;
+  transition-property: color, text-transform;
+  transition-duration: 250ms;
+  transition-timing-function:linear;
+  // margin-bottom: 32px;
 }
 
 .categorie-btn.active {
   color: var(--violet-color);
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  font-size: 15px;
 }
 
 .categorie-btn:hover,
@@ -70,4 +82,6 @@
   color: var(--violet-color);
   text-transform: uppercase;
   font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -.24px;
 }
