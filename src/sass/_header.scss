@@ -70,14 +70,12 @@
 }
 
 .logo {
-  display: inline-flex;
-  // height: 28px;
+  display: inline-flex;  
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
   color: #000;
-  font-weight: bold;
-  // margin-right: 144px;
+  font-weight: bold;  
 
   @media only screen and (min-width: 768px) {
     margin-right: 40px;
@@ -85,8 +83,7 @@
 }
 
 .part-one {
-  display: flex;
-  // gap: 32px;
+  display: flex;  
   align-items: center;
 }
 
@@ -125,8 +122,6 @@
 }
 
 .menu-item {
-
-
   transition: border-radius;
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -161,11 +156,6 @@
 .icon-shoping-list {
   margin-right: 8px;
 }
-
-// .menu-link:hover,
-// .menu-link:focus {
-//   color: var(--violet-color);
-// }
 
 // ____________________________swicher
 .switch {
@@ -246,8 +236,7 @@
   transition: 0.4s;
 }
 
-.header__registr-icon {
-  // position: relative;
+.header__registr-icon {  
   top: 1px;
   right: 14px;
 }
@@ -306,5 +295,3 @@
     
 }
 
-
-@media only screen and (min-width: 375px) {}

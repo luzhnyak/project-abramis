@@ -80,27 +80,20 @@
 .funds-item:hover,
 .funds-item:focus {
  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-//  border-radius: 3px;
 }
 
 
 .funds-scroll-btn {
   position: absolute;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   right: 45%;
   bottom: 26px;
-
   padding: 0;
-
   background-color: white;
-
   border: none;
   border-radius: 50%;
-
   cursor: pointer;
 
   transition: background-color;
@@ -116,7 +109,6 @@
 
 .funds-icon {
   fill: var(--violet-color);
-
 }
 
 .funds-scroll-btn:hover .funds-icon,

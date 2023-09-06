@@ -23,10 +23,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 40px;
-    @media only screen and (min-width: 375px) {
-
-        // display: block;        
-    }
 
     @media only screen and (min-width: 768px) {        
         flex-direction: row;
@@ -35,7 +31,6 @@
     }
 
     @media only screen and (min-width: 1440px) {
-        // display: block;
         flex-direction: column;
         row-gap: 86px;
         width: 356px;        
@@ -43,16 +38,7 @@
 }
 
 .sidebar-shopping-list{
-    display: none;    
-
-    @media only screen and (min-width: 375px) {
-
-        
-    }
-
-    @media only screen and (min-width: 768px) {
-        
-    }
+    display: none;  
 
     @media only screen and (min-width: 1440px) {
         display: flex;
