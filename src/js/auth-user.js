@@ -8,7 +8,7 @@ const authBtnElAll = document.querySelectorAll('.js-auth-btn');
 const displayNameElAll = document.querySelectorAll('.js-display-name');
 const logoutBtnElAll = document.querySelectorAll('.js-logout-btn');
 const logoutBtnEl = document.querySelector('.js-logout-btn');
-let isList;
+// let isList;
 
 logoutBtnElAll.forEach(el => el.addEventListener('click', onClickLogout));
 
