@@ -129,11 +129,8 @@ function loadData() {
     if (data.books) shoppingListData = JSON.parse(data.books);
     markupShoppingList(shoppingListData, 1, 3);
   });
-
-  // shoppingListData = JSON.parse(user.readUserData(user.userID).books);
 }
 
 function saveData(data) {
-  // localStorage.setItem('shopping-list', JSON.stringify(data));
   user.writeBooksToDB(user.userID, JSON.stringify(data));
 }

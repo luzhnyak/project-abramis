@@ -22,9 +22,3 @@ export function createPagination(totalItems) {
 
   return pagination;
 }
-
-// pagination.on('afterMove', function (eventData) {
-//   alert('The current page is ' + eventData.page);
-// });
-
-// pagination.getCurrentPage();

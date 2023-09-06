@@ -64,7 +64,6 @@ export async function markupBook(id) {
   </div>
   `;
 
-  let bookInList;
   const btnAddEl = document.querySelector('.add-to-shoping-list');
   btnAddEl.addEventListener('click', onClickBtnAdd);
 
@@ -116,12 +115,6 @@ function bookInList(id) {
 }
 
 function loadData() {
-  // const data = localStorage.getItem('shopping-list');
-
-  // if (!data) return;
-
-  // shoppingListData = JSON.parse(data);
-
   user.readUserData(user.userID).then(data => {
     if (!data) return;
     if (data.books) shoppingListData = JSON.parse(data.books);
@@ -129,6 +122,5 @@ function loadData() {
 }
 
 function saveData(data) {
-  // localStorage.setItem('shopping-list', JSON.stringify(data));
   user.writeBooksToDB(user.userID, JSON.stringify(data));
 }
