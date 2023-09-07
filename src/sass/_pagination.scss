@@ -19,6 +19,7 @@
   line-height: 1;
   font-size: 18px;
   font-weight: 700;
+  transition: background-color 350ms, border-color 350ms, color 350ms;
 
   @media only screen and (min-width: 768px) {
     height: 44px;
@@ -77,4 +78,3 @@
 .tui-pagination .tui-ico-last {
   filter: brightness(0) invert(1);
 }
-
