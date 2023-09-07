@@ -37,7 +37,7 @@
   border-radius: 40px;
   border: solid 2px #4f2ee8;
   background-color: transparent;
-  transition: background-color, color var(--transition);
+  transition: var(--transition);
 
   @media only screen and (min-width: 768px) {
     margin-top: 20px;
