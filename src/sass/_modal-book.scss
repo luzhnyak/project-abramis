@@ -11,17 +11,17 @@
   position: relative;
 }
 
-.modal {  
+.modal {
   width: 312px;
   border: 1px solid var(--black-color);
   border-radius: 18px;
-  background-color: var(--white-color);;
+  background-color: var(--white-color);
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 18px;
-  padding-right: 18px;  
+  padding-right: 18px;
 
-  @media only screen and (min-width: 375px) {    
+  @media only screen and (min-width: 375px) {
     width: 335px;
     margin: 0 auto;
     padding-top: 40px;
@@ -190,6 +190,9 @@
   padding-right: 19px;
   padding-left: 19px;
   display: block;
+
+  transition: var(--transition);
+
   @media only screen and (min-width: 375px) {
     min-width: 211px;
     height: 46px;
@@ -210,7 +213,6 @@
   @media only screen and (min-width: 1440px) {
     background-color: var(--violet-color);
     color: var(--white-color);
-    transition: var(--transition);
   }
 }
 
