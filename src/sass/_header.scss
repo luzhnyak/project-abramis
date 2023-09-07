@@ -115,12 +115,6 @@
   }
 }
 
-// .menu-item {
-//   transition: border-radius;
-//   transition-duration: 600ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
 .menu-item.active {
   border-radius: 36px;
   background: var(--yellow-color);
