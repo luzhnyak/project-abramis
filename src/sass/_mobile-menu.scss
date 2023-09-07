@@ -207,28 +207,15 @@
 .mobile-menu-item.active {
   border-radius: 36px;
   background: var(--yellow-color);
-  color: (--black-color);
+  color: var(--black-color);
 }
 
 .mobile-menu-link{
   padding: 8px 16px;
 }
 
-.mobile-menu-link:hover,
-.mobile-menu-link:focus {
-  border-radius: 36px;
-  background: var(--yellow-color);
-  color: (--black-color);
-}
-
-.mobile-menu-item:hover .mobile-menu-link,
-.mobile-menu-item:focus .mobile-menu-link {
-
-  color: black;
-}
-
 .mobile-menu-link {
-  color: white;
+  color:currentColor;
 
   transition: color;
   transition-duration: 600ms;
@@ -236,11 +223,18 @@
 }
 
 .mobile-icon {
-  fill: white;
+  fill: currentColor;
   margin-right: 16px;
   transition: fill;
   transition-duration: 600ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.mobile-menu-item
+{
+  fill: currentColor;
+  color: var(--white-color);
 }
 
 .mobile-menu-item:hover .mobile-icon,
