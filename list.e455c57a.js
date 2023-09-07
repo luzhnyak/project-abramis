@@ -1,5 +1,5 @@
 !function(){function t(t){return t&&t.__esModule?t.default:t}var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},n={},i={},s=e.parcelRequire0a78;null==s&&((s=function(t){if(t in n)return n[t].exports;if(t in i){var e=i[t];delete i[t];var s={id:t,exports:{}};return n[t]=s,e.call(s.exports,s,s.exports),s.exports}var o=Error("Cannot find module '"+t+"'");throw o.code="MODULE_NOT_FOUND",o}).register=function(t,e){i[t]=e},e.parcelRequire0a78=s),s.register("aNJCr",function(t,e){Object.defineProperty(t.exports,"getBundleURL",{get:function(){return n},set:function(t){return n=t},enumerable:!0,configurable:!0});var n,i={};n=function(t){var e=i[t];return e||(e=function(){try{throw Error()}catch(e){var t=(""+e.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);if(t)// Use the 3rd one, which will be a runtime in the original bundle.
-return(""+t[2]).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/,"$1")+"/"}return"/"}(),i[t]=e),e}}),s("cs7FV"),s("9VC5X"),s("d6S5l");var o=s("6JpON"),r={};function a(e){let n=document.getElementById("tui-pagination-container"),i=new/*@__PURE__*/(t(r))(n,{totalItems:e,itemsPerPage:3,visiblePages:2,usageStatistics:!1});return i.on("beforeMove",function(t){m(_,t.page,3)}),i}window,r=/******/function(t){/******/// The module cache
+return(""+t[2]).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/,"$1")+"/"}return"/"}(),i[t]=e),e}}),s("cs7FV"),s("9VC5X"),s("d6S5l");var o=s("6JpON"),r={};function a(e){let n=document.getElementById("tui-pagination-container"),i=new/*@__PURE__*/(t(r))(n,{totalItems:e,itemsPerPage:3,visiblePages:2,usageStatistics:!1});return i.on("beforeMove",function(t){m(v,t.page,3)}),i}window,r=/******/function(t){/******/// The module cache
 /******/var e={};/******//******/// The require function
 /******/function n(i){/******//******/// Check if module is in cache
 /******/if(e[i])/******/return e[i].exports;/******/// Create a new module (and put it into the cache)
@@ -833,48 +833,48 @@ _appendPages:function(t){var e,n,i=t.leftPageNumber,s=t.rightPageNumber;for(n=i;
  * @returns {string}
  * @private
  */function(t,e,n){var i,o,r,a,u=(i=[t],o=[],r=0,a=0,// eslint-disable-next-line complexity
-s(e,function(t,n){0===t.indexOf("if")?r+=1:"/if"===t?r-=1:r||0!==t.indexOf("elseif")&&"else"!==t||(i.push("else"===t?["true"]:t.split(" ").slice(1)),o.push(e.slice(a,n)),a=n+1)}),o.push(e.slice(a)),{exps:i,sourcesInsideIf:o}),l=!1,c="";return s(u.exps,function(t,e){return(l=x(t,n))&&(c=y(u.sourcesInsideIf[e],n)),!l}),c},each:/**
+s(e,function(t,n){0===t.indexOf("if")?r+=1:"/if"===t?r-=1:r||0!==t.indexOf("elseif")&&"else"!==t||(i.push("else"===t?["true"]:t.split(" ").slice(1)),o.push(e.slice(a,n)),a=n+1)}),o.push(e.slice(a)),{exps:i,sourcesInsideIf:o}),l=!1,c="";return s(u.exps,function(t,e){return(l=y(t,n))&&(c=x(u.sourcesInsideIf[e],n)),!l}),c},each:/**
  * Helper function for "each".
  * @param {Array.<string>} exps - array of expressions split by spaces
  * @param {Array.<string>} sourcesInsideBlock - array of sources inside the each block
  * @param {object} context - context
  * @returns {string}
  * @private
- */function(t,e,n){var i=x(t,n),r=o(i)?"@index":"@key",u={},l="";return s(i,function(t,i){u[r]=i,u["@this"]=t,a(n,u),l+=y(e.slice(),n)}),l},with:/**
+ */function(t,e,n){var i=y(t,n),r=o(i)?"@index":"@key",u={},l="";return s(i,function(t,i){u[r]=i,u["@this"]=t,a(n,u),l+=x(e.slice(),n)}),l},with:/**
  * Helper function for "with ... as"
  * @param {Array.<string>} exps - array of expressions split by spaces
  * @param {Array.<string>} sourcesInsideBlock - array of sources inside the with block
  * @param {object} context - context
  * @returns {string}
  * @private
- */function(t,e,n){var s=i("as",t),o=t[s+1],r=x(t.slice(0,s),n),u={};return u[o]=r,y(e,a(n,u))||""}},_=3==="a".split(/a/).length?function(t,e){return t.split(e)}:function(t,e){var n,i,s=[],o=0;for(e.global||(e=RegExp(e,"g")),n=e.exec(t);null!==n;)i=n.index,s.push(t.slice(o,i)),o=i+n[0].length,n=e.exec(t);return s.push(t.slice(o)),s};/**
+ */function(t,e,n){var s=i("as",t),o=t[s+1],r=y(t.slice(0,s),n),u={};return u[o]=r,x(e,a(n,u))||""}},v=3==="a".split(/a/).length?function(t,e){return t.split(e)}:function(t,e){var n,i,s=[],o=0;for(e.global||(e=RegExp(e,"g")),n=e.exec(t);null!==n;)i=n.index,s.push(t.slice(o,i)),o=i+n[0].length,n=e.exec(t);return s.push(t.slice(o)),s};/**
  * Find value in the context by an expression.
  * @param {string} exp - an expression
  * @param {object} context - context
  * @returns {*}
  * @private
  */// eslint-disable-next-line complexity
-function v(t,e){var n,i=e[t];return"true"===t?i=!0:"false"===t?i=!1:h.test(t)?i=t.replace(d,""):l.test(t)?i=v((n=t.split(c))[0],e)[v(n[1],e)]:p.test(t)?i=v((n=t.split(f))[0],e)[n[1]]:g.test(t)&&(i=parseFloat(t)),i}/**
+function _(t,e){var n,i=e[t];return"true"===t?i=!0:"false"===t?i=!1:h.test(t)?i=t.replace(d,""):l.test(t)?i=_((n=t.split(c))[0],e)[_(n[1],e)]:p.test(t)?i=_((n=t.split(f))[0],e)[n[1]]:g.test(t)&&(i=parseFloat(t)),i}/**
  * Helper function for "custom helper".
  * If helper is not a function, return helper itself.
  * @param {Array.<string>} exps - array of expressions split by spaces (first element: helper)
  * @param {object} context - context
  * @returns {string}
  * @private
- */function x(t,e){var n,i,o=v(t[0],e);return o instanceof Function?(n=t.slice(1),i=[],s(n,function(t){i.push(v(t,e))}),o.apply(null,i)):o}/**
+ */function y(t,e){var n,i,o=_(t[0],e);return o instanceof Function?(n=t.slice(1),i=[],s(n,function(t){i.push(_(t,e))}),o.apply(null,i)):o}/**
  * Get a result of compiling an expression with the context.
  * @param {Array.<string>} sources - array of sources split by regexp of expression.
  * @param {object} context - context
  * @returns {Array.<string>} - array of sources that bind with its context
  * @private
- */function y(t,e){for(var n,i,s,o=1,a=t[1];r(a);)m[i=(n=a.split(" "))[0]]?(s=/**
+ */function x(t,e){for(var n,i,s,o=1,a=t[1];r(a);)m[i=(n=a.split(" "))[0]]?(s=/**
  * Handle block helper function
  * @param {string} helperKeyword - helper keyword (ex. if, each, with)
  * @param {Array.<string>} sourcesToEnd - array of sources after the starting block
  * @param {object} context - context
  * @returns {Array.<string>}
  * @private
- */function(t,e,n){for(var i,s,o,a=m[t],u=1,l=2,c=e[2];u&&r(c);)0===c.indexOf(t)?u+=1:0===c.indexOf("/"+t)&&(u-=1,o=l),l+=2,c=e[l];if(u)throw Error(t+" needs {{/"+t+"}} expression.");return e[0]=a(e[0].split(" ").slice(1),(i=o,(s=e.splice(1,i-0)).pop(),s),n),e}(i,t.splice(o,t.length-o),e),t=t.concat(s)):t[o]=x(n,e),o+=2,a=t[o];return t.join("")}t.exports=/**
+ */function(t,e,n){for(var i,s,o,a=m[t],u=1,l=2,c=e[2];u&&r(c);)0===c.indexOf(t)?u+=1:0===c.indexOf("/"+t)&&(u-=1,o=l),l+=2,c=e[l];if(u)throw Error(t+" needs {{/"+t+"}} expression.");return e[0]=a(e[0].split(" ").slice(1),(i=o,(s=e.splice(1,i-0)).pop(),s),n),e}(i,t.splice(o,t.length-o),e),t=t.concat(s)):t[o]=y(n,e),o+=2,a=t[o];return t.join("")}t.exports=/**
  * Convert text by binding expressions with context.
  * <br>
  * If expression exists in the context, it will be replaced.
@@ -928,7 +928,7 @@ function v(t,e){var n,i=e[t];return"true"===t?i=!0:"false"===t?i=!1:h.test(t)?i=
  * 
  * var result = template(source, context);
  * console.log(result); // <h1>Date: 2019-11-25</h1><p>1: Clean the room</p><p>2: Wash the dishes</p>
- */function(t,e){return y(_(t,u),e)};/***/},/* 30 *//***/function(t,e,n){/**
+ */function(t,e){return x(v(t,u),e)};/***/},/* 30 *//***/function(t,e,n){/**
  * @fileoverview Send hostname on DOMContentLoaded.
  * @author NHN FE Development Lab <dl_javascript@nhn.com>
  */var i=n(1),s=n(31);t.exports=/**
@@ -959,7 +959,7 @@ function v(t,e){var n,i=e[t];return"true"===t?i=!0:"false"===t?i=!1:h.test(t)?i=
  *     dp: 'dp',
  *     dh: 'dh'
  * });
- */function(t,e){var n=document.createElement("img"),s="";return i(e,function(t,e){s+="&"+e+"="+t}),s=s.substring(1),n.src=t+"?"+s,n.style.display="none",document.body.appendChild(n),document.body.removeChild(n),n};/***/}]);var u=s("d0uJe"),l={};l=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("awYlv");var c={};c=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("c2XdF");var p={};p=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("dOQ1V");var f={};f=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("2344Y");var h={};h=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("53vZ8");var d={};d=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("3muyk");let g=document.querySelector(".js-shopping_list");function m(e,n,i){if(/*@__PURE__*/t(o).Loading.standard(),0===e.length){g.innerHTML=`
+ */function(t,e){var n=document.createElement("img"),s="";return i(e,function(t,e){s+="&"+e+"="+t}),s=s.substring(1),n.src=t+"?"+s,n.style.display="none",document.body.appendChild(n),document.body.removeChild(n),n};/***/}]);var u=s("d0uJe"),l={};l=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("awYlv");var c={};c=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("c2XdF");var p={};p=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("dOQ1V");var f={};f=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("2344Y");var h={};h=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("53vZ8");var d={};d=s("aNJCr").getBundleURL("jcFRk")+s("iE7OH").resolve("3muyk");let g=document.querySelector(".js-shopping_list");function m(e,n,i){/*@__PURE__*/t(o).Loading.standard();let s=document.querySelector(".tui-pagination");if(0===e.length){g.innerHTML=`
       <div class="shopping_list-content">
 
         <p class="shopping_list-empty-text">
@@ -968,7 +968,7 @@ function v(t,e){var n,i=e[t];return"true"===t?i=!0:"false"===t?i=!1:h.test(t)?i=
         <img class="book-column-img" srcset="${/*@__PURE__*/t(c)} 1x, ${/*@__PURE__*/t(p)} 2x"
           src="${/*@__PURE__*/t(c)}" alt="book-column" loading="lazy" />
 
-    </div>`;let e=document.querySelector(".tui-pagination");e.classList.add("visually-hidden"),/*@__PURE__*/t(o).Loading.remove();return}g.innerHTML=e.slice((n-1)*i,n*i).map(e=>`<ul class="shopping-list list">
+    </div>`,s.classList.add("visually-hidden"),/*@__PURE__*/t(o).Loading.remove();return}e.length<=3?s.classList.add("visually-hidden"):s.classList.remove("visually-hidden"),g.innerHTML=e.slice((n-1)*i,n*i).map(e=>`<ul class="shopping-list list">
       ${// Рендер однієї книги
     function({_id:e,book_image:n,title:i,list_name:s,author:o,description:r,buy_links:a}){return`<li class="shopping-list-book-item js-sl-item-${e}">
         <button class="btn-dump js-btn-dump" typy="button" data-id=${e} aria-label="dump"> 
@@ -997,6 +997,6 @@ function v(t,e){var n,i=e[t];return"true"===t?i=!0:"false"===t?i=!1:h.test(t)?i=
         </div>
       </div>
       </li>`}(e)}
-      </ul>`).join("");let s=document.querySelectorAll(".js-btn-dump");s.forEach(t=>{t.addEventListener("click",t=>{var e;let s=t.currentTarget.dataset.id,o=document.querySelector(`.js-sl-item-${s}`);o.remove(),e=_=_.filter(t=>t._id!==s),(0,u.user).writeBooksToDB(u.user.userID,JSON.stringify(e)),m(_,n-1,i),(r=a(_.length)).setTotalItems=_.length,r.movePageTo(n-1)})});let r=a(_.length);/*@__PURE__*/t(o).Loading.remove()}let _=[];u.user.isAuth||(window.location.href="./index.html"),u.user.userID&&(0,u.user).readUserData(u.user.userID).then(t=>{t&&(t.books&&(_=JSON.parse(t.books)),m(_,1,3))}),s("23Ajj"),s("7hKzD"),s("yTOug"),s("d0uJe"),s("7ADRq");let v=document.querySelectorAll(".js-list_menu");v.forEach(t=>t.classList.add("active"))}();//# sourceMappingURL=list.39ca5137.js.map
+      </ul>`).join("");let r=document.querySelectorAll(".js-btn-dump");r.forEach(t=>{t.addEventListener("click",t=>{var e;let s=t.currentTarget.dataset.id,o=document.querySelector(`.js-sl-item-${s}`);o.remove(),e=v=v.filter(t=>t._id!==s),(0,u.user).writeBooksToDB(u.user.userID,JSON.stringify(e)),m(v,n-1,i),(_=a(v.length)).setTotalItems=v.length,_.movePageTo(n-1)})});let _=a(v.length);/*@__PURE__*/t(o).Loading.remove()}let v=[];u.user.isAuth||(window.location.href="./index.html"),u.user.userID&&(0,u.user).readUserData(u.user.userID).then(t=>{t&&(t.books&&(v=JSON.parse(t.books)),m(v,1,3))}),s("23Ajj"),s("7hKzD"),s("yTOug"),s("d0uJe"),s("7ADRq");let _=document.querySelectorAll(".js-list_menu");_.forEach(t=>t.classList.add("active"))}();//# sourceMappingURL=list.e455c57a.js.map
 
-//# sourceMappingURL=list.39ca5137.js.map
+//# sourceMappingURL=list.e455c57a.js.map
