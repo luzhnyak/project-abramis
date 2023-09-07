@@ -27,6 +27,8 @@
   position: absolute;
   border: none;
   background: transparent;
+
+  transition: 400ms;
   @media only screen and (min-width: 375px) {
     top: 16;
     right: 16;
@@ -36,6 +38,12 @@
     right: 24;
   }
 }
+
+.modal-uath-cls-btn:hover,
+.modal-uath-cls-btn:focus {
+  transform: scale(1.25);
+}
+
 .userdata-input {
   display: block;
   width: 260px;
