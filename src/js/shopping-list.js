@@ -15,6 +15,8 @@ const shoppingListEl = document.querySelector('.js-shopping_list');
 export function markupShoppingList(books, page, perPage) {
   Notiflix.Loading.standard();
 
+  const paginationEl = document.querySelector('.tui-pagination');
+
   if (books.length === 0) {
     shoppingListEl.innerHTML = `
       <div class="shopping_list-content">
@@ -26,10 +28,15 @@ export function markupShoppingList(books, page, perPage) {
           src="${bookColumn1}" alt="book-column" loading="lazy" />
 
     </div>`;
-    const pagination = document.querySelector('.tui-pagination');
-    pagination.classList.add('visually-hidden');
+    paginationEl.classList.add('visually-hidden');
     Notiflix.Loading.remove();
     return;
+  }
+
+  if (books.length <= 3) {
+    paginationEl.classList.add('visually-hidden');
+  } else {
+    paginationEl.classList.remove('visually-hidden');
   }
 
   shoppingListEl.innerHTML = books
