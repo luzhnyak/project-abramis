@@ -40,6 +40,17 @@ export async function bestBooksAllCategories() {
     allSeeMoreEl.forEach(el => {
       el.addEventListener('click', event => {
         booksCategory(event.target.dataset.catname);
+
+        const catsBtnActive = document.querySelector('.categorie-btn.active');
+        catsBtnActive.classList.remove('active');
+
+        const catsBtn = document.querySelectorAll('.categorie-btn');
+
+        catsBtn.forEach(el => {
+          if (el.dataset.list_name === event.target.dataset.catname) {
+            el.classList.add('active');
+          }
+        });
       });
     });
   } catch (error) {
